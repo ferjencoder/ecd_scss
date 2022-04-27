@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/ico/ecd_ico.svg"
+      type="image/x-icon"
+    />
+
+    <!--<<<------------ CDN FONT AWESOME -------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--<<<------------ CSS BOOT------------------------------------------------------------------>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--<<<------------ CSS CUSTOM ----------------------------------------------------------->
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <title>Entre Cortinas || Info</title>
+  </head>
+  <body>
+    <!--<<<<---------------------------------------------------------------------------------->
+    <!--<<<<-- NAV BAR --------------------------------------------------------------------->
+    <!--<<<<---------------------------------------------------------------------------------->
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-light bg-light col-12 flex-column py-0"
+    >
+      <!--<<<-- BANNER MSG -->
+      <div
+        class="container-fluid d-flex justify-content-center containerBannerMsg py-1"
+        id="bannerMsg"
+      >
+        <a href="#" class="text-light"
+          ><i
+            class="fa-solid fa-sun fa-bounce"
+            style="--fa-animation-iteration-count: 5"
+          ></i>
+          ~ 3, 6 Y 9 CUOTAS SIN INTERES!!
+        </a>
+        <a href="#" class="text-light">
+          ~ LLEGO LA NUEVA LINEA DE ALMOHADONES!!</a
+        >
+        <a href="#" class="text-light">
+          ~ CHEQUEA NUESTRAS PROMOS CANDENTES! ~
+          <i
+            class="fa-solid fa-sun fa-bounce"
+            style="--fa-animation-iteration-count: 5"
+          ></i
+        ></a>
+      </div>
+      <!--<<<-- NAV BAR -->
+      <div class="container-fluid py-1">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            class="w-200"
+            src="../assets/ico/ecd_logo.svg"
+            alt="Logo Entre Cortinas"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-danger" href="../pages/cotizate.html"
+                >Cotizate!</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-danger" href="../pages/proyectos.html"
+                >Proyectos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-danger" href="../pages/contacto.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2 shadow-none"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+          </form>
+          <button class="btn btn-light shadow-none" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="btn btn-light shadow-none" type="submit">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="btn btn-light shadow-none" type="submit">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+          <button class="btn btn-light shadow-none" type="submit">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--<<<<------------ MAIN ---------------------------------->
+    <!--<<<------------ SECTION BANNER ----------------------->
+    <section class="container-fluid d-inline-flex heroTxt">
+      <div class="container d-flex w-50">
+        <h2 class="txtHHero">Conoce nuestra linea de cortinas tradicionales</h2>
+      </div>
+      <div class="container w-50 borderContainer">
+        <p class="txtPHero">livianas: Gasa de Algodon, Voile de Lino</p>
+        <p class="txtPHero">pesadas: Black Out Gamuzado</p>
+        <p class="txtPHero">crudas: Lino Black Out</p>
+      </div>
+    </section>
+
+    <!--<<<------------ SECTION BANNER ----------------------->
+
+    <!-- ACORDION -->
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="row text-center">
+          <h1 class="display-3 fw-bold text-uppercase">faq</h1>
+          <div class="heading-line"></div>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+            officia?
+          </p>
+        </div>
+        <!-- ACCORDION CONTENT -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button faqHeader"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    Quienes somos
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <h5 class="faqTitle">Somos Entre Cortinas</h5>
+                    <p class="faqText">
+                      Somos una empresa argentina con gran trayectoria en el
+                      mercado, disponemos de modelos exclusivos y brindamos
+                      atención personalizada a todos nuestros clientes.
+                    </p>
+                    <h5 class="faqTitle">Nuestra Mision</h5>
+                    <p class="faqText">
+                      Hacer de cada ambiente un lugar único, ofreciendo
+                      productos de calidad, tecnología avanzada y un servicio
+                      personalizado, atendiendo la necesidad de cada uno de
+                      nuestros clientes.
+                    </p>
+                    <h5 class="faqTitle">Nuestra Vision</h5>
+                    <p class="faqText">
+                      Ser reconocidos como la marca líder a nivel nacional en
+                      soluciones de calidad e innovadoras para la protección
+                      solar y térmica de cada ambiente. Gestionar y generar una
+                      red de trabajo a través de distribuidores en todo el país.
+                    </p>
+                    <ul class="faqUl">
+                      <h5 class="faqTitle">Nuestros Valores</h5>
+                      <li class="faqText">•Servicio al cliente</li>
+                      <li class="faqText">•Calidad</li>
+                      <li class="faqText">•Compromiso</li>
+                      <li class="faqText">•Innovación</li>
+                      <li class="faqText">•Pasión</li>
+                      <li class="faqText">•Perseverancia</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed faqHeader"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Politica de privacidad
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <p class="faqText">
+                      Esta Política de Privacidad está destinada a informar al
+                      Usuario sobre el modo en la que se da tratamiento a su
+                      Información Personal.
+                    </p>
+                    <p class="faqText">
+                      ENTRE CORTINAS se reserva el derecho de efectuar
+                      modificaciones a las presentes políticas a los efectos de
+                      dar mejor tratamiento a la Información Personal. Esta
+                      política no se aplica a los sitios a los que el Usuario
+                      pudiera acceder por medio de links, o cualquier otro tipo
+                      de vínculo. En caso de acceder a un sitio de un tercero
+                      por medio de un link publicado en el Website, el Usuario
+                      deberá revisar detenidamente las políticas de privacidad
+                      de dicho sitio.
+                    </p>
+                    <h5 class="faqTitle">INFORMACION PERSONAL</h5>
+                    <p class="faqText">
+                      El Website recopila la información que el Usuario ingresa
+                      referida a su identidad a los efectos de operar en el
+                      mismo. Los datos que se requieren a los Usuarios, son a
+                      los efectos de constatar no sólo la identidad, sino
+                      también de acceder a ciertas y determinadas funciones que
+                      hacen a la operatividad del Website. Todos los datos así
+                      recabados, son estrictamente privados, y no estarán
+                      disponibles de un modo público ni para conocimiento
+                      general.
+                    </p>
+                    <p class="faqText">
+                      La Información Personal es recopilada y almacenada en los
+                      casos en que ha sido brindada por el Usuario, o bien si
+                      ésta se ha obtenido de fuentes de acceso público
+                      irrestricto.
+                    </p>
+                    <p class="faqText">
+                      El usuario consiente que su Información Personal sea
+                      tratada de la manera en la que se explica en este
+                      documento.
+                    </p>
+                    <h5 class="faqTitle">USO DE LA INFORMACION PERSONAL</h5>
+                    <p class="faqText">
+                      ENTRE CORTINAS no vende ni alquila a terceros Información
+                      Personal de sus Usuarios. La utilización de dicha
+                      Información Personal es a exclusivos fines propios,
+                      relacionados con el uso del Website, como ser el envío de
+                      avisos o promociones que se difundan a través del mismo, o
+                      el envío de nuestros newsletters o bien para mantener
+                      informado y actualizado al Usuario sobre nuestras
+                      actividades, pero de ningún modo se revelará esa
+                      Información Personal a terceros.
+                    </p>
+                    <h5 class="faqTitle">POLITICA DE SEGURIDAD</h5>
+                    <p class="faqText">
+                      Proteger su privacidad es nuestro objetivo principal, por
+                      ello su Información Personal está protegida por una
+                      contraseña. Hemos tomado todas las medidas a nuestro
+                      alcance tecnológico y económico a fin de asegurar tanto su
+                      privacidad como la nuestra. Toda la información recabada
+                      se encuentra debidamente encriptada, salvo la que
+                      eventualmente nos hubiera enviado vía email, de modo de
+                      asegurar que las transacciones que se concierten tengan
+                      adecuado resguardo y privacidad.
+                    </p>
+                    <p class="faqText">
+                      En los casos de así estimarlo conveniente, y para brindar
+                      aún mayor seguridad, podremos utilizar el protocolo de
+                      seguridad Secured Socket Layer (SSL) para transferir datos
+                      del navegador al servidor.
+                    </p>
+                    <h5 class="faqTitle">
+                      REGIMEN DE EXCEPCIONESA LA RESERVA DE LA INFORMACION
+                      PERSONAL
+                    </h5>
+                    <p class="faqText">
+                      La Información Personal y/o cualquier otra información
+                      personal del Usuario a la que ENTRE CORTINAS hubiera
+                      accedido por cualquier medio, podrá ser revelada a
+                      terceros, en cualquiera de los siguientes casos: (i) si
+                      hubiera sido requerida por autoridad judicial o autoridad
+                      administrativa competente; (ii) si hubiera necesidad de
+                      hacerlo en caso de existencia de un intento de ruptura de
+                      la seguridad del Website.
+                    </p>
+                    <p class="faqText">
+                      No asumimos ninguna responsabilidad por la difusión de
+                      Información Personal que Ud. efectúe por cualquier medio
+                      distinto a los previstos como de operación del Website.
+                    </p>
+                    <h5 class="faqTitle">COOKIES</h5>
+                    <p class="faqText">
+                      Mediante la tecnología Cookie o el rastreo IP, el sitio
+                      puede acceder a otra información acerca del Usuario. Dicha
+                      información registra datos tales como información sobre el
+                      navegador que utiliza, el tipo de computadora, sus
+                      sistemas operativos, sus proveedores del servicio de
+                      Internet, las páginas que usted visita y otra información
+                      similar. De esta manera podemos conocer cuáles son las
+                      áreas de nuestro Website preferidas por nuestros Usuarios,
+                      qué áreas necesitan ser mejoradas y qué tecnología se está
+                      utilizando a fin de mejorar permanentemente los servicios
+                      brindados en nuestro sitio.
+                    </p>
+                    <p class="faqText">
+                      Eventualmente, podremos revelar información de tipo
+                      estadístico sin identificación del Usuario, pero en ningún
+                      caso damos a conocer a terceros su Información Personal.
+                    </p>
+                    <p class="faqText">
+                      Su navegador, al igual que otros, puede estar programado
+                      para aceptar Cookies. En tal caso, si Ud. no desea brindar
+                      esa información adicional, puede programar su navegador
+                      para rechazar Cookies, o para que éste le advierta que un
+                      sitio intenta enviarle Cookies.
+                    </p>
+                    <h5 class="faqTitle">SEGURIDAD EN LA COMPRA</h5>
+                    <p class="faqText">
+                      ENTRE CORTINAS a través de su Website, garantiza la
+                      seguridad y confidencialidad en todas sus comunicaciones
+                      con sus clientes. Todas las operaciones de pago on-line se
+                      realizan a través de un servidor seguro, basado en el
+                      estándar SSL y operados por empresas dedicadas
+                      exclusivamente a dicha actividad, que protege los datos
+                      frente a intentos de violación por terceros. Los datos del
+                      proceso de compra son guardados por las empresas que
+                      intervienen en la operación, sin que a este respecto ENTRE
+                      CORTINAS asuma responsabilidad alguna frente al Usuario.
+                    </p>
+                    <p class="faqText">
+                      Calidad de los datos de los usuarios. Derecho de acceso,
+                      rectificación, actualización y supresión.
+                    </p>
+                    <p class="faqText">
+                      Los Usuarios registrados garantizan y responden de la
+                      exactitud, vigencia y autenticidad de los datos personales
+                      facilitados y se comprometen a mantenerlos debidamente
+                      actualizados. Podrán los Usuarios cambiar su información
+                      de registro, directamente en el Website. Al registrarse en
+                      el Website y formar parte de la “Base General de
+                      Clientes”, los Usuarios aceptan que ENTRE CORTINAS se
+                      comunique con ellos por vía postal, telefónica o
+                      electrónica para enviar información que ENTRE CORTINAS
+                      considere a su exclusivo criterio que pueda ser de su
+                      interés, incluyendo publicidad e información sobre ofertas
+                      y promociones. En caso de que los Usuarios no deseen ser
+                      contactados con estos fines, podrán manifestarlo
+                      fehacientemente a ENTRE CORTINAS, quien procederá a
+                      interrumpir este tipo de comunicaciones en el menor tiempo
+                      que le sea posible.
+                    </p>
+                    <p class="faqText">
+                      El titular de los datos personales tiene la facultad de
+                      ejercer el derecho de acceso a los mismos en forma
+                      gratuita, a intervalos no inferiores a seis meses, salvo
+                      que se acredite un interés legítimo al efecto conforme lo
+                      establecido en el artículo 14, inciso 3 de la ley Nº
+                      25.326. La Dirección Nacional de Protección de Datos
+                      Personales, órgano de control de la Ley Nº 25.326, tiene
+                      la atribución de atender las denuncias y reclamos que se
+                      interpongan con relación al incumplimiento de las normas
+                      sobre protección de datos personales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed faqHeader"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    TERMINOS Y CONDICIONES
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<<<------------ FOOTER -------------->
+    <footer class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-sm-12 col-md-6 col-xl-4 col-xxl-3">
+          <div class="p-0">
+            <ul>
+              <h4 class="footerTitle">NUESTRO LOCAL</h4>
+              <li>
+                <iframe
+                  class="map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8323750412465!2d-68.8426698!3d-32.902599900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09133a724a37%3A0x201baf16d2a40f76!2sAv.%20San%20Mart%C3%ADn%20100%2C%20M5500EHD%20Mendoza%2C%20Argentina!5e0!3m2!1sen!2sus!4v1647193388276!5m2!1sen!2sus"
+                  width="300"
+                  height="150"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-4 col-xxl-3">
+          <div class="p-0">
+            <ul>
+              <h4 class="footerTitle">ENTRE CORTINAS DECO</h4>
+              <li><a href="../info.html">Quienes somos</a></li>
+              <li><a href="../info.html">Política de privacidad</a></li>
+              <li><a href="../info.html">Términos y condiciones</a></li>
+              <li><a href="../info.html">Promociones vigentes</a></li>
+              <h4 class="footerTitleSocial">ESTAMOS EN</h4>
+              <div class="socialIcons">
+                <!--<<<< Fb link -->
+                <a
+                  class="socialIco"
+                  href="https://es-la.facebook.com/"
+                  target="blank"
+                  ><i class="fab fa-facebook-square fa-xl"></i
+                ></a>
+                <!--<<<< Insta link -->
+                <a
+                  class="socialIco"
+                  href="https://www.instagram.com/"
+                  target="blank"
+                  ><i class="fab fa-instagram-square fa-xl"></i
+                ></a>
+                <!--<<<< Pinterest link -->
+                <a
+                  class="socialIco"
+                  href="https://ar.pinterest.com/"
+                  target="blank"
+                  ><i class="fab fa-pinterest-square fa-xl"></i
+                ></a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-4 col-xxl-3">
+          <div class="p-0">
+            <ul>
+              <h4 class="footerTitle">INFORMACION</h4>
+              <li><a href="../info.html">Como tomar medidas</a></li>
+              <li><a href="../info.html">Medios de pago</a></li>
+              <li><a href="../info.html">Método de envío</a></li>
+              <li><a href="../info.html">Cambios y devoluciones</a></li>
+              <li><a href="../info.html">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-4 col-xxl-3">
+          <div class="p-0">
+            <ul>
+              <h4 class="footerTitle">NEWLETTER</h4>
+              <form class="formSubscribe">
+                <div class="newsletterContainer">
+                  <label for="newsletter"></label>
+                  <input
+                    type="email"
+                    id="newsletter"
+                    placeholder="Ingresá tu correo electrónico"
+                  />
+                  <p>*Este campo es obligatorio</p>
+                </div>
+                <img src="../assets/img/recaptcha.png" alt="" /> <br />
+                <input class="Btn" type="submit" value="Enviar" />
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap);
+@import url(https://use.typekit.net/kal6lby.css);
+
+//<<< FONTS
+$ecd-ff-primary: Montserrat, sans-serif;
+$ecd-ff-secondary: Segoe UI, sans-serif;
+$ecd-ff-serif: Georgia, serif;
+$ecd-ff-logo: al-fresco, sans-serif;
+
+//<<< LETTER SPACING
+$ecd-fs-spacing: 0.05rem;
+
+//<<< COLORS
+$ecd-clr-1: rgba(72, 50, 65, 1);
+$ecd-clr-2: rgba(121, 85, 105, 1);
+$ecd-clr-3: rgba(166, 128, 140, 1);
+$ecd-clr-4: rgba(185, 156, 157, 1);
+$ecd-clr-5: rgba(121, 85, 105, 0.461);
+$ecd-clr-black: rgba(25, 25, 25, 1);
+$ecd-clr-white: rgba(250, 250, 250, 1);
+
+//<<< SHADOWS
+$ecd-shdw-1: 0 5px 15px rgba(0, 0, 0, 0.2);
+$ecd-shdw-2: 0 5px 15px rgba(0, 0, 0, 0.1);
+$ecd-shdw-3: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+//<<< TRANSITIONS
+$ecd-transit-1: all 0.5s ease;
+$ecd-transit-2: all 0.3s ease;
+
+//<<< RESET BOOT BORDER RADIUS
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-md: 0;
+$border-radius-lg: 0;
+$border-radius-xl: 0;
+$border-radius-xxl: 0;
