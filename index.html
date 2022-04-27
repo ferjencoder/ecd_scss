@@ -30,7 +30,7 @@
     <!--<<<<-- NAV BAR --------------------------------------------------------------------->
     <!--<<<<---------------------------------------------------------------------------------->
     <nav
-      class="navbar navbar-expand-lg fixed-top navbar-light bg-light col-12 flex-column py-0"
+      class="navbar navbar-expand-lg fixed-top navbar-light bg-light col-12 col-md flex-column py-0"
     >
       <!--<<<-- BANNER MSG -->
       <div
@@ -44,10 +44,20 @@
           ></i>
           ~ 3, 6 Y 9 CUOTAS SIN INTERES!!
         </a>
-        <a href="#" class="text-light">
+        <a href="#" class="text-light d-md-none d-lg-none d-xl-none d-xxl-none">
+          ~
+          <i
+            class="fa-solid fa-sun fa-bounce d-md-none d-lg-none d-xl-none d-xxl-none"
+            style="--fa-animation-iteration-count: 5"
+          ></i>
+        </a>
+        <a href="#" class="text-light d-none d-lg-flex d-xl-flex d-xxl-flex">
           ~ LLEGO LA NUEVA LINEA DE ALMOHADONES!!</a
         >
-        <a href="#" class="text-light">
+        <a
+          href="#"
+          class="text-light d-none d-md-flex d-lg-flex d-xl-flex d-xxl-flex"
+        >
           ~ CHEQUEA NUESTRAS PROMOS CANDENTES! ~
           <i
             class="fa-solid fa-sun fa-bounce"
@@ -131,7 +141,7 @@
     <section class="container-fluid">
       <div class="row heroTxt">
         <article
-          class="col align-items-center d-felx d-sm-flex d-md-flex flex-column borderContainer"
+          class="col align-items-center d-felx d-sm-flex d-md-flex flex-column"
         >
           <h2 class="txtHHero txtSerif text-center">IMAGINA</h2>
           <p class="txtPHeroSub text-center">
@@ -287,32 +297,25 @@
     <!--<<<<-- FOOTER ---------------------------------------------------------------------------------->
     <!--<<<<---------------------------------------------------------------------------------------------->
 
-    <footer class="container-fluid">
-      <div class="row justify-content-between">
-        <!--<<<--FOOTER ONE  ---------------------------------------------------------------------------->
-
-        <div class="col-sm-12 d-flex col-md-6 col-xl-4 col-xxl-3">
-          <div class="p-0">
+    <footer>
+      <div class="container m-0">
+        <div class="row d-flex">
+          <!--<<<--FOOTER ONE  ---------------------------------------------------------------------------->
+          <div class="col-12 col-md-6 col-xl-3">
             <ul>
               <h4 class="footerTitle">NUESTRO LOCAL</h4>
               <li>
                 <iframe
                   class="map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8323750412465!2d-68.8426698!3d-32.902599900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09133a724a37%3A0x201baf16d2a40f76!2sAv.%20San%20Mart%C3%ADn%20100%2C%20M5500EHD%20Mendoza%2C%20Argentina!5e0!3m2!1sen!2sus!4v1647193388276!5m2!1sen!2sus"
-                  width="300"
-                  height="150"
                   allowfullscreen=""
                   loading="lazy"
                 ></iframe>
               </li>
             </ul>
           </div>
-        </div>
-
-        <!--<<<--FOOTER TWO  --------------------------------------------------------------------------->
-
-        <div class="col-sm-12 d-flex col-md-6 col-xl-4 col-xxl-3">
-          <div class="p-0">
+          <!--<<<--FOOTER TWO  --------------------------------------------------------------------------->
+          <div class="col-12 col-md-4 col-xl-3">
             <ul>
               <h4 class="footerTitle">ENTRE CORTINAS DECO</h4>
               <li><a href="./info.html">Quienes somos</a></li>
@@ -321,21 +324,21 @@
               <li><a href="./info.html">Promociones vigentes</a></li>
               <h4 class="footerTitleSocial">ESTAMOS EN</h4>
               <div class="socialIcons">
-                <!--<<<<-- Fb link --------------------------------------------------------------------------->
+                <!--<<-- Fb link --------------------------------------------------------------------------->
                 <a
                   class="socialIco"
                   href="https://es-la.facebook.com/"
                   target="blank"
                   ><i class="fab fa-facebook-square fa-xl"></i
                 ></a>
-                <!--<<<<-- Insta link ------------------------------------------------------------------------>
+                <!--<<-- Insta link ------------------------------------------------------------------------>
                 <a
                   class="socialIco"
                   href="https://www.instagram.com/"
                   target="blank"
                   ><i class="fab fa-instagram-square fa-xl"></i
                 ></a>
-                <!--<<<<-- Pinterest link -------------------------------------------------------------------->
+                <!--<<-- Pinterest link -------------------------------------------------------------------->
                 <a
                   class="socialIco"
                   href="https://ar.pinterest.com/"
@@ -345,10 +348,8 @@
               </div>
             </ul>
           </div>
-        </div>
-        <!--<<<--FOOTER THREE  -------------------------------------------------------------------------->
-        <div class="col-sm-12 d-flex col-md-6 col-xl-4 col-xxl-3">
-          <div class="p-0">
+          <!--<<<--FOOTER THREE  -------------------------------------------------------------------------->
+          <div class="col-12 col-md-4 col-xl-3">
             <ul>
               <h4 class="footerTitle">INFORMACION</h4>
               <li><a href="./info.html">Como tomar medidas</a></li>
@@ -358,10 +359,8 @@
               <li><a href="./info.html">Preguntas frecuentes</a></li>
             </ul>
           </div>
-        </div>
-        <!--<<<--FOOTER FOUR  --------------------------------------------------------------------------->
-        <div class="col-sm-12 d-flex col-md-6 col-xl-4 col-xxl-3">
-          <div class="p-0">
+          <!--<<<--FOOTER FOUR  -------------------------------------------------------------------------->
+          <div class="col-12 col-md-4 col-xl-3">
             <ul>
               <h4 class="footerTitle">NEWLETTER</h4>
               <form class="formSubscribe">
@@ -369,13 +368,13 @@
                   <label for="newsletter"></label>
                   <input
                     type="email"
-                    class="text-light"
                     id="newsletter"
                     placeholder="Ingresá tu correo electrónico"
                   />
                   <p>*Este campo es obligatorio</p>
                 </div>
-                <img src="../assets/img/recaptcha.png" alt="" /> <br />
+                <img src="../assets/img/recaptcha.png" alt="" class="captcha" />
+                <br />
                 <input class="Btn" type="submit" value="Enviar" />
               </form>
             </ul>

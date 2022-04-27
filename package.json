@@ -18,5 +18,13 @@
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferjencoder/ecd_scss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ferjencoder/ecd_scss/issues"
+  },
+  "homepage": "https://github.com/ferjencoder/ecd_scss#readme"
 }

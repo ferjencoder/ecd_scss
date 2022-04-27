@@ -27,7 +27,7 @@ li {
   box-shadow: $ecd-shdw-3;
   text-transform: uppercase;
   font-family: $ecd-ff-secondary;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /*fix NO FUNK */
@@ -167,6 +167,8 @@ footer {
 }
 .map {
   filter: grayscale(1);
+  width: 16rem;
+  height: 10rem;
   /*   margin-top: 4px; */
 }
 .newsletterContainer p {
@@ -194,6 +196,10 @@ footer {
     font-size: 0.9rem;
     font-family: $ecd-ff-secondary;
   }
+}
+
+.captcha {
+  width: 16rem;
 }
 .Btn {
   font-size: 0.9rem;
