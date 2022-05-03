@@ -9,14 +9,21 @@ html {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: $ecd-ff-serif;
 }
 
 li {
   text-decoration: none;
   list-style: none;
+  font-family: $ecd-ff-serif;
 }
 
-/*<<<------------ NAV BAR --------------> */
+/*<<<------------ NAV BAR TEXT--------------> */
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: $ecd-clr-2;
+}
 
 .containerBannerMsg {
   background-color: $ecd-clr-2;
@@ -26,17 +33,34 @@ li {
 .navbar {
   box-shadow: $ecd-shdw-3;
   text-transform: uppercase;
-  font-family: $ecd-ff-secondary;
+  font-family: $ecd-ff-serif;
   font-weight: 400;
 }
 
 /*fix NO FUNK */
-.nav-link {
+.navLink {
   color: $ecd-clr-2;
   font-weight: 600;
+  border-bottom: 1px solid $ecd-clr-2;
+  &:visited {
+    color: $ecd-clr-2;
+  }
+  &:visited {
+    color: $ecd-clr-2;
+  }
+  &:focus {
+    color: $ecd-clr-3;
+  }
   &:hover {
     color: $ecd-clr-3;
   }
+  &:active {
+    color: $ecd-clr-3;
+  }
+}
+
+.navBox {
+  border-top: 1px solid $ecd-clr-2;
 }
 
 /* BUTTONS */
@@ -71,6 +95,9 @@ li {
     background: transparent;
     border-bottom: 1px solid $ecd-clr-2;
   }
+}
+.boderFull {
+  border: 1px solid $ecd-clr-2;
 }
 
 /* HERO TEXT */

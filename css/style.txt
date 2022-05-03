@@ -7819,19 +7819,13 @@ html {
 
 a {
   color: inherit;
-  text-decoration: none;
-  font-family: Georgia, serif; }
+  text-decoration: none; }
 
 li {
   text-decoration: none;
-  list-style: none;
-  font-family: Georgia, serif; }
+  list-style: none; }
 
-/*<<<------------ NAV BAR TEXT--------------> */
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
-  color: #795569; }
-
+/*<<<------------ NAV BAR --------------> */
 .containerBannerMsg {
   background-color: #795569;
   font-size: 1rem; }
@@ -7839,27 +7833,15 @@ li {
 .navbar {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   text-transform: uppercase;
-  font-family: Georgia, serif;
+  font-family: Segoe UI, sans-serif;
   font-weight: 400; }
 
 /*fix NO FUNK */
-.navLink {
+.nav-link {
   color: #795569;
-  font-weight: 600;
-  border-bottom: 1px solid #795569; }
-  .navLink:visited {
-    color: #795569; }
-  .navLink:visited {
-    color: #795569; }
-  .navLink:focus {
+  font-weight: 600; }
+  .nav-link:hover {
     color: #a6808c; }
-  .navLink:hover {
-    color: #a6808c; }
-  .navLink:active {
-    color: #a6808c; }
-
-.navBox {
-  border-top: 1px solid #795569; }
 
 /* BUTTONS */
 .btn {
@@ -7885,9 +7867,6 @@ li {
   .form-control:focus {
     background: transparent;
     border-bottom: 1px solid #795569; }
-
-.boderFull {
-  border: 1px solid #795569; }
 
 /* HERO TEXT */
 .text-dark {
