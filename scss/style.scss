@@ -63,6 +63,23 @@ li {
   border-top: 1px solid $ecd-clr-2;
 }
 
+/* WHATSAP ICON */
+
+#whatsupIcon {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  float: right;
+  top: 80%;
+  cursor: pointer;
+  min-width: 50px;
+  max-width: 150px;
+  text-align: center;
+  padding: 5px 20px;
+  margin: 0 auto 0 auto;
+  transition: All 0.5s ease;
+}
+
 /* BUTTONS */
 .btn {
   color: $ecd-clr-2;
@@ -96,8 +113,14 @@ li {
     border-bottom: 1px solid $ecd-clr-2;
   }
 }
-.boderFull {
+.borderFull {
   border: 1px solid $ecd-clr-2;
+  &:active {
+    border: 1px solid $ecd-clr-2;
+  }
+  &:focus {
+    border: 1px solid $ecd-clr-2;
+  }
 }
 
 /* HERO TEXT */
@@ -154,6 +177,8 @@ li {
 .txtHHeroHeader {
   font-size: 2.5rem;
 }
+
+/* HERO PRODUCTOS */
 
 /*<<<------------ FOOTER --------------> */
 
@@ -392,6 +417,22 @@ footer {
 .btnBagFourPop {
   top: 32%;
   right: 82.5%;
+}
+
+/*<<<------------ CAROUSEL --------------> */
+.bkgCarousel {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.txtCarousel {
+  font-family: $ecd-ff-serif;
+  color: $ecd-clr-black;
 }
 
 /*<<<------------ CARDS --------------> */

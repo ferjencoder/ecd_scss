@@ -38,9 +38,7 @@
     <title>Entre Cortinas || Cotizate!</title>
   </head>
   <body>
-    <!--<<<<---------------------------------------------------------------------------------->
     <!--<<<<-- NAV BAR --------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------->
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-light bg-light col-12 flex-column py-0"
     >
@@ -143,11 +141,9 @@
       </div>
     </nav>
 
-    <!--<<<<----------------------------------------------------------------------------------------------->
     <!--<<<<-- MAIN -------------------------------------------------------------------------------------->
-    <!--<<<<----------------------------------------------------------------------------------------------->
 
-    <!--<<<<-- HERO TEXT -------------------------------------------------------------------------------------->
+    <!--<<<-- HERO TEXT -------------------------------------------------------------------------------------->
 
     <section class="container-fluid">
       <div class="row heroTxt">
@@ -182,91 +178,143 @@
         </article>
       </div>
     </section>
+    <!--<<<-- SECTION COTIZATE -------------------------------------------------------------------------------------->
 
-    <!--<<<------------ SECTION BANNER ----------------------->
+    <section class="container-fluid d-flex justify-content-center mt-100">
+      <div
+        class="container justify-content-center d-flex flex-nowrap mb-3 mx-0 g-5 px-0 flex-column flex-xl-row"
+      >
+        <div class="container justify-content-center col-lg-8 col-xl-6">
+          <h2 class="mt-2 mb-2 text-center">COTIZATE!</h2>
+          <div>
+            <p class="m-0">
+              En este espacio podes contarnos sobre el estilo que buscas,
+              colores, que habitaciones necesitas vestir, en fin, todo aquello
+              que desees ampliar para que podamos darte una cotización hecha a
+              tu medida.
+            </p>
+          </div>
 
-    <section class="container-fluid d-flex mt-100">
-      <div class="container w-50 mb-3">
-        <div class="container d-flex flex-wrap justify-content-start w-75">
-          <h2 class="mt-2 mb-2">DEJANOS TU MENSAJE</h2>
-          <p class="pb-2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-            explicabo veritatis et molestiae debitis numquam distinctio
-            blanditiis quasi sequi minus.
-          </p>
-          <form action="" method="post">
-            <div class="row">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Nombre</label
+          <div class="container px-0 pe-md-5">
+            <form action="" method="post">
+              <div class="row">
+                <div
+                  class="container d-flex justify-content-between align-items-center"
                 >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="..."
-                />
+                  <div class="my-3">
+                    <label for="inputText1" class="form-label">Alto</label>
+                    <input type="text" class="form-control" id="inputText1" />
+                  </div>
+                  <div class="my-3">
+                    <label for="inputText2" class="form-label">Ancho</label>
+                    <input type="text" class="form-control" id="inputText2" />
+                  </div>
+                  <div class="my-3">
+                    <span
+                      class="d-inline-block"
+                      tabindex="0"
+                      data-bs-toggle="popover"
+                      data-bs-trigger="hover focus"
+                      data-bs-content="Disabled popover"
+                    >
+                      <button
+                        class="btn btm-light shadow-none"
+                        type="button"
+                        disabled
+                      >
+                        <i class="fas fa-info-circle fa-xl"></i>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="my-3">
+                  <label for="inputTipo" class="form-label"
+                    >Tipo de cortina</label
+                  >
+                  <select
+                    id="inputTipo"
+                    class="form-select borderFull shadow-none"
+                  >
+                    <option selected>Selecciona el tipo de cortina...</option>
+                    <option>Roller Sunscreen</option>
+                    <option>Roller Black Out</option>
+                    <option>Tradicionales livianas</option>
+                    <option>Toldos Verticales</option>
+                    <option>Toldos de Brazos Invisibles</option>
+                  </select>
+                </div>
+                <div class="my-3">
+                  <label for="inputMaterial" class="form-label">Material</label>
+                  <select
+                    id="inputMaterial"
+                    class="form-select borderFull shadow-none"
+                  >
+                    <option selected>Selecciona el material...</option>
+                    <option>Black out vinílico</option>
+                    <option>Black out lino</option>
+                    <option>Black out seda</option>
+                    <option>Black out textil</option>
+                  </select>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input borderFull shadow-none"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Agregar accesorios
+                  </label>
+                </div>
+                <div class="my-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Mensaje</label
+                  >
+                  <textarea
+                    class="form-control borderFull shadow-none"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput2" class="form-label"
-                  >Teléfono</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleFormControlInput2"
-                  placeholder="299-555-5555"
-                />
+              <div class="my-3">
+                <button type="submit" class="my-3 border-0 bg-transparent">
+                  <a href="#" class="btnCard">Enviar</a>
+                </button>
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput3" class="form-label"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput3"
-                  placeholder="name@example.com"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Mensaje</label
-                >
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div>
-            </div>
-            <div class="mb-3">
-              <button type="submit" class="btnCard mb-3">Enviar</button>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div class="p-0 d-none d-xl-flex flex-column pe-md-5">
+            <h6 class="mt-2">TELEFONO</h6>
+            <span class="form-control p-0"></span>
+            <a href="tel:+542995555555" type="call"><p>+54 299 555 5555</p></a>
+            <h6 class="mt-2">VISITANOS EN NUESTRO LOCAL</h6>
+            <span class="form-control p-0"></span>
+            <p>Av. San Martín 100, Capital, Mendoza.</p>
+            <h6 class="mt-2">HORARIOS DE ATENCION</h6>
+            <span class="form-control p-0"></span>
+            <p>Lunes a viernes de 09:00 a 13:00 hs y de 14:30 a 17:00 hs.</p>
+            <h6 class="mt-2">MEDIOS DE PAGO</h6>
+            <span class="form-control p-0"></span>
+            <p>
+              Efectivo - Transferencia - Cheque - Tarjetas de débito/crédito -
+              Mercado Pago
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="container d-flex flex-wrap justify-content-start w-50 mb-5">
-        <div class="p-0">
-          <h2>VISITANOS EN NUESTRO LOCAL</h2>
-          <ul class="mapContacto">
-            <li>
-              <iframe
-                class="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8323750412465!2d-68.8426698!3d-32.902599900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09133a724a37%3A0x201baf16d2a40f76!2sAv.%20San%20Mart%C3%ADn%20100%2C%20M5500EHD%20Mendoza%2C%20Argentina!5e0!3m2!1sen!2sus!4v1647193388276!5m2!1sen!2sus"
-                width="400"
-                height="250"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </li>
-          </ul>
+        <div class="container d-flex text-center align-items-center">
+          <div class="card">
+            <img
+              src="../assets/img/ecd_people_01.webp"
+              alt=""
+              class="card-img-top"
+            />
+          </div>
         </div>
       </div>
     </section>
-    <!--<<<<---------------------------------------------------------------------------------------------->
+
     <!--<<<<-- FOOTER ---------------------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------------------->
 
     <footer class="container-fluid">
       <div class="row justify-content-between">
@@ -364,9 +412,7 @@
       </div>
     </footer>
 
-    <!--<<<<---------------------------------------------------------------------------------------------->
     <!--<<<<-- SCRIPTS ---------------------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------------------->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

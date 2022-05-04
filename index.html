@@ -31,12 +31,11 @@
     <!--<<<------------ CSS CUSTOM ----------------------------------------------------------->
     <link rel="stylesheet" href="./css/custom.css" />
 
-    <title>Entre Cortinas || Home</title>
+    <title>Casa de cortinas || Entre Cortinas</title>
   </head>
   <body>
-    <!--<<<<---------------------------------------------------------------------------------->
     <!--<<<<-- NAV BAR --------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------->
+
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-light bg-light col-12 col-md flex-column py-0"
     >
@@ -138,13 +137,10 @@
         </div>
       </div>
     </nav>
-    <!--<<<<---------------------------------------------------------------------------------->
-    <!--<<<<-- MAIN ------------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------->
 
-    <!--<<<------------------------------------------------------------------------------------>
+    <!--<<<<-- MAIN ------------------------------------------------------------------------->
+
     <!--<<<-- HERO TEXT SECTION ONE ------------------------------------------------------>
-    <!--<<<------------------------------------------------------------------------------------>
 
     <section class="container-fluid">
       <div class="row heroTxt">
@@ -182,17 +178,17 @@
       </div>
     </section>
 
-    <!--<<<------------------------------------------------------------------------------------>
     <!--<<<-- HERO IMAGE ------------------------------------------------------------------->
-    <!--<<<------------------------------------------------------------------------------------>
     <div class="container-fluid my-5">
-      <img src="./assets/img/ecd_img_hero_08.jpg" alt="" class="img-fluid" />
+      <img
+        src="./assets/img/ecd_img_hero_08.jpg"
+        alt="Imagen de livingroom con cortinas blakout en gamusa gris y cortinas en gasa blanca, sofa con almohadones de diferentes materiales y tonalidades y una manta de faux piel"
+        class="img-fluid"
+      />
     </div>
-    <!--<<<------------------------------------------------------------------------------------>
     <!--<<<-- HERO CAROUSEL --------------------------------------------------------------->
-    <!--<<<------------------------------------------------------------------------------------>
 
-    <section class="container-fluid d-flex carousel-dark">
+    <section class="container-fluid d-flex carousel-light fs-4">
       <div
         id="carouselExampleCaptions"
         class="carousel slide"
@@ -231,11 +227,11 @@
             <img
               src="./assets/img/ecd_carousel_02.jpg"
               class="img-fluid w-90"
-              alt="..."
+              alt="Imagen de cortinas de gasa en colores violetas, verdes y naranja, de estilo hippy chic"
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">IMAGINA</h5>
-              <p class="textPHero">
+            <div class="carousel-caption d-none d-md-block bkgCarousel">
+              <h2 class="txtCarousel fs-1">IMAGINA</h2>
+              <p class="txtCarousel">
                 tradicionales livianas, diseño, calidez, estilo
               </p>
             </div>
@@ -244,39 +240,33 @@
             <img
               src="./assets/img/ecd_carousel_01.jpg"
               class="img-fluid w-90"
-              alt="..."
+              alt="Imagen de una cama con una manta de faux piel, otra manta tejida en tonos crudos y cortinas de voile de lino en tono crudo que cae sobre el colchón."
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">IMAGINA</h5>
-              <p class="textPHero">
-                tradicionales livianas, diseño, calidez, estilo
-              </p>
+            <div class="carousel-caption d-none d-md-block bkgCarousel">
+              <h5 class="txtCarousel fs-1">INSPIRATE</h5>
+              <p class="txtCarousel">te mostramos las ultimas tendencias</p>
             </div>
           </div>
           <div class="carousel-item">
             <img
               src="./assets/img/ecd_carousel_03.jpg"
               class="img-fluid w-90"
-              alt="..."
+              alt="Imagen de cortinas blakout grises y cortinas de gasa blanca"
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">IMAGINA</h5>
-              <p class="textPHero">
-                tradicionales livianas, diseño, calidez, estilo
-              </p>
+            <div class="carousel-caption d-none d-md-block bkgCarousel">
+              <h5 class="txtCarousel fs-1">DISEÑA</h5>
+              <p class="txtCarousel">con nuestros blakouts</p>
             </div>
           </div>
           <div class="carousel-item">
             <img
               src="./assets/img/ecd_carousel_04.jpg"
               class="img-fluid w-90"
-              alt="..."
+              alt="Imagen de cortinas de viole y cortinas blakout en rosa viejo. Silla de mimbre con manta de tejida en color blanco."
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">IMAGINA</h5>
-              <p class="textPHero">
-                tradicionales livianas, diseño, calidez, estilo
-              </p>
+            <div class="carousel-caption d-none d-md-block bkgCarousel">
+              <h5 class="txtCarousel fs-1">ELIGE</h5>
+              <p class="txtCarousel">te mostramos todas las opciones</p>
             </div>
           </div>
         </div>
@@ -301,9 +291,15 @@
       </div>
     </section>
 
-    <!--<<<<---------------------------------------------------------------------------------------------->
+    <!--<<<-- WHATS APP -------------------------------------------------------------------->
+
+    <div class="float-end mb-2 me-2">
+      <a href="./pages/whatsapp.html" target="blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
     <!--<<<<-- FOOTER ---------------------------------------------------------------------------------->
-    <!--<<<<---------------------------------------------------------------------------------------------->
 
     <footer>
       <div class="container m-0">
@@ -381,7 +377,11 @@
                   />
                   <p>*Este campo es obligatorio</p>
                 </div>
-                <img src="./assets/img/recaptcha.png" alt="" class="captcha" />
+                <img
+                  src="./assets/img/recaptcha.png"
+                  alt="Imagen recaptcha para validar la presencia de una persona"
+                  class="captcha"
+                />
                 <br />
                 <input class="Btn" type="submit" value="Enviar" />
               </form>
@@ -401,8 +401,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
-
     <script src="./app.js"></script>
-    <script src="./test.js"></script>
   </body>
 </html>
