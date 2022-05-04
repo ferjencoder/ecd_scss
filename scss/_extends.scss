@@ -1,0 +1,11 @@
+/* EXTEND */
+
+.firstStyle {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.secondStyle {
+  @extend .firstStyle;
+  font-weight: 600;
+}
