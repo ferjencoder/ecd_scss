@@ -4,8 +4,14 @@
 
 ## TO FIX
 
--NAV BAR SEARCH INPUT => fix closing x icon (blue)
+# ![alt text](https://ibb.co/VHhRPLr "Logo de Entre Cortinas") Entre Cortinas
 
--Eliminar txtSerif de las pages sólo en indx en heroTxt 1
--Add whatsuppp
--Arreglar responsive toasts
+Shopping website for a company that designs, produces and installs curtains, pillows, throws and more.
+
+https://github.com/ferjencoder/ecd_scss
+
+### How it works
+
+Hope you like it and comment if you have suggestions! Feedback lover here 🤓!
+
+# ![alt text](https://ibb.co/qr8XyD2 "Image of the site")
