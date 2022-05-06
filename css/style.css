@@ -7871,7 +7871,6 @@ li {
   list-style: none;
   font-family: Georgia, serif; }
 
-/* ACCORDION OVERRIDES */
 /*<<<------------ NAV BAR TEXT--------------> */
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
@@ -7907,19 +7906,11 @@ li {
   border-top: 1px solid #795569; }
 
 /* WHATSAP ICON */
-#whatsupIcon {
-  position: fixed;
-  z-index: 9999;
-  right: 0;
-  float: right;
-  top: 80%;
-  cursor: pointer;
-  min-width: 50px;
-  max-width: 150px;
-  text-align: center;
-  padding: 5px 20px;
-  margin: 0 auto 0 auto;
-  transition: All 0.5s ease; }
+.whatsappIcon {
+  border-radius: 5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  width: 2.2rem;
+  height: 2.2rem; }
 
 /* BUTTONS */
 .btn {
@@ -8003,7 +7994,7 @@ li {
 .txtHHeroHeader {
   font-size: 2.5rem; }
 
-/* HERO PRODUCTOS */
+/* FAQ ACCORDION */
 /*<<<------------ FOOTER --------------> */
 footer {
   margin-top: 4rem;
@@ -8114,6 +8105,7 @@ footer {
 
 .toastHeader {
   font-family: Georgia, serif;
+  font-size: 1rem;
   color: white;
   font-weight: 200;
   letter-spacing: 0.07rem;
@@ -8126,6 +8118,7 @@ footer {
 .toastBody {
   font-family: Segoe UI, sans-serif;
   color: #191919;
+  font-size: 1rem;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.36);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

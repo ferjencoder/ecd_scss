@@ -18,13 +18,6 @@ li {
   font-family: $ecd-ff-serif;
 }
 
-/* ACCORDION OVERRIDES */
-
-$accordion-icon-color: $primary;
-$accordion-icon-active-color: $secondary;
-$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
-$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
-
 /*<<<------------ NAV BAR TEXT--------------> */
 
 .nav-tabs .nav-link.active,
@@ -72,19 +65,11 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 
 /* WHATSAP ICON */
 
-#whatsupIcon {
-  position: fixed;
-  z-index: 9999;
-  right: 0;
-  float: right;
-  top: 80%;
-  cursor: pointer;
-  min-width: 50px;
-  max-width: 150px;
-  text-align: center;
-  padding: 5px 20px;
-  margin: 0 auto 0 auto;
-  transition: All 0.5s ease;
+.whatsappIcon {
+  border-radius: 5rem;
+  box-shadow: $ecd-shdw-3;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 /* BUTTONS */
@@ -185,7 +170,7 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
   font-size: 2.5rem;
 }
 
-/* HERO PRODUCTOS */
+/* FAQ ACCORDION */
 
 /*<<<------------ FOOTER --------------> */
 
@@ -312,6 +297,7 @@ footer {
 }
 .toastHeader {
   font-family: $ecd-ff-serif;
+  font-size: 1rem;
   color: white;
   font-weight: 200;
   letter-spacing: 0.07rem;
@@ -324,6 +310,7 @@ footer {
 .toastBody {
   font-family: $ecd-ff-secondary;
   color: $ecd-clr-black;
+  font-size: 1rem;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.36);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
