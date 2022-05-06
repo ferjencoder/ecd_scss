@@ -6,6 +6,8 @@ Shopping website for a company that designs, produces and installs curtains, pil
 
 https://github.com/ferjencoder/ecd_scss
 
+https://ferjencoder.github.io/ecd_scss/
+
 Hope you like it and comment if you have suggestions! Feedback lover here 🤓!
 
 # ![alt text](https://i.ibb.co/jJpmnX1/ecd-web.jpg "Image of Entre Cortina's site")
