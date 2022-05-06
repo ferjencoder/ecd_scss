@@ -182,102 +182,83 @@
 
     <!--<<<-- SECTION CONTACTO ------------------------------------------------------------------------------------->
 
-    <section class="container-fluid d-flex justify-content-center mt-100">
-      <div
-        class="container justify-content-center d-flex flex-nowrap mb-3 mx-0 g-5 px-0 flex-column flex-xl-row"
-      >
-        <div class="container justify-content-center col-lg-8 col-xl-6">
-          <h2 class="my-2 text-start">DEJANOS TU MENSAJE</h2>
-          <div>
-            <p class="m-0">
-              Contactanos a través de este formulario o a nuestro correo:
-            </p>
-            <a
-              href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20"
-              class="my-2 link-primary"
-              >contacto@entrecortinas.com.ar</a
-            >
-          </div>
+    <section id="contact" class="get-started">
+      <div class="container">
+        <div class="row flex-md-row-reverse">
+          <div class="col-12 col-lg-6 p-3">
+            <div class="form w-100 pb-2">
+              <h2 class="my-2 text-start">DEJANOS TU MENSAJE</h2>
+              <div>
+                <p class="m-0">
+                  Contactanos a través de este formulario o a nuestro correo:
+                </p>
+                <a
+                  href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20"
+                  class="my-2 link-primary"
+                  >contacto@entrecortinas.com.ar</a
+                >
+              </div>
+            </div>
 
-          <div class="container px-0 pe-md-5">
-            <form action="" method="post">
-              <div class="row">
-                <div class="my-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Nombre</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control borderFull shadow-none"
-                    id="exampleFormControlInput1"
-                    placeholder="..."
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput2" class="form-label"
-                    >Teléfono</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control borderFull shadow-none"
-                    id="exampleFormControlInput2"
-                    placeholder="299-555-5555"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput3" class="form-label"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control borderFull shadow-none"
-                    id="exampleFormControlInput3"
-                    placeholder="email@email.com"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label"
-                    >Mensaje</label
-                  >
-                  <textarea
-                    class="form-control borderFull shadow-none"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  ></textarea>
-                </div>
+            <form
+              onsubmit="sendEmail(); reset(); return false;"
+              class="row mt-3"
+            >
+              <div class="mb-3">
+                <input
+                  type="text"
+                  placeholder="Nombre y Apellido"
+                  id="inputName"
+                  class="form-control borderFull shadow-none"
+                />
               </div>
               <div class="mb-3">
-                <button type="submit" class="mb-3 border-0 bg-transparent">
-                  <a href="#" class="btnCard">Enviar</a>
+                <input
+                  type="text"
+                  placeholder="Teléfono ej. 299 527 1223"
+                  id="inputTelefono"
+                  class="form-control borderFull shadow-none"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  id="inputEmail"
+                  class="form-control borderFull shadow-none"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="8"
+                  class="form-control borderFull shadow-none"
+                  placeholder="Mensaje"
+                ></textarea>
+              </div>
+              <div class="text-center d-grid mt-1">
+                <button
+                  type="submit"
+                  class="py-3 shadow-none bg-transparent border-0 text-end me-5"
+                >
+                  <p class="btn bntCard bg-primary text-white text-uppercase">
+                    Enviar
+                  </p>
+                  <!-- <a href="#" class="btnCard"></a> -->
                 </button>
               </div>
             </form>
           </div>
-          <div class="p-0 d-none d-xl-flex flex-column pe-md-5">
-            <h6 class="mt-2">TELEFONO</h6>
-            <span class="form-control p-0"></span>
-            <a href="tel:+542995555555" type="call"><p>+54 299 555 5555</p></a>
-            <h6 class="mt-2">VISITANOS EN NUESTRO LOCAL</h6>
-            <span class="form-control p-0"></span>
-            <p>Av. San Martín 100, Capital, Mendoza.</p>
-            <h6 class="mt-2">HORARIOS DE ATENCION</h6>
-            <span class="form-control p-0"></span>
-            <p>Lunes a viernes de 09:00 a 13:00 hs y de 14:30 a 17:00 hs.</p>
-            <h6 class="mt-2">MEDIOS DE PAGO</h6>
-            <span class="form-control p-0"></span>
-            <p>
-              Efectivo - Transferencia - Cheque - Tarjetas de débito/crédito -
-              Mercado Pago
-            </p>
-          </div>
-        </div>
-        <div class="container d-flex text-center align-items-center">
-          <div class="card">
-            <img
-              src="../assets/img/ecd_fabrics_03.jpg"
-              alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe."
-              class="card-img-top"
-            />
+          <div class="col-12 col-lg-6 p-3">
+            <div class="w-100">
+              <img
+                src="../assets/img/ecd_blackout-01_650X770_01.jpg"
+                alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe."
+                class="card-img-top"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -406,5 +387,6 @@
     ></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="../app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

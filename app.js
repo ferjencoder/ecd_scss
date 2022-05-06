@@ -201,3 +201,17 @@ const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 
 yearEl.textContent = currentYear;
+
+//<<<------ EMAIL -----------------------------------------------------
+
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "examen.efip@gmail.com",
+    Password: "0704eE0503*",
+    To: "examen.efip@gmail.com",
+    From: document.getElementById("email").value,
+    Subject: "Email de ECD site",
+    Body: "Contacto: ",
+  }).then((message) => alert(message));
+}
