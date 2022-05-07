@@ -195,13 +195,48 @@
             </p>
           </div>
 
-          <div class="container px-0 pe-md-5">
+          <div class="container px-0 mt-4 my-2">
             <form name="cotizate" method="POST" data-netlify="true">
               <div class="row">
                 <div
+                  class="container-fluid justify-content-between align-items-center row"
+                >
+                  <div class="field col-6 my-2">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control borderFull shadow-none"
+                      id="name"
+                    />
+                  </div>
+                  <div class="field col-6 my-2">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      type="number"
+                      name="telefono"
+                      class="form-control borderFull shadow-none"
+                      id="telefono"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="container justify-content-between align-items-center"
+                >
+                  <div class="field my-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control borderFull shadow-none"
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <div
                   class="container d-flex justify-content-between align-items-center"
                 >
-                  <div class="field my-3">
+                  <div class="field my-2">
                     <label for="inputText1" class="form-label">Alto</label>
                     <input
                       type="number"
@@ -210,7 +245,7 @@
                       id="inputText1"
                     />
                   </div>
-                  <div class="field my-3">
+                  <div class="field my-2">
                     <label for="inputText2" class="form-label">Ancho</label>
                     <input
                       type="number"
@@ -219,13 +254,13 @@
                       id="inputText2"
                     />
                   </div>
-                  <div class="field my-3">
+                  <div class="field my-2">
                     <a href="./info.html" class="btn shadow-none"
                       ><i class="fas fa-info-circle fa-xl"></i
                     ></a>
                   </div>
                 </div>
-                <div class="field my-3">
+                <div class="field my-2">
                   <label for="inputTipo" class="form-label"
                     >Tipo de cortina</label
                   >
@@ -245,7 +280,7 @@
                     </option>
                   </select>
                 </div>
-                <div class="field my-3">
+                <div class="field my-2">
                   <label for="inputMaterial" class="form-label">Material</label>
                   <select
                     name="role[]"
@@ -260,7 +295,7 @@
                     <option value="textil">Blackout textil</option>
                   </select>
                 </div>
-                <div class="field form-check">
+                <div class="field my-2">
                   <input
                     name="accesorios"
                     class="form-check-input borderFull shadow-none"
@@ -271,7 +306,7 @@
                     Agregar accesorios
                   </label>
                 </div>
-                <div class="field my-3">
+                <div class="field my-2">
                   <label for="exampleFormControlTextarea1" class="form-label"
                     >Mensaje</label
                   >
@@ -283,15 +318,15 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="field my-3">
-                <button type="submit" class="my-3 border-0 bg-transparent">
+              <div class="field my-2">
+                <button type="submit" class="my-2 border-0 bg-transparent">
                   <a href="#" class="btnCard">Enviar</a>
                 </button>
               </div>
             </form>
           </div>
-          <div class="p-0 d-none d-xl-flex flex-column pe-md-5">
-            <h6 class="mt-2">TELEFONO</h6>
+          <div class="p-0 d-none d-xl-flex flex-column">
+            <h6 class="mt-5">TELEFONO</h6>
             <span class="form-control p-0"></span>
             <a href="tel:+542995555555" type="call"><p>+54 299 555 5555</p></a>
             <h6 class="mt-2">VISITANOS EN NUESTRO LOCAL</h6>
@@ -308,12 +343,12 @@
             </p>
           </div>
         </div>
-        <div class="container d-flex text-center align-items-center">
-          <div class="card">
+        <div class="container d-flex text-center align-content-start">
+          <div class="card mt-5">
             <img
               src="../assets/img/ecd_people_01.webp"
               alt=""
-              class="card-img-top"
+              class="card-img-top mt-0"
             />
           </div>
         </div>
