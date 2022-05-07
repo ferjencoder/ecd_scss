@@ -204,20 +204,30 @@ yearEl.textContent = currentYear;
 
 //<<<------ EMAIL -----------------------------------------------------
 
-function sendEmail() {
-  Email.send({
-    SecureToken: "455fc679-b8b4-4a2c-a058-23fb9e051880",
-    To: "examen.efip@gmail.com",
-    From: document.getElementById("email").value,
-    Subject: "Email de ECD site",
-    Body:
-      "Name: " +
-      document.getElementById("inputName").value +
-      "<br> Teléfono: " +
-      document.getElementById("inputTelefono").value +
-      "<br> Email: " +
-      document.getElementById("inputEmail").value +
-      "<br> Mensaje: " +
-      document.getElementById("message").value,
-  }).then((message) => alert("Email enviado! En breve estaremos en contacto"));
-}
+// function sendEmail() {
+//   Email.send({
+//     SecureToken: "455fc679-b8b4-4a2c-a058-23fb9e051880",
+//     To: "examen.efip@gmail.com",
+//     From: document.getElementById("email").value,
+//     Subject: "Email de ECD site",
+//     Body:
+//       "Name: " +
+//       document.getElementById("inputName").value +
+//       "<br> Teléfono: " +
+//       document.getElementById("inputTelefono").value +
+//       "<br> Email: " +
+//       document.getElementById("inputEmail").value +
+//       "<br> Mensaje: " +
+//       document.getElementById("message").value,
+//   }).then((message) => alert("Email enviado! En breve estaremos en contacto"));
+// }
+
+// function sendEmail() {
+//   Email.send({
+//     SecureToken: "455fc679-b8b4-4a2c-a058-23fb9e051880",
+//     To: "examen.efip@gmail.com",
+//     From: document.getElementById("inputEmail").value,
+//     Subject: "This is the subject",
+//     Body: "And this is the body",
+//   }).then((message) => alert(message));
+// }
