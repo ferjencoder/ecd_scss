@@ -182,7 +182,7 @@
 
     <!--<<<-- SECTION CONTACTO ------------------------------------------------------------------------------------->
 
-    <section id="contact" class="get-started">
+    <section id="contacto" class="get-started">
       <div class="container">
         <div class="row flex-md-row-reverse">
           <div class="col-12 col-lg-6 p-3">
@@ -200,7 +200,12 @@
               </div>
             </div>
 
-            <form action="proyectos.html" data-netlify="true" class="row mt-3">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              class="row mt-3"
+            >
               <div class="field mb-3">
                 <input
                   type="text"
@@ -360,11 +365,17 @@
           <div class="p-0">
             <ul>
               <h4 class="footerTitle">NEWLETTER</h4>
-              <form class="formSubscribe">
+              <form
+                name="newsletter"
+                method="POST"
+                data-netlify-recaptcha="true"
+                data-netlify="true"
+                class="formSubscribe"
+              >
                 <div class="field newsletterContainer">
-                  <label for="newsletter"></label>
                   <input
                     type="email"
+                    name="email"
                     id="newsletter"
                     placeholder="Ingresá tu correo electrónico"
                   />
@@ -374,26 +385,6 @@
                 </div>
               </form>
             </ul>
-            <!--             <ul>
-              <h4 class="footerTitle">NEWLETTER</h4>
-              <form class="formSubscribe">
-                <div class="newsletterContainer">
-                  <label for="newsletter"></label>
-                  <input
-                    type="email"
-                    id="newsletter"
-                    placeholder="Ingresá tu correo electrónico"
-                  />
-                  <p>*Este campo es obligatorio</p>
-                </div>
-                <img
-                  src="../assets/img/recaptcha.png"
-                  alt="Imagen recaptcha para validar la presencia de una persona"
-                />
-                <br />
-                <input class="Btn" type="submit" value="Enviar" />
-              </form>
-            </ul> -->
           </div>
         </div>
       </div>
