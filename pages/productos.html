@@ -1025,22 +1025,24 @@
           <div class="p-0">
             <ul>
               <h4 class="footerTitle">NEWLETTER</h4>
-              <form class="formSubscribe">
-                <div class="newsletterContainer">
-                  <label for="newsletter"></label>
+              <form
+                name="newsletter"
+                method="POST"
+                data-netlify-recaptcha="true"
+                data-netlify="true"
+                class="formSubscribe"
+              >
+                <div class="field newsletterContainer">
                   <input
                     type="email"
+                    name="email"
                     id="newsletter"
                     placeholder="Ingresá tu correo electrónico"
                   />
                   <p>*Este campo es obligatorio</p>
+                  <div data-netlify-recaptcha="true" class="mt-2"></div>
+                  <input class="Btn" type="submit" value="Enviar" />
                 </div>
-                <img
-                  src="../assets/img/recaptcha.png"
-                  alt="Imagen recaptcha para validar la presencia de una persona"
-                />
-                <br />
-                <input class="Btn" type="submit" value="Enviar" />
               </form>
             </ul>
           </div>

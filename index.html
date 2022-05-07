@@ -367,28 +367,31 @@
             </ul>
           </div>
           <!--<<<--FOOTER FOUR  -------------------------------------------------------------------------------------->
-          <div class="col-12 col-md-4 col-xl-3">
-            <ul>
-              <h4 class="footerTitle">NEWLETTER</h4>
-              <form class="formSubscribe">
-                <div class="newsletterContainer">
-                  <label for="newsletter"></label>
-                  <input
-                    type="email"
-                    id="newsletter"
-                    placeholder="Ingresá tu correo electrónico"
-                  />
-                  <p>*Este campo es obligatorio</p>
-                </div>
-                <img
-                  src="./assets/img/recaptcha.png"
-                  alt="Imagen recaptcha para validar la presencia de una persona"
-                  class="captcha"
-                />
-                <br />
-                <input class="Btn" type="submit" value="Enviar" />
-              </form>
-            </ul>
+          <div class="col-sm-12 d-flex col-md-6 col-xl-4 col-xxl-3">
+            <div class="p-0">
+              <ul>
+                <h4 class="footerTitle">NEWLETTER</h4>
+                <form
+                  name="newsletter"
+                  method="POST"
+                  data-netlify-recaptcha="true"
+                  data-netlify="true"
+                  class="formSubscribe"
+                >
+                  <div class="field newsletterContainer">
+                    <input
+                      type="email"
+                      name="email"
+                      id="newsletter"
+                      placeholder="Ingresá tu correo electrónico"
+                    />
+                    <p>*Este campo es obligatorio</p>
+                    <div data-netlify-recaptcha="true" class="mt-2"></div>
+                    <input class="Btn" type="submit" value="Enviar" />
+                  </div>
+                </form>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
