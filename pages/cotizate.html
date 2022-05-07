@@ -197,116 +197,128 @@
 
           <div class="container px-0 mt-4 my-2">
             <form name="cotizate" method="POST" data-netlify="true">
-              <div class="row">
+              <div class="row d-flex">
                 <div
-                  class="container-fluid justify-content-between align-items-center row"
+                  class="container-fluid d-flex justify-content-between align-items-center"
                 >
-                  <div class="field col-6 my-2">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control borderFull shadow-none"
-                      id="name"
-                    />
+                  <div class="field col-6 my-1">
+                    <label for="name" class="form-label col-12 pe-2"
+                      >Nombre
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control borderFull shadow-none"
+                        id="name"
+                      />
+                    </label>
                   </div>
-                  <div class="field col-6 my-2">
-                    <label for="telefono" class="form-label">Teléfono</label>
-                    <input
-                      type="number"
-                      name="telefono"
-                      class="form-control borderFull shadow-none"
-                      id="telefono"
-                    />
+                  <div class="field col-6 my-1">
+                    <label for="telefono" class="form-label col-12 ps-2"
+                      >Teléfono
+                      <input
+                        type="tel"
+                        name="telefono"
+                        class="form-control borderFull shadow-none"
+                        id="telefono"
+                      />
+                    </label>
                   </div>
                 </div>
-                <div
-                  class="container justify-content-between align-items-center"
-                >
-                  <div class="field my-2">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control borderFull shadow-none"
-                      id="email"
-                    />
+                <div class="container-fluid">
+                  <div class="field my-1">
+                    <label for="email" class="form-label col-12"
+                      >Email
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control borderFull shadow-none"
+                        id="email"
+                      />
+                    </label>
                   </div>
                 </div>
                 <div
                   class="container d-flex justify-content-between align-items-center"
                 >
-                  <div class="field my-2">
-                    <label for="inputText1" class="form-label">Alto</label>
-                    <input
-                      type="number"
-                      name="alto"
-                      class="form-control borderFull shadow-none"
-                      id="inputText1"
-                    />
+                  <div class="field col-6 my-1">
+                    <label for="alto" class="form-label col-12 pe-2"
+                      >Alto
+                      <input
+                        type="number"
+                        name="alto"
+                        class="form-control borderFull shadow-none"
+                        id="alto"
+                      />
+                    </label>
                   </div>
-                  <div class="field my-2">
-                    <label for="inputText2" class="form-label">Ancho</label>
-                    <input
-                      type="number"
-                      name="ancho"
-                      class="form-control borderFull shadow-none"
-                      id="inputText2"
-                    />
-                  </div>
-                  <div class="field my-2">
-                    <a href="./info.html" class="btn shadow-none"
-                      ><i class="fas fa-info-circle fa-xl"></i
-                    ></a>
+                  <div class="field col-6 my-1">
+                    <label for="inputText2" class="form-label col-12 ps-2"
+                      >Ancho
+                      <input
+                        type="number"
+                        name="ancho"
+                        class="form-control borderFull shadow-none"
+                        id="inputText2"
+                      />
+                    </label>
                   </div>
                 </div>
-                <div class="field my-2">
-                  <label for="inputTipo" class="form-label"
-                    >Tipo de cortina</label
-                  >
-                  <select
-                    name="role[]"
-                    multiple
-                    id="inputTipo"
-                    class="form-select borderFull shadow-none"
-                  >
-                    <option selected>Selecciona el tipo de cortina...</option>
-                    <option value="sunscreen">Roller Sunscreen</option>
-                    <option value="blackout">Roller Blackout</option>
-                    <option value="livianas">Tradicionales livianas</option>
-                    <option value="toldovert">Toldos Verticales</option>
-                    <option value="toldoinvsible">
-                      Toldos de Brazos Invisibles
-                    </option>
-                  </select>
+                <div
+                  class="container d-flex justify-content-between align-items-center"
+                >
+                  <div class="field col-6 my-1">
+                    <label for="inputTipo" class="form-label col-12 pe-2"
+                      >Tipo de cortina
+
+                      <select
+                        name="tipo"
+                        id="inputTipo"
+                        class="form-select borderFull shadow-none"
+                      >
+                        <option value="sunscreen" selected>
+                          Roller Sunscreen
+                        </option>
+                        <option value="blackout">Roller Blackout</option>
+                        <option value="livianas">Tradicionales livianas</option>
+                        <option value="toldovert">Toldos Verticales</option>
+                        <option value="toldoinvsible">
+                          Toldos de Brazos Invisibles
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="field col-6 my-1">
+                    <label for="inputMaterial" class="form-label col-12 ps-2"
+                      >Material
+                      <select
+                        name="material"
+                        aria-label="multiple select example"
+                        id="inputMaterial"
+                        class="form-select borderFull shadow-none"
+                      >
+                        <option value="vinilico" selected>
+                          Blackout vinílico
+                        </option>
+                        <option value="lino">Blackout lino</option>
+                        <option value="seda">Blackout seda</option>
+                        <option value="textil">Blackout textil</option>
+                      </select>
+                    </label>
+                  </div>
                 </div>
-                <div class="field my-2">
-                  <label for="inputMaterial" class="form-label">Material</label>
-                  <select
-                    name="role[]"
-                    multiple
-                    id="inputMaterial"
-                    class="form-select borderFull shadow-none"
-                  >
-                    <option selected>Selecciona el material...</option>
-                    <option value="vinilico">Blackout vinílico</option>
-                    <option value="lino">Blackout lino</option>
-                    <option value="seda">Blackout seda</option>
-                    <option value="textil">Blackout textil</option>
-                  </select>
-                </div>
-                <div class="field my-2">
-                  <input
-                    name="accesorios"
-                    class="form-check-input borderFull shadow-none"
-                    type="checkbox"
-                    id="gridCheck"
-                  />
+                <div class="container-fluid d-flex row">
                   <label class="form-check-label" for="gridCheck">
-                    Agregar accesorios
+                    <div class="field my-1">
+                      <input
+                        name="accesorios"
+                        class="form-check-input borderFull shadow-none me-2"
+                        type="checkbox"
+                        id="gridCheck"
+                      />Agregar accesorios
+                    </div>
                   </label>
                 </div>
-                <div class="field my-2">
+                <div class="field my-1">
                   <label for="exampleFormControlTextarea1" class="form-label"
                     >Mensaje</label
                   >
@@ -318,9 +330,20 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="field my-2">
+              <!-- <div class="field my-2">
                 <button type="submit" class="my-2 border-0 bg-transparent">
                   <a href="#" class="btnCard">Enviar</a>
+                </button>
+              </div> -->
+              <div class="text-center d-grid mt-1">
+                <button
+                  type="submit"
+                  value="Send Message"
+                  class="py-3 shadow-none bg-transparent border-0 text-end me-0"
+                >
+                  <p class="btn bntCard bg-primary text-white text-uppercase">
+                    Enviar
+                  </p>
                 </button>
               </div>
             </form>
