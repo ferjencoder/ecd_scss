@@ -10,3 +10,6 @@ pages/productos-copy.html
 pages/productos-copy-1.html
 pages/contacto-copy.html
 pages/cotizate-copy.html
+pages/productos-toast.html
+pages/productos-popover.html
+assets/js/bootstrap.bundle.js
