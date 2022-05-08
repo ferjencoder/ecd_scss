@@ -15,6 +15,13 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
+//<<<------ COPYRIGHT -----------------------------------------------------
+
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+yearEl.textContent = currentYear;
+
 //<<<------ POP ----------------------------------------------------------
 const btnPop = document.querySelector(".btnPopper");
 const btnPopOne = document.querySelector(".btnPopperOne");
@@ -194,13 +201,6 @@ if (toastTriggerSix) {
     toast.show();
   });
 }
-
-//<<<------ COPYRIGHT -----------------------------------------------------
-
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-
-yearEl.textContent = currentYear;
 
 //<<<------ EMAIL -----------------------------------------------------
 
