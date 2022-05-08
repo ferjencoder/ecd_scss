@@ -8010,6 +8010,8 @@ footer {
   font-size: 1.5rem;
   color: rgba(250, 250, 250, 0.7);
   padding-right: 0.4em; }
+  .socialIco:hover {
+    color: white; }
 
 .map {
   filter: grayscale(1);
