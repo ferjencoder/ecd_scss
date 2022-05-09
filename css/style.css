@@ -18,13 +18,13 @@
 /* */
 /* MAPS */
 .fontPrimary {
-  font-family: Montserrat, sans-serif; }
+  font-family: adobe-garamond-pro, sans-serif; }
 
 .fontSecondary {
   font-family: Segoe UI, sans-serif; }
 
 .fontSerif {
-  font-family: Georgia, serif; }
+  font-family: adobe-garamond-pro, Georgia, serif; }
 
 /* EXTEND */
 .firstStyle, .secondStyle {
@@ -37,7 +37,7 @@
 /* MIXINS */
 /* MIXIN SIN PARAMETROS */
 .mTitleStyle {
-  font-family: Georgia, serif;
+  font-family: adobe-garamond-pro, Georgia, serif;
   font-size: 1rem;
   text-align: start; }
 
@@ -7869,12 +7869,13 @@ a {
 li {
   text-decoration: none;
   list-style: none;
-  font-family: Georgia, serif; }
+  font-family: adobe-garamond-pro, Georgia, serif; }
 
 /*<<<------------ NAV BAR TEXT--------------> */
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #795569; }
+  color: #483241;
+  font-weight: 400; }
 
 .containerBannerMsg {
   background-color: #795569;
@@ -7883,8 +7884,9 @@ li {
 .navbar {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   text-transform: uppercase;
-  font-family: Georgia, serif;
-  font-weight: 400; }
+  font-family: Segoe UI, sans-serif;
+  font-size: 1rem;
+  font-weight: 600; }
 
 /* WHATSAP ICON */
 .whatsappIcon {
@@ -7930,7 +7932,7 @@ li {
   font-weight: 600;
   letter-spacing: 0.3rem;
   font-size: 2.5rem;
-  font-family: Georgia, serif; }
+  font-family: adobe-garamond-pro, Georgia, serif; }
 
 .txtPHero {
   color: #191919;
@@ -7945,7 +7947,7 @@ li {
 .txtPHeroTop {
   font-size: 1.5rem;
   margin-bottom: 0;
-  font-family: Georgia, serif; }
+  font-family: adobe-garamond-pro, Georgia, serif; }
 
 .borderContainer {
   border-left: 1px solid #191919; }
@@ -7963,7 +7965,7 @@ li {
   margin-top: 6rem;
   margin-bottom: 4rem;
   background-color: rgba(72, 50, 65, 0.2);
-  font-family: Georgia, serif; }
+  font-family: adobe-garamond-pro, Georgia, serif; }
 
 /* HERO PRODUCTOS */
 .txtFresco {
@@ -7996,20 +7998,20 @@ footer {
       font-weight: 400; }
 
 .footerTitle {
-  font-size: 1rem;
-  font-family: Georgia, serif;
-  letter-spacing: 0.04rem; }
+  font-size: 1.1rem;
+  font-family: adobe-garamond-pro, Georgia, serif;
+  letter-spacing: 0.15rem; }
 
 .footerTitleSocial {
-  font-size: 1rem;
-  padding-top: 1rem;
-  font-family: Georgia, serif;
+  font-size: 3rem;
+  /*   */
+  font-family: al-fresco, sans-serif;
   letter-spacing: 0.04rem; }
 
 .socialIco {
   font-size: 1.5rem;
   color: rgba(250, 250, 250, 0.7);
-  padding-right: 0.4em; }
+  padding-right: 1em; }
   .socialIco:hover {
     color: white; }
 
@@ -8093,7 +8095,7 @@ footer {
     background: transparent; }
 
 .toastHeader {
-  font-family: Georgia, serif;
+  font-family: adobe-garamond-pro, Georgia, serif;
   font-size: 1rem;
   color: white;
   font-weight: 200;
@@ -8209,7 +8211,7 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3); }
 
 .txtCarousel {
-  font-family: Georgia, serif;
+  font-family: adobe-garamond-pro, Georgia, serif;
   color: #191919; }
 
 /*<<<------------ CARDS --------------> */
@@ -8223,13 +8225,13 @@ footer {
   object-fit: cover; }
 
 .cardTitle {
-  font-family: Georgia, serif;
+  font-family: adobe-garamond-pro, Georgia, serif;
   font-weight: 200;
   margin-bottom: 0; }
 
 .cardTxtSub {
   font-family: Segoe UI, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem; }
 
 .btnCard {
