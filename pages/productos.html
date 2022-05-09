@@ -923,18 +923,7 @@
 
     <!--<<<<-- FOOTER ------------------------------------------------------------------------------------------------->
 
-    <!--<<<-- FOOTER -------------------------------------------------------------------------------------------------->
     <footer class="container-fluid p-0 m-0">
-      <!--<<<-- WHATS APP ---------------------------------------------------------------------------------------------->
-
-      <!-- <div class="position-fixed bottom-0 end-0 whatsappIcon mb-4 me-4">
-        <a href="./pages/whatsapp.html" target="blank">
-          <img
-            src="../assets/ico/whatsapp_ico.svg"
-            alt="Icono de whatsapp para comunicarse diretamente."
-          />
-        </a>
-      </div> -->
       <div class="container-fluid">
         <div class="row containerFooterMsg py-0">
           <div
@@ -1035,7 +1024,6 @@
                   class="d-inline-block bg-white"
                   style="width: 60px; height: 2px"
                 />
-
                 <form
                   name="newsletter"
                   method="POST"
@@ -1043,19 +1031,15 @@
                   data-netlify="true"
                   class="formSubscribe"
                 >
-                  <div class="field">
+                  <div class="field newsletterContainer">
                     <input
                       type="email"
                       name="email"
                       id="newsletter"
                       placeholder="Ingresá tu correo electrónico"
                     />
-                    <p class="mb-2">*Este campo es obligatorio</p>
-                    <div
-                      data-netlify-recaptcha="true"
-                      class="m-0"
-                      style="width: 300"
-                    ></div>
+                    <p>*Este campo es obligatorio</p>
+                    <div data-netlify-recaptcha="true" class="mt-2"></div>
                     <input class="Btn" type="submit" value="Enviar" />
                   </div>
                 </form>
