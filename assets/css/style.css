@@ -10915,6 +10915,13 @@ textarea.form-control-lg {
   letter-spacing: 0.09rem;
 }
 
+.text-logo-thks {
+  font-family: al-fresco, sans-serif;
+  letter-spacing: 0.09rem;
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
+
 .text-serif-nav {
   font-family: adobe-garamond-pro, Georgia, serif;
   font-size: 1em;
