@@ -1,0 +1,45 @@
+// @import url(https://use.typekit.net/kal6lby.css);
+
+// FONTS
+$ecd-ff-primary: Segoe UI, sans-serif;
+$ecd-ff-secondary: Segoe UI, sans-serif;
+$ecd-ff-serif: adobe-garamond-pro, Georgia, serif;
+$ecd-ff-logo: al-fresco, sans-serif;
+
+// LETTER SPACING
+$ecd-fs-spacing-lg: 0.05rem;
+$ecd-fs-spacing-sm: 0.03rem;
+
+.text-serif {
+  font-family: $ecd-ff-serif;
+  letter-spacing: 0.09rem;
+}
+
+.text-serif-nav {
+  font-family: $ecd-ff-serif;
+  font-size: 1em;
+  letter-spacing: 0.1rem;
+}
+
+.text-spacing-sm {
+  letter-spacing: $ecd-fs-spacing-sm;
+}
+
+.text-sub-hero {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: $ecd-fs-spacing-lg;
+  line-height: 1.2em;
+}
+
+.txtPHeroTop {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-family: $ecd-ff-serif;
+}
+
+.text-logo {
+  font-size: 3rem;
+  font-family: $ecd-ff-logo;
+  letter-spacing: 0.09rem;
+}

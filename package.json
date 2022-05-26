@@ -1,30 +1,22 @@
 {
-  "name": "ecd_scss",
+  "name": "boot_template_2",
   "version": "1.0.0",
-  "description": "adding sass",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "dev": "sass --watch scss:assets/css"
   },
   "author": "ferJen",
+  "type": "module",
   "license": "ISC",
-  "dependencies": {
-    "@popperjs/core": "^2.11.5",
-    "bootstrap": "^5.1.3",
-    "bootstrap-icons": "^1.8.1"
-  },
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
+    "sass": "^1.51.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ferjencoder/ecd_scss.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ferjencoder/ecd_scss/issues"
-  },
-  "homepage": "https://github.com/ferjencoder/ecd_scss#readme"
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "autoprefixer": "^10.4.7",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.2",
+    "postcss-cli": "^9.1.0"
+  }
 }

@@ -1,0 +1,33 @@
+// ECD COLOR PALETTE
+$ecd-clr-1: rgba(72, 50, 65, 1); //Eggplant
+$ecd-clr-2: rgba(121, 85, 105, 1); //Twilight Lavender
+$ecd-clr-3: rgba(166, 128, 140, 1); //English Lavander
+$ecd-clr-4: rgba(185, 156, 157, 1); //Tuscany
+$ecd-clr-5: rgba(204, 183, 174, 1); //Silver Pink
+$ecd-clr-6: rgba(121, 85, 105, 0.461);
+$ecd-clr-7: rgb(239, 206, 216);
+$ecd-clr-8: rgb(229, 239, 230);
+$ecd-clr-9: rgb(226, 213, 222);
+$ecd-clr-10: rgb(230, 227, 222);
+$white: #fafafa;
+
+// HEX //
+$eggplant: #483241;
+$twilight-lavender: #795569;
+$english-lavender: #a6808c;
+$tuscany: #b99c9d;
+//$silver-pink: #ccb7ae;
+$silver-pink: rgb(239, 206, 216);
+
+.bg-ecd-clr-8 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-ecd-clr-8-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-ecd-clr-9 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-ecd-clr-9-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-ecd-clr-10 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-ecd-clr-10-rgb), var(--bs-bg-opacity)) !important;
+}

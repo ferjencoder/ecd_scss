@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://entrecortinas.netlify.app/sitemap.xml
+
+EN CONSTRUCCIÓN

@@ -1,0 +1,26 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+@use '../colors/ecd-palette' as *;
+
+// _forms - CUSTOM FORMS
+
+//<<<<-------- BORDER ------------------>
+
+.ecd-border-full {
+  border: 1px solid $ecd-clr-2;
+  &:active {
+    border: 1px solid $ecd-clr-2;
+  }
+  &:focus {
+    border: 1px solid $ecd-clr-2;
+  }
+}
+.ecd-border-bt {
+  border-bottom: 1px solid $ecd-clr-2;
+  &:active {
+    border-bottom: 1px solid $ecd-clr-2;
+  }
+  &:focus {
+    border-bottom: 1px solid $ecd-clr-2;
+  }
+}

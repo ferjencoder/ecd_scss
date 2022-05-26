@@ -1,0 +1,12 @@
+{
+  "name": "Casa de Cortinas - Entre Cortinas",
+  "short_name": "ecd",
+  "icons": [
+    { "src": "assets/img/ico/android-chrome-192x192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "assets/img/ico/android-chrome-512x512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+
+  "theme_color": "light",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
