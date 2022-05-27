@@ -1,5 +1,4 @@
 //<<<-- HIDE BANNER MSG ------------------------------------------------------------------------>
-
 // let lastScrollTop = 1;
 // bannerMsg = document.getElementById('bannerMsg');
 // bannerMsg = document.getElementById('bannerMsg');
@@ -16,21 +15,18 @@
 // });
 
 //<<<-- COPYRIGHT ------------------------------------------------------------------------>
-
 const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
 yearEl.textContent = currentYear;
 
 //<<<-- POPOVERS ------------------------------------------------------------------------->
-
 // let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 // let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 //   return new bootstrap.Popover(popoverTriggerEl);
 // });
 
 //<<<-- TOASTS ---------------------------------------------------------------------------->
-
 const toastTriggerOne = document.getElementById('liveToastBtnOne');
 const toastLiveExampleOne = document.getElementById('liveToastOne');
 if (toastTriggerOne) {
@@ -249,7 +245,6 @@ btnPop.addEventListener('click', () => {
   }
 });
 //<<<------ POP ONE -----------------------------------------------------
-
 btnPopOne.addEventListener('click', () => {
   if (divPopOne.style.display === 'contents') {
     divPopOne.style.display = 'none';
@@ -269,7 +264,6 @@ btnPopOne.addEventListener('click', () => {
 });
 
 //<<<------ POP TWO -----------------------------------------------------
-
 btnPopTwo.addEventListener('click', () => {
   if (divPopTwo.style.display === 'contents') {
     divPopTwo.style.display = 'none';
@@ -289,7 +283,6 @@ btnPopTwo.addEventListener('click', () => {
 });
 
 //<<<------ POP THREE -----------------------------------------------------
-
 btnPopThree.addEventListener('click', () => {
   if (divPopThree.style.display === 'contents') {
     divPopThree.style.display = 'none';
@@ -309,7 +302,6 @@ btnPopThree.addEventListener('click', () => {
 });
 
 //<<<------ POP FOUR -----------------------------------------------------
-
 btnPopFour.addEventListener('click', () => {
   if (divPopFour.style.display === 'contents') {
     divPopFour.style.display = 'none';

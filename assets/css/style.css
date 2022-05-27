@@ -5102,7 +5102,7 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 .toast.showing {
   opacity: 0;
@@ -6318,15 +6318,15 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: transparent !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .shadow-sm {
-  box-shadow: transparent !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .shadow-lg {
-  box-shadow: transparent !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .shadow-none {
@@ -11101,72 +11101,86 @@ textarea.form-control-lg {
   background-color: #fff;
 }
 
-.carousel-control-prev {
-  left: -5.5rem;
-}
-
-.carousel-control-next {
-  right: -4rem;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-position: 100%;
-  background-size: 100% 100%;
+  background-color: transparent;
+  background-size: 100%;
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='black'><path d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM310.6 345.4c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0l-112-112C147.1 272.4 144 264.2 144 256s3.125-16.38 9.375-22.62l112-112c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L221.3 256L310.6 345.4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='black'><path d='M144,120.02c0-9.53,5.66-18.19,14.41-22,3.09-1.3,6.29-2,9.59-2,5.94,0,11.81,2.22,16.34,6.41l112,104c4.86,4.59,7.66,10.89,7.66,17.59,0,6.7-2.78,13.03-7.66,17.59l-112,104c-7.03,6.47-17.22,8.16-25.94,4.41-8.7-3.8-14.4-12.5-14.4-22V120.02Z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='black'><path d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM358.6 278.6l-112 112c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L290.8 256L201.4 166.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l112 112C364.9 239.6 368 247.8 368 256S364.9 272.4 358.6 278.6z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='black'><path d='M304,327.98c0,9.53-5.66,18.19-14.41,22-3.09,1.3-6.29,2-9.59,2-5.94,0-11.81-2.22-16.34-6.41l-112-104c-4.86-4.59-7.66-10.89-7.66-17.59s2.78-13.03,7.66-17.59l112-104c7.03-6.47,17.22-8.16,25.94-4.41,8.7,3.8,14.4,12.5,14.4,22v208Z'/%3e%3c/svg%3e");
 }
 
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin-right: 15%;
-  margin-bottom: 1rem;
-  margin-left: 15%;
-  list-style: none;
-}
-.carousel-indicators [data-bs-target] {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
+.ecd-overlay {
   cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: 1;
-  transition: opacity 0.6s ease;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }
-@media (prefers-reduced-motion: reduce) {
-  .carousel-indicators [data-bs-target] {
-    transition: none;
-  }
-}
-.carousel-indicators .active {
+.ecd-overlay:hover {
+  transition: all 0.3s ease;
   opacity: 1;
+}
+
+.ecd-overlay-dark {
+  cursor: pointer;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0;
+  background: rgba(20, 20, 20, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+.ecd-overlay-dark:hover {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.btn-overlay {
+  font-size: 1em;
+  color: rgb(72, 50, 65);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  padding: 0.2em 1em;
+  margin-top: 0.7rem;
+  border: 1.5px solid rgb(72, 50, 65);
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.btn-overlay:hover {
+  font-weight: 700;
+  transition: all 0.3s ease;
+  color: rgb(72, 50, 65);
+  border: 1.7px solid rgb(72, 50, 65);
+}
+
+.btn-overlay-light {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  padding: 0.2em 1em;
+  margin-top: 0.7rem;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.btn-overlay-light:hover {
+  font-weight: 700;
+  transition: all 0.3s ease;
+  color: #fff;
+  border: 1.7px solid #fff;
 }
 
 .ecd-footer {
@@ -11256,8 +11270,7 @@ textarea.form-control-lg {
   border-bottom: 1px solid rgb(121, 85, 105);
 }
 
-/*<<<------------ PRODUCTOS --------------> */
-/*<<<------------ LIKE AND TOAST --------------> */
+/* _imagehero.scss */
 .btnLike {
   border: 0;
   font-size: 1.5rem;
