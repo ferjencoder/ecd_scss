@@ -536,7 +536,7 @@
             </div>
             <hr class="d-inline-block bg-black mt-4 mb-0" style="width: 200px; height: 2px" />
             <div class="container px-0 my-1 mb-0">
-              <form name="cotizate" action="/rta-cotizate.html" method="POST" data-netlify="true">
+              <form name="cotizate" action="/rta-cotizate.html" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                 <div class="row d-flex">
                   <fieldset class="container d-flex mt-1 text-uppercase mb-0">Tus datos de contacto</fieldset>
                   <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -571,15 +571,15 @@
                       </label>
                     </div>
                     <div class="field col-6 my-1">
-                      <label for="inputText2" class="form-label col-12 ps-2"
+                      <label for="ancho" class="form-label col-12 ps-2"
                         >Ancho
-                        <input type="number" name="ancho" class="form-control ecd-border-full shadow-none" id="inputText2" />
+                        <input type="number" name="ancho" class="form-control ecd-border-full shadow-none" id="ancho" />
                       </label>
                     </div>
                   </div>
                   <div class="container d-flex justify-content-between align-items-center">
                     <div class="field col-6 my-1">
-                      <label for="inputTipo" class="form-label col-12 pe-2"
+                      <label for="inputTipo[]" class="form-label col-12 pe-2"
                         >Tipo de cortina
                         <select name="tipo" id="inputTipo" class="form-select ecd-border-full shadow-none">
                           <option value="sunscreen" selected>Roller Sunscreen</option>
@@ -594,7 +594,7 @@
                     <div class="field col-6 my-1">
                       <label for="inputMaterial" class="form-label col-12 ps-2"
                         >Material
-                        <select name="material" aria-label="multiple select example" id="inputMaterial" class="form-select ecd-border-full shadow-none">
+                        <select name="material[]" aria-label="multiple select example" id="inputMaterial" class="form-select ecd-border-full shadow-none">
                           <option value="vinilico" selected>Blackout vinílico</option>
                           <option value="lino">Blackout lino</option>
                           <option value="seda">Blackout seda</option>
@@ -609,14 +609,14 @@
                     </label>
                   </div>
                   <div class="field my-1 ps-2">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                    <textarea name="message" class="form-control ecd-border-full shadow-none" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea name="message" class="form-control ecd-border-full shadow-none" id="message" rows="3"></textarea>
                   </div>
                 </div>
                 <div class="d-block mt-1 text-end">
                   <button type="submit" value="Send Message" class="btn mb-1 shadow-none ecd-btn-outlined-p text-end">Enviar</button>
                 </div>
-                <div data-netlify-recaptcha="true" class="mt-2"></div>
+                <div data-netlify-recaptcha="true" class="mt-2" width="auto" height="70px"></div>
               </form>
             </div>
           </div>
@@ -732,7 +732,7 @@
       <!-- Copyright  ---------------------------------------------------------------------------->
       <div class="row m-0 p-0 bg-primary">
         <p class="m-0 p-1 text-center">
-          <small>Copyright &copy; <span class="year">1</span> Entre Cortinas || Created by <a class="text-white" href="https://github.com/ferjencoder" rel="noopener" target="_blank">ferJen</a></small>
+          <small>Copyright &copy; <span class="year">1</span> Entre Cortinas || Created by <a class="text-white" href="https://github.com/ferjencoder" rel="noopener" target="_blank">ferJen @ CODERHOUSE</a></small>
         </p>
       </div>
     </footer>
