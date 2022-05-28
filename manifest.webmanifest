@@ -6,7 +6,6 @@
     { "src": "assets/img/ico/android-chrome-512x512.png", "type": "image/png", "sizes": "512x512" }
   ],
 
-  "theme_color": "light",
   "background_color": "#ffffff",
   "display": "standalone"
 }

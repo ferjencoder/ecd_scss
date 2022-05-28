@@ -1,3 +1,5 @@
+'use strict';
+
 //<<<-- HIDE BANNER MSG ------------------------------------------------------------------------>
 // let lastScrollTop = 1;
 // bannerMsg = document.getElementById('bannerMsg');
@@ -17,7 +19,6 @@
 //<<<-- COPYRIGHT ------------------------------------------------------------------------>
 const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
-console.log(currentYear);
 yearEl.textContent = currentYear;
 
 //<<<-- POPOVERS ------------------------------------------------------------------------->
@@ -194,6 +195,114 @@ const toastLiveExampleNineteen = document.getElementById('liveToastNineteen');
 if (toastTriggerNineteen) {
   toastTriggerNineteen.addEventListener('click', () => {
     const toast = new bootstrap.Toast(toastLiveExampleNineteen);
+
+    toast.show();
+  });
+}
+const toastTriggerTwenty = document.getElementById('liveToastBtnTwenty');
+const toastLiveExampleTwenty = document.getElementById('liveToastTwenty');
+if (toastTriggerTwenty) {
+  toastTriggerTwenty.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwenty);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyOne = document.getElementById('liveToastBtnTwentyOne');
+const toastLiveExampleTwentyOne = document.getElementById('liveToastTwentyOne');
+if (toastTriggerTwentyOne) {
+  toastTriggerTwentyOne.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyOne);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyTwo = document.getElementById('liveToastBtnTwentyTwo');
+const toastLiveExampleTwentyTwo = document.getElementById('liveToastTwentyTwo');
+if (toastTriggerTwentyTwo) {
+  toastTriggerTwentyTwo.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyTwo);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyThree = document.getElementById('liveToastBtnTwentyThree');
+const toastLiveExampleTwentyThree = document.getElementById('liveToastTwentyThree');
+if (toastTriggerTwentyThree) {
+  toastTriggerTwentyThree.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyThree);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyFour = document.getElementById('liveToastBtnTwentyFour');
+const toastLiveExampleTwentyFour = document.getElementById('liveToastTwentyFour');
+if (toastTriggerTwentyFour) {
+  toastTriggerTwentyFour.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyFour);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyFive = document.getElementById('liveToastBtnTwentyFive');
+const toastLiveExampleTwentyFive = document.getElementById('liveToastTwentyFive');
+if (toastTriggerTwentyFive) {
+  toastTriggerTwentyFive.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyFive);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentySix = document.getElementById('liveToastBtnTwentySix');
+const toastLiveExampleTwentySix = document.getElementById('liveToastTwentySix');
+if (toastTriggerTwentySix) {
+  toastTriggerTwentySix.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentySix);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentySeven = document.getElementById('liveToastBtnTwentySeven');
+const toastLiveExampleTwentySeven = document.getElementById('liveToastTwentySeven');
+if (toastTriggerTwentySeven) {
+  toastTriggerTwentySeven.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentySeven);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyEight = document.getElementById('liveToastBtnTwentyEight');
+const toastLiveExampleTwentyEight = document.getElementById('liveToastTwentyEight');
+if (toastTriggerTwentyEight) {
+  toastTriggerTwentyEight.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyEight);
+
+    toast.show();
+  });
+}
+const toastTriggerTwentyNine = document.getElementById('liveToastBtnTwentyNine');
+const toastLiveExampleTwentyNine = document.getElementById('liveToastTwentyNine');
+if (toastTriggerTwentyNine) {
+  toastTriggerTwentyNine.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleTwentyNine);
+
+    toast.show();
+  });
+}
+const toastTriggerThirty = document.getElementById('liveToastBtnThirty');
+const toastLiveExampleThirty = document.getElementById('liveToastThirty');
+if (toastTriggerThirty) {
+  toastTriggerThirty.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleThirty);
+
+    toast.show();
+  });
+}
+const toastTriggerThirtyOne = document.getElementById('liveToastBtnThirtyOne');
+const toastLiveExampleThirtyOne = document.getElementById('liveToastThirtyOne');
+if (toastTriggerThirtyOne) {
+  toastTriggerThirtyOne.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExampleThirtyOne);
 
     toast.show();
   });

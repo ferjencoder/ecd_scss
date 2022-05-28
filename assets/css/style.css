@@ -11118,10 +11118,8 @@ textarea.form-control-lg {
 .ecd-overlay {
   cursor: pointer;
   opacity: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
 }
 .ecd-overlay:hover {
   transition: all 0.3s ease;
@@ -11133,10 +11131,8 @@ textarea.form-control-lg {
   object-fit: cover;
   overflow: hidden;
   opacity: 0;
-  background: rgba(20, 20, 20, 0.3);
+  background: rgba(20, 20, 20, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
 }
 .ecd-overlay-dark:hover {
   transition: all 0.3s ease;
@@ -11144,14 +11140,14 @@ textarea.form-control-lg {
 }
 
 .btn-overlay {
-  font-size: 1em;
-  color: rgb(72, 50, 65);
+  font-size: 1.2em;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   padding: 0.2em 1em;
   margin-top: 0.7rem;
-  border: 1.5px solid rgb(72, 50, 65);
+  border: 2.1px solid #000;
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -11159,19 +11155,19 @@ textarea.form-control-lg {
 .btn-overlay:hover {
   font-weight: 700;
   transition: all 0.3s ease;
-  color: rgb(72, 50, 65);
-  border: 1.7px solid rgb(72, 50, 65);
+  color: #000;
+  border: 2.1px solid #000;
 }
 
 .btn-overlay-light {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   padding: 0.2em 1em;
   margin-top: 0.7rem;
-  border: 1.5px solid #fff;
+  border: 2.1px solid #fff;
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -11180,7 +11176,7 @@ textarea.form-control-lg {
   font-weight: 700;
   transition: all 0.3s ease;
   color: #fff;
-  border: 1.7px solid #fff;
+  border: 2.1px solid #fff;
 }
 
 .ecd-footer {

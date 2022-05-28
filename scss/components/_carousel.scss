@@ -34,11 +34,8 @@ $carousel-control-transition: opacity 0.15s ease;
 .ecd-overlay {
   cursor: pointer;
   opacity: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
   &:hover {
     transition: $ecd-transit-2;
     opacity: 1;
@@ -49,10 +46,8 @@ $carousel-control-transition: opacity 0.15s ease;
   object-fit: cover;
   overflow: hidden;
   opacity: 0;
-  background: rgba(20, 20, 20, 0.3);
+  background: rgba(20, 20, 20, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
   &:hover {
     transition: $ecd-transit-2;
     opacity: 1;
@@ -60,33 +55,33 @@ $carousel-control-transition: opacity 0.15s ease;
 }
 
 .btn-overlay {
-  font-size: 1em;
-  color: $ecd-clr-1;
+  font-size: 1.2em;
+  color: $black;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   padding: 0.2em 1em;
   margin-top: 0.7rem;
-  border: 1.5px solid $ecd-clr-1;
+  border: 2.1px solid $black;
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   &:hover {
     font-weight: 700;
     transition: $ecd-transit-2;
-    color: $ecd-clr-1;
-    border: 1.7px solid $ecd-clr-1;
+    color: $black;
+    border: 2.1px solid $black;
   }
 }
 .btn-overlay-light {
-  font-size: 1em;
+  font-size: 1.2em;
   color: $white;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   padding: 0.2em 1em;
   margin-top: 0.7rem;
-  border: 1.5px solid $white;
+  border: 2.1px solid $white;
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -94,6 +89,6 @@ $carousel-control-transition: opacity 0.15s ease;
     font-weight: 700;
     transition: $ecd-transit-2;
     color: $white;
-    border: 1.7px solid $white;
+    border: 2.1px solid $white;
   }
 }
