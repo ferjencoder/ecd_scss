@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO ------------------------------------------------------------------------------------>
+    <meta name="language" content="Spanish" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
     <meta
       name="description"
       content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más."
     />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
+    <link rel="canonical" href="https://entrecortinas.netlify.app/proyectos.html" />
 
-    <!-- FAVICONS ------------------------------------------------------------------------------>
+    <!-- FAV+ICONS ----------------------------------------------------------------------------->
     <link rel="icon" href="../assets/img/ico/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="../assets/img/ico/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/ico/touch-icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/ico/touch-icon-iphone-retina.png" />
     <link rel="apple-touch-icon" sizes="167x167" href="../assets/img/ico/touch-icon-ipad-retina.png" />
     <link rel="manifest" href="../manifest.webmanifest" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="manifest" href="../manifest.json" />
 
     <!-- OGP ----------------------------------------------------------------------------------->
-
     <meta property="og:title" content="Entre Cortinas Website" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://entrecortinas.netlify.app/" />
@@ -31,16 +33,16 @@
     <link rel="stylesheet" href="https://use.typekit.net/kal6lby.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <title>Proyectos || Entre Cortinas</title>
+    <title>Tu Carrito || Entre Cortinas</title>
   </head>
   <body>
     <!-- ------------------------------------------------------------------------------------------>
     <!-- START NAVBAR ------------------------------------------------------------------------->
     <!-- ------------------------------------------------------------------------------------------>
-    <nav class="container-fluid">
+    <header class="container-fluid">
       <!-- START BANNER MSG ------------------------------------------------------------------>
-      <div class="row">
-        <nav class="navbar bg-primary p-1 justify-content-center align-items-center" id="bannerMsg">
+      <nav class="row">
+        <div class="navbar bg-primary p-1 justify-content-center align-items-center" id="bannerMsg">
           <!-- MESSAGE 1 ------------------------------------------------------------------------>
           <p class="m-0 nav-link p-0 text-white text-uppercase"><i class="fa-solid fa-sun fa-bounce ms-2" style="--fa-animation-iteration-count: 5"></i>~ 3, 6 Y 9 cuotas sin interes</p>
           <!-- MESSAGE 2 ------------------------------------------------------------------------>
@@ -51,12 +53,11 @@
           <p class="m-0 nav-link p-0 text-white text-uppercase d-none d-md-flex">
             <i class="fa-solid fa-sun fa-bounce me-2" style="--fa-animation-iteration-count: 5"></i>
           </p>
-        </nav>
-      </div>
-      <!-- end row navbar banner msg -->
+        </div>
+      </nav>
       <!-- START ECD NAVBAR ------------------------------------------------------------------>
-      <div class="row">
-        <nav class="navbar navbar-expand-lg container-fluid navbar-light bg-white border-bottom border-primary-border p-0 ecd-navbar">
+      <nav class="row">
+        <div class="navbar navbar-expand-lg container-fluid navbar-light bg-white border-bottom border-primary-border p-0 ecd-navbar">
           <!-- Logo ------------------------------------------------------------------------------->
           <div class="col-12 col-lg-3 d-flex justify-content-between justify-content-lg-center px-4">
             <a class="nav-link active" aria-current="page" href="../index.html"><img width="200px" src="../assets/img/ico/ecd_logo.svg" alt="Logo Entre Cortinas y link a la página de inicio" height="40" tabindex="0" /></a>
@@ -133,7 +134,7 @@
                         <h6 class="m-0 py-2">ingresa con tu usuario</h6>
                       </li>
                       <li class="list-group-item bg-white">
-                        <form class="p-3 d-flex flex-column">
+                        <form class="p-3 d-flex flex-column" name="loginoffnavbar" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                           <div class="mb-3">
                             <label for="offcanvasEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
                             <input type="email" class="form-control shadow-none ecd-border-full" id="offcanvasEmail" placeholder="email@ejemplo.com" />
@@ -312,7 +313,10 @@
                     <h6 class="m-0 p-0 fw-bold">ingresa con tu usuario</h6>
                   </li>
                   <li class="list-group-item bg-white">
-                    <form class="p-3 d-flex flex-column">
+                    <form class="p-3 d-flex flex-column" name="loginnavbar" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                      <p class="hidden">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                      </p>
                       <div class="mb-3">
                         <label for="navbarEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
                         <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" placeholder="email@ejemplo.com" />
@@ -466,13 +470,12 @@
               </div>
             </div>
           </div>
-        </nav>
+        </div>
         <!-- ecd navbar -->
-      </div>
-      <!-- end row ecd navbar -->
+      </nav>
       <!-- START NAVBAR PRODUCTOS ---------------------------------------------------------->
-      <div class="row">
-        <nav class="navbar navbar-light border-bottom border-ecd ecd-navbar d-none d-md-flex p-0" id="navbarProductos">
+      <nav class="row">
+        <div class="navbar navbar-light border-bottom border-ecd ecd-navbar d-none d-md-flex p-0" id="navbarProductos">
           <div class="container-fluid d-flex justify-content-center p-0">
             <a class="nav-link text-black text-spacing-lg text-uppercase ps-3 text-serif-nav" href="../pages/productos.html#cortinas-section">Cortinas</a>
             <a class="nav-link text-black text-spacing-lg text-uppercase ps-3 text-serif-nav" href="../pages/productos.html#almohadones-section">Almohadones</a>
@@ -480,11 +483,10 @@
             <a class="nav-link text-black text-spacing-lg text-uppercase ps-3 text-serif-nav" href="../pages/productos.html#manteles-section">Mantelería</a>
             <a class="nav-link text-black text-spacing-lg text-uppercase ps-3 text-serif-nav" href="../pages/productos.html#toldos">Outdoor</a>
           </div>
-        </nav>
+        </div>
         <!-- End navbar productos -->
-      </div>
-      <!-- end row navbar productos-->
-    </nav>
+      </nav>
+    </header>
 
     <!--<<<-- HERO TEXT ---------------------------------------------------------------------->
     <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-10">
