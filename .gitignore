@@ -16,3 +16,9 @@ pages/productos-popover.html
 theme
 assets/img/productos/
 pages/productos-effects.html
+app-liveT.js
+scss/
+pages/productos-liveT.html
+scss/components/_carousel.scss
+crm/ecd-CRM.xd
+.gitignore
