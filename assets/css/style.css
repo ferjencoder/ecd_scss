@@ -11091,6 +11091,7 @@ textarea.form-control-lg {
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  padding: 0.2em 1em;
   border: 1.5px solid rgb(72, 50, 65);
   cursor: pointer;
   font-weight: 400;
@@ -11145,6 +11146,8 @@ textarea.form-control-lg {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
+  padding: 0.2em 1em;
+  margin-top: 0.7rem;
   border: 2.1px solid #000;
   cursor: pointer;
   font-weight: 600;
@@ -11163,6 +11166,8 @@ textarea.form-control-lg {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
+  padding: 0.2em 1em;
+  margin-top: 0.7rem;
   border: 2.1px solid #fff;
   cursor: pointer;
   font-weight: 600;
