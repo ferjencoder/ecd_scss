@@ -37,6 +37,7 @@ if (toastTriggerOne) {
     toast.show();
   });
 }
+
 const toastTriggerTwo = document.getElementById('liveToastBtnTwo');
 const toastLiveExampleTwo = document.getElementById('liveToastTwo');
 if (toastTriggerTwo) {

@@ -27,6 +27,11 @@ $btn-active-box-shadow: none;
   }
 }
 
+.ecd-btn-footer {
+  @extend .ecd-btn-outlined-p;
+  border: 1.5px solid white;
+}
+
 .ecd-btn-outlined {
   background-color: $ecd-clr-1;
   font-size: 0.875em;

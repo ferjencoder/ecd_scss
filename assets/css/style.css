@@ -11066,7 +11066,7 @@ textarea.form-control-lg {
   box-shadow: transparent;
 }
 
-.ecd-btn-outlined-p {
+.ecd-btn-outlined-p, .ecd-btn-footer {
   background-color: rgb(72, 50, 65);
   font-size: 0.875em;
   color: white;
@@ -11079,10 +11079,14 @@ textarea.form-control-lg {
   cursor: pointer;
   font-weight: 600;
 }
-.ecd-btn-outlined-p:hover {
+.ecd-btn-outlined-p:hover, .ecd-btn-footer:hover {
   transition: all 0.3s ease;
   color: rgb(72, 50, 65);
   background-color: #fff;
+}
+
+.ecd-btn-footer {
+  border: 1.5px solid white;
 }
 
 .ecd-btn-outlined {
