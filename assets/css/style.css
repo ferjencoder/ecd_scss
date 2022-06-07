@@ -2021,8 +2021,8 @@ progress {
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #000;
-  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-striped-color: rgb(121, 85, 105);
+  --bs-table-striped-bg: rgb(121, 85, 105);
   --bs-table-active-color: #000;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
   --bs-table-hover-color: #000;
@@ -2046,7 +2046,7 @@ progress {
   vertical-align: bottom;
 }
 .table > :not(:first-child) {
-  border-top: 2px solid currentColor;
+  border-top: 2px solid rgba(121, 85, 105, 0.4);
 }
 
 .caption-top {
@@ -11104,6 +11104,31 @@ textarea.form-control-lg {
   transition: all 0.3s ease;
   color: rgb(121, 85, 105);
   background-color: #fff;
+}
+
+.ecd-btn-counter, .ecd-btn-counter-hover {
+  background-color: transparent;
+  font-size: 0.875em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.2em 1em;
+  border: 1.5px solid rgb(72, 50, 65);
+  font-weight: 400;
+  cursor: default;
+}
+
+.ecd-btn-counter-hover {
+  cursor: pointer;
+}
+.ecd-btn-counter-hover:hover {
+  transition: all 0.3s ease;
+  color: white;
+  background-color: rgb(121, 85, 105);
+}
+
+.num {
+  padding: 0.2em 1.5rem;
 }
 
 .carousel-control-prev-icon,
