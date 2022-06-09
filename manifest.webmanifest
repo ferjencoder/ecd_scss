@@ -5,7 +5,7 @@
   "theme_color": "#fff",
   "background_color": "#fff",
   "display": "standalone",
-  "start_url": "https://entrecortinas.netlify.app/",
+
   "lang": "Spanish; Castilian",
   "Scope": "/",
   "icons": [
