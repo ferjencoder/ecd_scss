@@ -7,10 +7,7 @@
     <meta name="language" content="Spanish" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
-    <meta
-      name="description"
-      content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más."
-    />
+    <meta name="description" content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
     <link rel="canonical" href="https://entrecortinas.netlify.app/contacto.html" />
 
@@ -485,42 +482,122 @@
 
     <!-- MAIN CONTENT CRM -->
     <main>
-      <!-- HERO TEXT -->
-      <!--       <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-10">
-        <div class="row justify-content-center">
-          <article class="col-lg-4 d-none d-lg-flex">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold text-uppercase">imagina</h6>
-              <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+              <div class="row g-2">
+                <div class="col-6">
+                  <label for="id" class="form-label text-uppercase">Creador de productos</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1 ">id:</span>
+                    <input type="text" class="form-control ecd-border-light" id="id" placeholder="Uciel sólo hay que llenar id 😁" aria-label="id" aria-describedby="basic-addon1" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2 ">numero producto:</span>
+                    <input type="text" class="form-control ecd-border-light" id="numeroProducto" placeholder="01" aria-label="numeroProducto" aria-describedby="basic-addon2" />
+                    <span class="input-group-text" id="basic-addon3 ">codigo tipo:</span>
+                    <input type="text" class="form-control ecd-border-light" id="codigoTipo" placeholder="mn" aria-label="numeroProducto" aria-describedby="basic-addon3" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon4">productor:</span>
+                    <input class="form-control ecd-border-light" list="productor" placeholder="Seleccione productor..." />
+                    <datalist id="productor">
+                      <option value="ENTRE CORTINAS"></option>
+                      <option value="PROVEEDOR 1"></option>
+                      <option value="PROVEEDOR 2"></option>
+                      <option value="PROVEEDOR 3"></option>
+                      <option value="PROVEEDOR 4"></option>
+                      <option value="PROVEEDOR 5"></option>
+                    </datalist>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2 ">color1:</span>
+                    <input type="text" class="form-control ecd-border-light" id="color1" placeholder="01" aria-label="numeroProducto" aria-describedby="basic-addon2" />
+                    <span class="input-group-text" id="basic-addon3 ">color2:</span>
+                    <input type="text" class="form-control ecd-border-light" id="color2" placeholder="mn" aria-label="numeroProducto" aria-describedby="basic-addon3" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon5">tipo:</span>
+                    <input class="form-control ecd-border-light" list="tipo" placeholder="Seleccione tipo..." />
+                    <datalist id="tipo">
+                      <option value="ALMOHADON">ALMOHADON</option>
+                      <option value="CORTINA">CORTINA</option>
+                      <option value="MANTELERIA">MANTELERIA</option>
+                      <option value="MANTAS">MANTAS</option>
+                      <option value="PANTALLAS">PANTALLAS</option>
+                      <option value="TOLDOS">TOLDOS</option>
+                    </datalist>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon6">alto:</span>
+                    <input type="number" class="form-control ecd-border-light" id="alto" placeholder="140" aria-label="alto" aria-describedby="basic-addon6" />
+                    <span class="input-group-text" id="basic-addon5">ancho</span>
+                    <input type="number" class="form-control ecd-border-light" id="ancho" placeholder="90" aria-label="ancho" aria-describedby="basic-addon5" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon6">material:</span>
+                    <input class="form-control ecd-border-light" list="material" placeholder="Seleccione material..." />
+                    <datalist id="material">
+                      <option value="Lino rústico"></option>
+                      <option value="Gasa de algodón"></option>
+                      <option value="Satinado"></option>
+                      <option value="Simil Piel"></option>
+                      <option value="Tejido"></option>
+                    </datalist>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">descripcion:</span>
+                    <textarea class="form-control ecd-border-light" aria-label="With textarea"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control ecd-border-light" id="precio" aria-label="Amount (to the nearest dollar)" />
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="imagenProducto" class="form-label text-uppercase">Imagen producto</label>
+                  <div class="input-group mb-3">
+                    <div id="productIMGs" class="carousel slide" style="width: 100px; height: 100px" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="../assets/img/productos/al/ecd-al-rustico-lino-01-100x100.jpg" class="d-block w-100" style="width: 100px; height: 100px" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../assets/img/productos/al/ecd-al-rustico-lino-01-558x501.jpg" class="d-block w-100" style="width: 100px; height: 100px" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../assets/img/productos/al/ecd-al-rustico-lino-01-558x501s.jpg" class="d-block w-100" style="width: 100px; height: 100px" alt="..." />
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#productIMGs" data-bs-slide="prev">
+                        <span class="" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#productIMGs" data-bs-slide="next">
+                        <span class="" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control ecd-border-light" id="imgFirst" aria-describedby="uploadImg" aria-label="Upload" />
+                    <button class="btn ecd-btn-outlined" type="button" id="uploadImgFirst">Button</button>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control ecd-border-light" id="imgSecond" aria-describedby="uploadImg" aria-label="Upload" />
+                    <button class="btn ecd-btn-outlined" type="button" id="uploadImgSecond">Button</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="vr"></div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4 d-flex">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
-              <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
+            <div class="col-4">
+              <p id="pText" class="text-black mt-5 ms-5 ps-5"></p>
             </div>
-            <div class="vr d-none d-md-flex"></div>
-          </article>
-          <article class="d-none d-md-flex col-md-6 col-lg-4">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
-              <ul class="p-0 m-0">
-                <li>
-                  <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
-                </li>
-                <li>
-                  <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
-                </li>
-                <li>
-                  <p class="mb-0 text-uppercase text-sub-hero"></p>
-                </li>
-              </ul>
-            </div>
-          </article>
+          </div>
         </div>
-      </section> -->
-
+      </section>
       <!-- SECTION CONTACTO -->
       <section class="container-fluid d-flex justify-content-center mt-5">
         <div class="container-fluid">
