@@ -1,3 +1,5 @@
+const carritoOne = JSON.parse(localStorage.getItem('carritoOne')) || [];
+
 //CARRITO SECTION
 let productCounter = document.querySelector('.num');
 let subtotal = document.querySelector('#subtotal');
@@ -37,3 +39,10 @@ const buttonPlus = document.querySelector('.plus').addEventListener('click', fun
 // for (let i = 0; i <= numeroFormat.length; i++) {
 //   document.querySelectorAll('.numeroFormat')[i].innerHTML = '$ ' + document.querySelectorAll('.numeroFormat')[i].innerHTML.toLocaleString('es-AR');
 // }
+
+let cart = [];
+
+const addToCart = (productoId) => {
+  const item = stockProductos.find((producto) => producto.id === productoId);
+  cart.push(item);
+};

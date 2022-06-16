@@ -639,7 +639,7 @@ progress {
   display: inline-block;
 }
 .list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 0;
 }
 
 .initialism {
@@ -694,6 +694,7 @@ progress {
 
 .container,
 .container-fluid,
+.container-ecd,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -731,6 +732,10 @@ progress {
     max-width: 1320px;
   }
 }
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  max-width: 1855px;
+}
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -3896,7 +3901,8 @@ textarea.form-control-lg {
 .navbar > .container-md,
 .navbar > .container-lg,
 .navbar > .container-xl,
-.navbar > .container-xxl {
+.navbar > .container-xxl,
+.navbar > .container-ecd {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -11014,6 +11020,21 @@ textarea.form-control-lg {
   box-shadow: transparent;
 }
 
+.ecd-shadow {
+  border-radius: 0px;
+  background: #e0e0e0;
+  box-shadow: inset 10px 10px 20px #cccccc, inset -10px -10px 20px #f4f4f4;
+}
+.ecd-shadow:active {
+  box-shadow: none;
+}
+.ecd-shadow:hover {
+  box-shadow: none;
+}
+.ecd-shadow:focus {
+  box-shadow: none;
+}
+
 .ecd-accordion-button {
   position: relative;
   display: flex;
@@ -11108,6 +11129,16 @@ textarea.form-control-lg {
   transition: all 0.3s ease;
   color: rgb(121, 85, 105);
   background-color: #fff;
+}
+
+.ecd-btn-card {
+  background-color: black;
+  font-size: 1em;
+  color: white;
+  letter-spacing: 0.1rem;
+  padding: 0.2em 1em;
+  border: 1.5px solid black;
+  font-weight: 600;
 }
 
 .ecd-btn-counter, .ecd-btn-counter-hover {
@@ -11220,6 +11251,29 @@ textarea.form-control-lg {
   transition: all 0.3s ease;
   color: #fff;
   border: 2.1px solid #fff;
+}
+
+#lightSlider .demo {
+  width: 450px;
+}
+
+#lightSlider ul {
+  list-style: none outside none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+#lightSlider li {
+  display: block;
+  float: left;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+#lightSlider img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 .ecd-footer {
