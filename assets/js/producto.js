@@ -46,12 +46,14 @@ let producto1 = new Producto(
   50,
   50,
   // Producto.colors.push({ color: 'arcilla', stock: 10, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567c-arcilla.jpg' }),
-  Producto.colors.push('arcilla', 10, '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567c-arcilla.jpg'),
+  // Producto.colors.push('arcilla', 10, '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567c-arcilla.jpg'),
+  { color: 'arcilla', stock: 10, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-arcilla.jpg' },
   4750,
   'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
   10,
   `../pages/${Date.now()}.html`,
-  productIMG.push('../assets/img/productos/al/ecd-al-rustico-lino-01-630x567.jpg')
+  // productIMG.push('../assets/img/productos/al/ecd-al-rustico-lino-01-630x567.jpg')
+  { productIMG1: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567.jpg' }
 );
 
 console.log(producto1);

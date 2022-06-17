@@ -13,39 +13,12 @@ const productos = [
       { color: 'eucaliptus', stock: 10, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg' },
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
-    precio: 4500,
+    precio: 4700,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      { productIMG1: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567.jpg' },
-      { productIMG2: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567g-arcilla.jpg' },
-      { productIMG3: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567v-arcilla.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567g-cambray.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567v-cambray.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567g-lino.jpg' },
-      { productIMG4: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567v-lino.jpg' },
-    ],
+    productIMG: '../assets/img/productos/al/ecd-al-rustico-lino-01-558x501.jpg',
   },
-
-  /////////////////////////////////
-
-  // this.color1: 'arcilla';
-  // this.swatch1: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-arcilla.jpg';
-  // this.producto1: '../assets/img/productos/al/ecd-al-rustico-lino-01-630x567c-arcilla.jpg';
-  // this.color2: 'cambray';
-  // this.swatch2: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-cambray.jpg';
-  // this.producto2: '';
-  // this.color3: 'eucaliptus';
-  // this.swatch3: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg';
-  // this.producto3: '';
-  // this.color4: 'lino';
-  // this.swatch4: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg';
-  // this.producto4: '';
-  ////////////////////////////////
-
   {
     id: 1654981998442,
     nombre: 'Almohadón Tusor Cuadrado2',
@@ -61,7 +34,7 @@ const productos = [
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
     colores: 'colores',
-    precio: 4500,
+    precio: 6400,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
@@ -82,7 +55,7 @@ const productos = [
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
     colores: 'colores',
-    precio: 4500,
+    precio: 5600,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
@@ -103,7 +76,7 @@ const productos = [
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
     colores: 'colores',
-    precio: 4500,
+    precio: 7200,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
@@ -124,7 +97,7 @@ const productos = [
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
     colores: 'colores',
-    precio: 4500,
+    precio: 8500,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
@@ -145,7 +118,7 @@ const productos = [
       { color: 'lino', stock: 0, swatch: '../assets/img/productos/al/ecd-al-rustico-lino-01-60x54s-lino.jpg' },
     ],
     colores: 'colores',
-    precio: 4500,
+    precio: 4900,
     productURL: '../pages/1654981998440.html',
     stock: 10,
     descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',

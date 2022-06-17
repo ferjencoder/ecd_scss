@@ -11191,6 +11191,8 @@ textarea.form-control-lg {
 
 .ecd-overlay {
   cursor: pointer;
+  object-fit: contain;
+  overflow: hidden;
   opacity: 0;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -11202,7 +11204,7 @@ textarea.form-control-lg {
 
 .ecd-overlay-dark {
   cursor: pointer;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   opacity: 0;
   background: rgba(20, 20, 20, 0.5);
@@ -11251,29 +11253,6 @@ textarea.form-control-lg {
   transition: all 0.3s ease;
   color: #fff;
   border: 2.1px solid #fff;
-}
-
-#lightSlider .demo {
-  width: 450px;
-}
-
-#lightSlider ul {
-  list-style: none outside none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-#lightSlider li {
-  display: block;
-  float: left;
-  margin-right: 6px;
-  cursor: pointer;
-}
-
-#lightSlider img {
-  display: block;
-  height: auto;
-  max-width: 100%;
 }
 
 .ecd-footer {
