@@ -633,16 +633,26 @@
       <!-- HERO ALL  -->
 
       <section class="container-ecd">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5" id="list-product">
+        <div id="list-product" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5">
           <!-- MAGIC HAPPENS HERE -->
         </div>
       </section>
-
       <template id="template-product">
+        <div class="col">
+          <div id="list-product" class="card border-0">
+            <h6 id="productName" class="card-title fw-bold text-uppercase mb-0"></h6>
+            <p id="productMaterial" class="m-0"></p>
+            <p id="productAlto" class="m-0"></p>
+            <figure class="position-relative m-0"></figure>
+          </div>
+        </div>
+      </template>
+
+      <template id="template-">
         <div class="col">
           <div class="card border-0">
             <figure class="position-relative m-0">
-              <img src="${producto.productIMG[0]}" class="card-img-top" alt="${producto.descripcion}" />
+              <img src="${data.productIMG[0]}" class="card-img-top" alt="${producto.descripcion}" />
               <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnSeven">
                 <span class="fa-solid fa-heart"></span>
               </button>
@@ -665,9 +675,9 @@
                 </ul>
                 <span class="badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1">${producto.stock} en stock</span>
               </div>
-              <h6 class="card-title fw-bold text-uppercase mb-0"><small>${producto.nombre}</small></h6>
-              <p class="m-0">Material: ${producto.material}</p>
-              <p class="m-0">Medidas: ${producto.alto}cm x ${producto.ancho}sm</p>
+              <!-- <h6 id="productName" class="card-title fw-bold text-uppercase mb-0"></h6>
+              <p id="productMaterial" class="m-0"></p>
+              <p id="productAlto" class="m-0"></p> -->
             </div>
           </div>
         </div>

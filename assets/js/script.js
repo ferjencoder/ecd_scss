@@ -1,6 +1,24 @@
 //CARRITO SECTION - productos-effects.html
 //DOM
+
 let cart = [];
+
+// let cartEnLS = JSON.stringify(localStorage.getItem('cart'));
+
+document.addEventListener('DOMContentLoaded', () => {
+  fectchData();
+});
+
+const fectchData = async () => {
+  try {
+    const res = await fetch('../assets/js/api.json');
+    const data = await res.json();
+    renderProducts(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 let cortinasLivianasDiv = document.querySelector('#productsList');
 
 for (const producto of productos) {
