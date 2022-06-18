@@ -633,26 +633,16 @@
       <!-- HERO ALL  -->
 
       <section class="container-ecd">
-        <div id="list-product" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5">
+        <div id="product-list" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5">
           <!-- MAGIC HAPPENS HERE -->
         </div>
       </section>
-      <template id="template-product">
-        <div class="col">
-          <div id="list-product" class="card border-0">
-            <h6 id="productName" class="card-title fw-bold text-uppercase mb-0"></h6>
-            <p id="productMaterial" class="m-0"></p>
-            <p id="productAlto" class="m-0"></p>
-            <figure class="position-relative m-0"></figure>
-          </div>
-        </div>
-      </template>
 
-      <template id="template-">
+      <template id="product-template">
         <div class="col">
-          <div class="card border-0">
+          <div iclass="card border-0">
             <figure class="position-relative m-0">
-              <img src="${data.productIMG[0]}" class="card-img-top" alt="${producto.descripcion}" />
+              <img id="product-img" src="" class="card-img-top" alt="${producto.descripcion}" />
               <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnSeven">
                 <span class="fa-solid fa-heart"></span>
               </button>
@@ -661,7 +651,8 @@
             <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
               <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
-                  <div class="toast-body">Agregaste ${producto.nombre} a <a href="../pages/favoritos.html">tus favoritos</a></div>
+                  <!-- <div class="toast-body">Agregaste ${producto.nombre} a <a href="../pages/favoritos.html">tus favoritos</a></div> -->
+                  <div class="toast-body"></div>
                   <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
               </div>
@@ -675,19 +666,14 @@
                 </ul>
                 <span class="badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1">${producto.stock} en stock</span>
               </div>
-              <!-- <h6 id="productName" class="card-title fw-bold text-uppercase mb-0"></h6>
-              <p id="productMaterial" class="m-0"></p>
-              <p id="productAlto" class="m-0"></p> -->
+              <h6 id="product-name" class="card-title fw-bold text-uppercase mb-0"></h6>
+              <p id="product-material" class="m-0"></p>
+              <p id="product-alto" class="m-0"></p>
+              <p id="product-ancho" class="m-0"></p>
             </div>
           </div>
         </div>
       </template>
-
-      <!--   <section class="container-ecd my-5 py-5"> -->
-      <!-- <div class="my-5 py-5"> -->
-      <!-- MAGIC HAPPENS HERE -->
-      <!-- </div> -->
-      <!-- </section> -->
     </main>
 
     <!-- FOOTER -->

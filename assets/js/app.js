@@ -1,8 +1,8 @@
-const listProduct = document.getElementById('list-product'); //items
-const templateProduct = document.getElementById('template-product').content; //templateCard
+const productList = document.getElementById('product-list'); //items
+const productTemplate = document.getElementById('product-template').content; //templateCard
 const fragment = document.createDocumentFragment();
 
-console.log(templateProduct);
+console.log(productTemplate);
 
 document.addEventListener('DOMContentLoaded', () => {
   fectchData();
@@ -12,8 +12,8 @@ const fectchData = async () => {
   try {
     const res = await fetch('../assets/js/api.json');
     const data = await res.json();
-    console.log('DATA: ');
-    console.log(data);
+    // console.log('DATA: ');
+    //console.log(data);
     renderProducts(data);
   } catch (error) {
     console.log(error);
@@ -22,18 +22,23 @@ const fectchData = async () => {
 
 const renderProducts = (data) => {
   data.forEach((producto) => {
-    templateProduct.querySelector('#productName').textContent = producto.nombre;
-    templateProduct.querySelector('#productMaterial').textContent = producto.material;
-    templateProduct.querySelector('#productAlto').textContent = producto.alto;
+    productTemplate.querySelector('#product-name').textContent = producto.nombre;
+    productTemplate.querySelector('#product-material').textContent = producto.material;
+    productTemplate.querySelector('#product-alto').textContent = producto.alto;
+    productTemplate.querySelector('#product-ancho').textContent = producto.ancho;
+    productTemplate.querySelector('#product-img').setAttribute('src', producto.productIMG[0]);
+    // productTemplate.querySelector('#product-img').setAttribute('alt', producto.descripcion);
+    // productTemplate.querySelector('toast-body').textContent = producto.nombre;
 
     //console.log(producto);
 
-    const clone = templateProduct.cloneNode(true);
-    console.log('FRAGMENT: ');
-    console.log(fragment);
+    const clone = productTemplate.cloneNode(true);
+    // console.log('FRAGMENT: ');
+    // console.log(fragment);
 
     fragment.appendChild(clone);
-    console.log('frag' + fragment);
+    // console.log('FRAGMENT: ');
+    // console.log(fragment);
   });
-  listProduct.appendChild(fragment);
+  productList.appendChild(fragment);
 };
