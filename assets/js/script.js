@@ -8,7 +8,7 @@ for (const producto of productos) {
       <div class="col">
         <div class="card border-0">
         <figure class="position-relative m-0">
-          <img src="${producto.productIMG}" class="card-img-top" alt="${producto.descripcion}" />
+          <img src="${producto.productIMG[0]}" class="card-img-top" alt="${producto.descripcion}" />
           <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnSeven">
             <span class="fa-solid fa-heart"></span>
           </button>
@@ -25,11 +25,12 @@ for (const producto of productos) {
           <div class="card-body p-0">
             <div class="clearfix">
               <ul class="d-flex p-0 pt-1 m-0 float-start">
-                <li class="p-1 ps-0"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                <li class="p-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                <li class="p-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
+
+                <li class="p-1 ps-0"><img src=${producto.swatch[0]}  class="cardSwatch" width="32" alt="Muestra material Classic Ivory"/></li>
+                <li class="p-1"><img src=${producto.swatch[1]} class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
+                <li class="p-1"><img src=${producto.swatch[2]} class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
               </ul>
-              <span class="badge p-1 m-1 ${'bg-success'} rounded-pill text-dark float-end mt-1 me-1">${producto.stock} en stock</span>
+              <span class="badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1">${producto.stock} en stock</span>
             </div>
             <h6 class="card-title fw-bold text-uppercase mb-0"><small>${producto.nombre}</small></h6>
             <p class="m-0">Material: ${producto.material}</p >
@@ -47,3 +48,7 @@ for (const producto of productos) {
 //   for (const producto of productos) {
 //   }
 // }
+
+// <li class="p-1 ps-0"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
+// <li class="p-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
+// <li class="p-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>

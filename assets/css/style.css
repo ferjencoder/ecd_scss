@@ -11100,7 +11100,7 @@ textarea.form-control-lg {
   letter-spacing: 0.08rem;
   padding: 0.2em 1em;
   margin-top: 0.7rem;
-  border: 1.5px solid rgb(72, 50, 65);
+  border: 1.5px solid white;
   cursor: pointer;
   font-weight: 600;
 }
@@ -11126,6 +11126,23 @@ textarea.form-control-lg {
   font-weight: 400;
 }
 .ecd-btn-outlined:hover {
+  transition: all 0.3s ease;
+  color: rgb(121, 85, 105);
+  background-color: #fff;
+}
+
+.ecd-btn-outlined-muted {
+  background-color: rgb(230, 227, 222);
+  font-size: 0.875em;
+  color: rgb(72, 50, 65);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.2em 1em;
+  border: 1.5px solid rgb(230, 227, 222);
+  cursor: pointer;
+  font-weight: 400;
+}
+.ecd-btn-outlined-muted:hover {
   transition: all 0.3s ease;
   color: rgb(121, 85, 105);
   background-color: #fff;
