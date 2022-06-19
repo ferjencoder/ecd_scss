@@ -11156,6 +11156,18 @@ textarea.form-control-lg {
   padding: 0.2em 1em;
   border: 1.5px solid black;
   font-weight: 600;
+  position: absolute;
+}
+.ecd-btn-card:hover {
+  color: black;
+  background-color: white;
+  border: 1.5px solid black;
+}
+
+.btn-favourite:hover {
+  color: rgb(151, 16, 16);
+  padding: 0.5rem;
+  font-size: 2rem;
 }
 
 .ecd-btn-counter, .ecd-btn-counter-hover {
