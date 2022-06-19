@@ -3,8 +3,6 @@ const productList = document.getElementById('product-list'); //items
 const productTemplate = document.getElementById('product-template').content; //templateCard
 const fragment = document.createDocumentFragment();
 
-//console.log(productTemplate);
-
 document.addEventListener('DOMContentLoaded', () => {
   fectchData();
 });
@@ -35,9 +33,21 @@ const renderProducts = (data) => {
 
     //! crear for para iterar sobre los swatches y crear elements hasta 5 y luego añadir un
     //! "+3 más" text como link que lleve al producto tmb
+    // console.log(producto.id + ' ' + producto.swatch.length);
+
+    // producto.swatch.length >= 4 ? console.log('mayor que 4') : console.log('menor que 4');
+
+    // if (producto.swatch.length >= 4) {
+    //   for (let i = 0; i <= producto.swatch.length; i++) {
+    //     productTemplate.querySelector('#product-swatch' + i++).setAttribute('src', producto.swatch[i]);
+
+    //   }
+    // }
+
     productTemplate.querySelector('#product-swatch1').setAttribute('src', producto.swatch[0]);
     productTemplate.querySelector('#product-swatch2').setAttribute('src', producto.swatch[1]);
     productTemplate.querySelector('#product-swatch3').setAttribute('src', producto.swatch[2]);
+    productTemplate.querySelector('#product-swatch4').setAttribute('src', producto.swatch[3]);
     productTemplate.querySelector('#stock').textContent = producto.stock[0] + ' en stock';
     productTemplate.querySelector('#btn-comprar').textContent = '$ ' + producto.precio;
     productTemplate.querySelector('#btn-comprar').dataset.id = producto.id;
@@ -47,30 +57,19 @@ const renderProducts = (data) => {
     //console.log(producto);
 
     const clone = productTemplate.cloneNode(true);
-    // console.log('FRAGMENT: ');
-    // console.log(fragment);
 
     fragment.appendChild(clone);
-    // console.log('FRAGMENT: ');
-    // console.log(fragment);
   });
   productList.appendChild(fragment);
 };
 
 const addToCart = (e) => {
-  // console.log(e.target);
-  // console.log(e.target.id.includes('btn-comprar'));
-
-  if (e.target.id.includes('btn-comprar')) {
-    setCart(e.target.parentElement.parentElement);
-    // console.log(e.target.parentElement.parentElement);
-    // console.log(e.target);
-    // console.log(e.target.dataset.id);
-  }
+  e.target.id.includes('btn-comprar') ? setCart(e.target.parentElement.parentElement) : '';
   e.stopPropagation;
 };
 
 const setCart = (obj) => {
+  console.log(obj);
   const producto = {
     id: obj.querySelector('#btn-comprar').dataset.id,
   };
@@ -82,3 +81,7 @@ const setCart = (obj) => {
 // btnFavouriteArray = document.querySelectorAll('btn-favourite');
 
 // console.log(btnFavouriteArray);
+
+// $('btn-comprar').hover(function (event) {
+//   e.target.content = 'comprar';
+// });
