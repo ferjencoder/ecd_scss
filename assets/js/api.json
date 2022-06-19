@@ -119,18 +119,25 @@
     "alto": 50,
     "ancho": 50,
     "medidas": "50cm x 50cm",
-    "colors": ["arcilla", "cambray", "eucaliptus", "lino"],
-    "swatch": [
-      "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-arcilla.jpg",
-      "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-cambray.jpg",
-      "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg",
-      "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-lino.jpg"
-    ],
+    "colors": ["carbon", "eucaliptus", "indigo", "lino"],
+    "swatch": ["../assets/img/productos/al/1654981998444/1654981998444-180x162-carbon-s.jpg", "../assets/img/productos/al/1654981998444/1654981998444-180x162-eucaliptus-s.jpg", "../assets/img/productos/al/1654981998444/1654981998444-180x162-indigo-s.jpg", "../assets/img/productos/al/1654981998444/1654981998444-180x162-lino-s.jpg"],
     "precio": 5800,
     "productURL": "../pages/1654981998440.html",
     "stock": [10, 5, 4, 6],
     "descripcion": "Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.",
-    "productIMG": ["../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-04-558x501.jpg", "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-04-558x501s.jpg", "../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-04-1000x900v.jpg"]
+    "productIMG": [
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-main.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-carbon-c.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-carbon-s.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-carbon-v.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-eucaliptus-c.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-eucaliptus-s.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-indigo-c.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-indigo-s.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-indigo-v.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-lino-c.jpg",
+      "../assets/img/productos/al/1654981998444/1654981998444-710x639-lino-s.jpg"
+    ]
   },
   {
     "id": 1654981998445,
@@ -222,31 +229,38 @@
   },
   {
     "id": 1654981998448,
-    "nombre": "Almohadón Faux fur",
+    "nombre": "Almohadón Tejido Extra Soft",
     "productor": "ecd",
     "tipo": "almohadón",
-    "material": "Simil piel",
+    "material": "Lana",
     "alto": 50,
     "ancho": 50,
     "medidas": "50cm x 50cm",
-    "colors": ["marfil"],
-    "swatch": ["../assets/img/productos/al/1654981998448/ecd-al-simil-piel-redondo-02-1000x900s.jpg"],
+    "colors": ["carbon", "salvia", "tabaco"],
+    "swatch": ["../assets/img/productos/al/1654981998448/1654981998448-180x162-carbon-s.jpg", "../assets/img/productos/al/1654981998448/1654981998448-180x162-salvia-s.jpg", "../assets/img/productos/al/1654981998448/1654981998448-180x162-tabaco-s.jpg"],
     "precio": 7500,
     "productURL": "../pages/1654981998440.html",
     "stock": [8, 5, 4, 6],
-    "descripcion": "Almohadón Faux Fur de 50cm x 50cm con relleno. Funda removible.",
-    "productIMG": ["../assets/img/productos/al/1654981998448/ecd-al-simil-piel-redondo-02-1000x900.jpg", "../assets/img/productos/al/1654981998448/ecd-al-simil-piel-redondo-02-1000x900v.jpg", "../assets/img/productos/al/1654981998448/ecd-al-simil-piel-redondo-02-1000x900vv.jpg"]
+    "descripcion": "Almohadón Tejido Extra Soft de 50cm x 50cm con relleno. Funda removible.",
+    "productIMG": [
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-main.jpg",
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-carbon-c.jpg",
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-salvia-c.jpg",
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-salvia-s.jpg",
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-tabaco.jpg",
+      "../assets/img/productos/al/1654981998448/1654981998448-710x639-tabaco-s.jpg"
+    ]
   },
   {
     "id": 1654981998449,
-    "nombre": "Almohadón Tejido Chenille 9",
+    "nombre": "Almohadón Tejido Ochos",
     "productor": "ecd",
     "tipo": "almohadón",
     "material": "Lana chenille",
     "alto": 50,
     "ancho": 50,
     "medidas": "50cm x 50cm",
-    "colors": ["arcilla", "cambray", "eucaliptus", "lino"],
+    "colors": ["avena", "barro", "black", "cambray", "cardinal", "indigo", "marfil", "naval"],
     "swatch": [
       "../assets/img/productos/al/1654981998449/ecd-al-tejido-01-180x162s-avena.jpg",
       "../assets/img/productos/al/1654981998449/ecd-al-tejido-01-180x162s-barro.jpg",

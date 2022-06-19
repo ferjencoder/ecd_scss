@@ -77,8 +77,8 @@ const setCart = (obj) => {
   console.log(producto);
 };
 
-let btnFavouriteArray = [];
+// let btnFavouriteArray = [];
 
-btnFavouriteArray = document.querySelectorAll('btn-favourite');
+// btnFavouriteArray = document.querySelectorAll('btn-favourite');
 
-console.log(btnFavouriteArray);
+// console.log(btnFavouriteArray);
