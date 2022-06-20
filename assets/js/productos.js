@@ -14,6 +14,7 @@ const productos = [
       '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
       '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-lino.jpg',
     ],
+    img100: [],
     precio: 4500,
     productURL: '../pages/1654981998440.html',
     stock: [10, 5, 4, 6],

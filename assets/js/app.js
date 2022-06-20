@@ -29,7 +29,7 @@ const renderProducts = (data) => {
     productTemplate.querySelector('#product-name').textContent = producto.nombre;
     productTemplate.querySelector('#product-material').textContent = 'Material: ' + producto.material;
     productTemplate.querySelector('#product-alto').textContent = 'Medidas: ' + producto.medidas;
-    productTemplate.querySelector('#product-img').setAttribute('src', producto.productIMG[0]);
+    productTemplate.querySelector('#product-img').setAttribute('src', producto.img500[0]);
     productTemplate.querySelector('#product-img').setAttribute('alt', producto.descripcion);
 
     //! crear for para iterar sobre los swatches y crear elements hasta 5 y luego añadir un
@@ -45,10 +45,10 @@ const renderProducts = (data) => {
     //   }
     // }
 
-    productTemplate.querySelector('#product-swatch1').setAttribute('src', producto.swatch[0]);
-    productTemplate.querySelector('#product-swatch2').setAttribute('src', producto.swatch[1]);
-    productTemplate.querySelector('#product-swatch3').setAttribute('src', producto.swatch[2]);
-    productTemplate.querySelector('#product-swatch4').setAttribute('src', producto.swatch[3]);
+    productTemplate.querySelector('#product-swatch1').setAttribute('src', producto.img40[0]);
+    productTemplate.querySelector('#product-swatch2').setAttribute('src', producto.img40[1]);
+    productTemplate.querySelector('#product-swatch3').setAttribute('src', producto.img40[2]);
+    productTemplate.querySelector('#product-swatch4').setAttribute('src', producto.img40[3]);
     productTemplate.querySelector('#stock').textContent = producto.stock[0] + ' en stock';
     productTemplate.querySelector('#btn-comprar').textContent = '$ ' + producto.precio;
     productTemplate.querySelector('#btn-comprar').dataset.id = producto.id;
