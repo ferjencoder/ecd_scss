@@ -66,7 +66,3 @@ for (const producto of productos) {
 //   for (const producto of productos) {
 //   }
 // }
-
-// <li class="p-1 ps-0"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-// <li class="p-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-// <li class="p-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>

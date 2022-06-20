@@ -11160,14 +11160,14 @@ textarea.form-control-lg {
 }
 .ecd-btn-card:hover {
   color: black;
+  transition: all 0.5s ease;
   background-color: white;
   border: 1.5px solid black;
 }
 
 .btn-favourite:hover {
   color: rgb(151, 16, 16);
-  padding: 0.5rem;
-  font-size: 2rem;
+  transition: all 0.5s ease;
 }
 
 .ecd-btn-counter, .ecd-btn-counter-hover {

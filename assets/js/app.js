@@ -1,3 +1,4 @@
+//PENSAR PARA FAVOURITES
 let cart = [];
 const productList = document.getElementById('product-list'); //items
 const productTemplate = document.getElementById('product-template').content; //templateCard
