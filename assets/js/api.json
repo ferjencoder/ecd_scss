@@ -14,7 +14,9 @@
     "stock": [10, 5, 4, 6],
     "descripcion": "Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.",
     "img40": ["../assets/img/productos/al/1654981998441/1654981998441-180x162s-arcilla.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-cambray.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-eucaliptus.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-lino.jpg"],
+
     "img100": ["../assets/img/productos/al/1654981998441/1654981998441-180x162s-arcilla.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-cambray.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-eucaliptus.jpg", "../assets/img/productos/al/1654981998441/1654981998441-180x162s-lino.jpg"],
+
     "img500": [
       "../assets/img/productos/al/1654981998441/1654981998441-710x639-arcilla-c.jpg",
       "../assets/img/productos/al/1654981998441/1654981998441-710x639-arcilla-p.jpg",
