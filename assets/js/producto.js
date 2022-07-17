@@ -6,7 +6,8 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // console.log(cart);
 
-const productList = document.getElementById('product-list');
+// const productList = document.getElementById('product-list');
+// console.log(productList);
 
 // FETCH SELECTED PRODUCT FROM LOCAL STORAGE
 let productoStored = JSON.parse(localStorage.getItem('item'));
@@ -16,10 +17,6 @@ let productoSelected = Number(productoStored.id);
 document.addEventListener('DOMContentLoaded', () => {
   fectchData();
 });
-
-// productList.addEventListener('click', (e) => {
-//   selectProduct(e);
-// });
 
 // FETCH / GET DATA FROM JSON FILE (LATER ON API) AND CALL RENDER PRODUCTS AND SWIPER
 //info get favourites to work
@@ -57,105 +54,122 @@ const callSwiper = () => {
 
 // RENDER PRODUCTS
 const almohadonesDiv = document.getElementById('productList');
+const almohadonesTable = document.getElementById('productTable');
+
+// console.log(almohadonesDiv);
 
 const renderProducts = (data) => {
   almohadonesDiv.innerHTML = '';
   for (const producto of data) {
     if (producto.id === productoSelected) {
+      //RENDER PRODUCT GALLERY - SWIPER
       almohadonesDiv.innerHTML += `
-      <div class="col mx-5">
-        <div class="row g-1 mx-5">
-          <div class="col-1 m-0 p-0">
-            <div class="swiper gallery-thumbs">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(${producto.img100[0]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[1]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[2]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[3]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[4]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[5]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[6]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[7]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[8]})"></div>
-                <div class="swiper-slide" style="background-image: url(${producto.img100[9]})"></div>
-              </div>
+        <div class="col-2 m-0 p-0">
+          <div class="swiper gallery-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url(${producto.img100[0]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[1]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[2]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[3]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[4]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[5]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[6]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[7]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[8]})"></div>
+              <div class="swiper-slide" style="background-image: url(${producto.img100[9]})"></div>
             </div>
           </div>
-
-          <div class="col-6 m-0 p-0">
-            <div class="swiper gallery-top m-0 p-0">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="${producto.img1000[0]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[1]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[2]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[3]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[4]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[5]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[6]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[7]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[8]}" alt="" /></div>
-                <div class="swiper-slide"><img src="${producto.img1000[9]}" alt="" /></div>
-              </div>
+        </div>
+        <div class="col-10 m-0 p-0">
+          <div class="swiper gallery-top m-0 p-0">
+            <div class="swiper-wrapper">
+              <div id="slide-0" class="swiper-slide"><img src="${producto.img1000[0]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-1" class="swiper-slide"><img src="${producto.img1000[1]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-2" class="swiper-slide"><img src="${producto.img1000[2]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-3" class="swiper-slide"><img src="${producto.img1000[3]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-4" class="swiper-slide"><img src="${producto.img1000[4]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-5" class="swiper-slide"><img src="${producto.img1000[5]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-6" class="swiper-slide"><img src="${producto.img1000[6]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-7" class="swiper-slide"><img src="${producto.img1000[7]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-8" class="swiper-slide"><img src="${producto.img1000[8]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-9" class="swiper-slide"><img src="${producto.img1000[9]}" alt="${producto.descripcion}" /></div>
             </div>
           </div>
-
-          <div class="col-5 m-0 p-0 mt-4">
-            <ul class="small-photos p-0 list-group-flush">
-              <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">Almohadón Tusor Cuadrado</h2></li>
-              <li class="ecd-border-bt mb-3"><p>Comfy Pillow. Funda lavable.</p></li>
-              <li class="m-0 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
-              <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
-              <!-- <li class="mb-3 p-0"><p class="m-0 p-0">${producto.stock[0]}</p></li> -->
-              <li class="mb-2">
-                <h6 class="text-uppercase text-primary">
-                  <strong>Selecciona el color: <span>1</span></strong>
-                </h6>
-              </li>
-              <li>
-                <div class="list-group list-group-flush list-group-horizontal overflow-hidden m-0 p-0 border-0 d-inline-flex" id="list-tab" role="tablist">
-                  <div class="list-group-item btn-swatch sw1 m-0 p-1 text-center list-group-item-action border-0" id="list-one-list" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-one">
-                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[0]}" width="35" height="30" alt="Almohadón tusor cuadrado color arcilla" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ARCILLA" data-bs-custom-class="ecd-tooltip" />
-                  </div>
-                  <div class="list-group-item btn-swatch sw2 m-0 p-1 border-0 text-center list-group-item-action" id="list-five-list" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-five">
-                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[1]}" width="35" height="30" alt="Almohadón tusor cuadrado color cambray" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CAMBRAY" data-bs-custom-class="ecd-tooltip" />
-                  </div>
-                  <div class="list-group-item btn-swatch sw3 m-0 p-1 border-0 text-center list-group-item-action" id="list-nine-list" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-nine">
-                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[2]}" width="35" height="30" alt="Almohadón tusor cuadrado color eucaliptus" data-bs-toggle="tooltip" data-bs-placement="bottom" title="EUCALIPTUS" data-bs-custom-class="ecd-tooltip" />
-                  </div>
-                  <div class="list-group-item btn-swatch sw4 m-0 p-1 border-0 text-center list-group-item-action" id="list-thirteen-list" data-bs-toggle="list" href="#list-thirteen" role="tab" aria-controls="list-thirteen">
-                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[3]}" width="35" height="30" alt="Almohadón tusor cuadrado color lino" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LINO" data-bs-custom-class="ecd-tooltip" />
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item text-center ecd-border-bt mt-5 pb-3">
-                <button class="btn ecd-btn-outlined w-100 shadow-none" type="submit" id="agragarAlCarrito" aria-label="Agregar al carrito">AGREGAR AL CARRITO</button>
-              </li>
-              <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
-              <li class="list-group-item text-center border-0 mt-2">
-                <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">CONTINUAR COMPRANDO</button>
-              </li>
-            </ul>
-          </div>
+        </div>
         </div>
       </div>
       `;
+
+      // RENDER PRODUCT DETAILS TABLE
+      almohadonesTable.innerHTML += `
+        <aside class="py-5 p-sm-5 pt-xl-5 px-xl-0 bg-white ecd-border-light">
+          <div class="container-sm px-5 px-xl-4">
+            <div class="col-12 m-0 px-4 mt-4">
+              <ul class="small-photos p-0 list-group-flush">
+                <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">${producto.nombre}</h2></li>
+                <li class="ecd-border-bt mb-3"><p>${producto.descripcion}</p></li>
+                <li class="mt-4 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
+                <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
+                <!-- <li class="mb-3 p-0"><p class="m-0 p-0">${producto.stock[0]}</p></li> -->
+                <li class="mb-2">
+                  <h6 class="text-uppercase text-primary">
+                    <strong>Selecciona el color: <span></span></strong>
+                  </h6>
+                </li>
+                <li>
+                  <div class="list-group list-group-flush list-group-horizontal overflow-hidden m-0 p-0 border-0 d-inline-flex" id="list-tab" role="tablist">
+                    <div class="list-group-item btn-swatch sw1 m-0 p-1 text-center list-group-item-action border-0" id="slide-0" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-one">
+                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[0]}" width="35" height="30" alt="${producto.colors[0]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[0]}" data-bs-custom-class="ecd-tooltip" />
+                    </div>
+                    <div class="list-group-item btn-swatch sw2 m-0 p-1 border-0 text-center list-group-item-action" id="slide-1" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-five">
+                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[1]}" width="35" height="30" alt="${producto.colors[1]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[1]}" data-bs-custom-class="ecd-tooltip" />
+                    </div>
+                    <div class="list-group-item btn-swatch sw3 m-0 p-1 border-0 text-center list-group-item-action" id="slide-2" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-nine">
+                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[2]}" width="35" height="30" alt="${producto.colors[2]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[2]}" data-bs-custom-class="ecd-tooltip" />
+                    </div>
+                    <div class="list-group-item btn-swatch sw4 m-0 p-1 border-0 text-center list-group-item-action" id="slide-3" data-bs-toggle="list" href="#list-thirteen" role="tab" aria-controls="list-thirteen">
+                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[3]}" width="35" height="30" alt="${producto.colors[3]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[3]}" data-bs-custom-class="ecd-tooltip" />
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-center ecd-border-bt mt-5 pb-3">
+                  <button id="" class="agregarAlCarrito btn ecd-btn-outlined w-100 shadow-none" type="button">AGREGAR AL CARRITO</button>
+                </li>
+                <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
+                <li class="list-group-item text-center border-0 mt-2">
+                  <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">CONTINUAR COMPRANDO</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      `;
+
+      document.querySelector('.agregarAlCarrito').onclick = function () {
+        //preventDefault();
+        console.log(producto);
+        console.log(productoSelected);
+        // addToCart(producto);
+        addToCart(producto);
+      };
     }
   }
 };
 
-// // ADD TO CART
+// ADD TO CART
+const addToCart = (producto) => {
+  // console.info('addToCart CALLED');
+  // console.log(productoSelected);
+  cart.push(producto);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  // document.querySelector('#cartDropdown').className = 'btn dropdown-toggle shadow-none show';
 
-// //#agragarAlCarrito
-// console.log(productList);
-// productList.addEventListener('click', (e) => {
-//   console.log(e);
-//   addToCart(e);
-// });
+  const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+  const dropdownList = [...dropdownElementList].map((dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl));
 
-const addToCart = (e) => {
-  e.target.id.includes('agragarAlCarrito') ? setProduct(e.target.parentElement) : '';
-  e.target.stopPropagation;
-  console.log(e.target.parentElement);
+  const cartDropdown = document.querySelector('#cartDropdown');
+  cartDropdown.getins;
+
   console.log(cart);
 };
 
