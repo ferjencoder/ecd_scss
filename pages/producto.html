@@ -123,6 +123,7 @@
                       </ul>
                     </div>
                   </div>
+                  <!-- USER PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
@@ -154,6 +155,7 @@
                       <li class="list-group-item border-bottom-0 shadow-none"><p class="dropdown-item-text text-wrap text-sm-start p-0 m-0">Tener una cuenta te permite comprar más rápido, hacer seguimiento de tus órdenes y mucho más.</p></li>
                     </ul>
                   </div>
+                  <!-- FAVOURITE PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="favourite" role="tabpanel" aria-labelledby="favourite-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
@@ -223,42 +225,20 @@
                       </li>
                     </ul>
                   </div>
+                  <!-- SHOPPING PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="shopping" role="tabpanel" aria-labelledby="shopping-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
                         <h6 class="m-0 p-2">mi carrito</h6>
                       </li>
-                      <!-- favourite example one -->
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-tejido-01-100x100.jpg" width="100" height="100" alt="Almohadón tejido ochos. Material: Lana de algodón natural. Color: crudo." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tejido ochos</h6>
-                          <p class="m-0 p-0"><small>Color: crudo</small></p>
-                          <p class="m-0 p-0"><small>Material: Lana de algodón natural</small></p>
-                          <p class="m-0 p-0">$ 4.500</p>
-                        </div>
-                        <span class="badge bg-success rounded-pill text-dark position-absolute bottom-0 end-0 m-2">5 en stock</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-02-100x100.jpg" width="100" height="100" alt="Mantel crudo tejido. Material: Algodón natural. Color: crudo." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">mantel crudo tejido</h6>
-                          <p class="m-0 p-0"><small>Color: crudo</small></p>
-                          <p class="m-0 p-0"><small>Material: Algodón natural</small></p>
-                          <p class="m-0 p-0">$ 6.750</p>
-                        </div>
-                        <span class="badge bg-danger rounded-pill text-dark position-absolute bottom-0 end-0 m-2">1 en stock</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-03-100x100.jpg" width="100" height="100" alt="Individual trenzado. Material: Lana trenzada. Color: varios colores." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">individual trenzado</h6>
-                          <p class="m-0 p-0"><small>Color: varios colores</small></p>
-                          <p class="m-0 p-0"><small>Material: Lana trenzada</small></p>
-                          <p class="m-0 p-0">$3.800</p>
-                        </div>
-                        <span class="badge bg-success rounded-pill text-dark position-absolute bottom-0 end-0 m-2">4 en stock</span>
-                      </li>
+                    </ul>
+
+                    <ul id="offcanvasCartDropdown" class="list-group list-group-flush p-0 m-0 ecd-border-bt">
+                      <!-- MAGIC HAPPENS HERE -->
+                    </ul>
+
+                    <!-- goto cart link -->
+                    <ul class="list-group list-group-flush p-0 m-0 ecd-border-bt">
                       <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
                         <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
                       </li>
@@ -424,37 +404,11 @@
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
                   </li>
-                  <!-- favourite example one -->
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-tejido-01-100x100.jpg" width="100" height="100" alt="Almohadón tejido ochos. Material: Lana de algodón natural. Color: crudo." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tejido ochos</h6>
-                      <p class="m-0 p-0"><small>Color: crudo</small></p>
-                      <p class="m-0 p-0"><small>Material: Lana de algodón natural</small></p>
-                      <p class="m-0 p-0">$ 4.500</p>
-                    </div>
-                    <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">5 en stock</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-02-100x100.jpg" width="100" height="100" alt="Mantel crudo tejido. Material: Algodón natural. Color: crudo." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">mantel crudo tejido</h6>
-                      <p class="m-0 p-0"><small>Color: crudo</small></p>
-                      <p class="m-0 p-0"><small>Material: Algodón natural</small></p>
-                      <p class="m-0 p-0">$ 6.750</p>
-                    </div>
-                    <span class="badge bg-danger rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">1 en stock</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-03-100x100.jpg" width="100" height="100" alt="Individual trenzado. Material: Lana trenzada. Color: varios colores." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">individual trenzado</h6>
-                      <p class="m-0 p-0"><small>Color: varios colores</small></p>
-                      <p class="m-0 p-0"><small>Material: Lana trenzada</small></p>
-                      <p class="m-0 p-0">$3.800</p>
-                    </div>
-                    <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">4 en stock</span>
-                  </li>
+                </ul>
+                <ul id="navbarCartDropdown" class="list-group list-group-flush p-0 m-0">
+                  <!-- MAGIC HAPPENS HERE -->
+                </ul>
+                <ul class="list-group list-group-flush p-0 m-0">
                   <li class="list-group-item d-flex justify-content-center align-items-center position-relative border-top">
                     <a class="text-uppercase align-content-center small text-primary" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
                   </li>

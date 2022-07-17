@@ -1,13 +1,8 @@
 'use strict';
-//ULTIMO WORKING - producto-api-gal.html
-//console.log(cart);
 
 // CHECK CART
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// console.log(cart);
-
-// const productList = document.getElementById('product-list');
-// console.log(productList);
+console.log(cart);
 
 // FETCH SELECTED PRODUCT FROM LOCAL STORAGE
 let productoStored = JSON.parse(localStorage.getItem('item'));
@@ -25,6 +20,7 @@ const fectchData = async () => {
     const res = await fetch(`../assets/js/api.json`);
     const data = await res.json();
     renderProducts(data);
+    renderOffcanvasCart(cart);
     callSwiper();
   } catch (error) {
     console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
@@ -52,14 +48,37 @@ const callSwiper = () => {
   //  console.log("DONE SWIPIN'");
 };
 
+//! CALL LIVE TOASTS
+// const callSwiper = () => {
+//   let galleryThumbs = new Swiper('.gallery-thumbs', {
+//     direction: 'vertical',
+//     loop: true,
+//     spaceBetween: 10,
+//     slidesPerView: 7,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//   });
+//   let galleryTop = new Swiper('.gallery-top', {
+//     direction: 'vertical',
+//     thumbs: {
+//       swiper: galleryThumbs,
+//     },
+//   });
+//   //  console.log("DONE SWIPIN'");
+// };
+
 // RENDER PRODUCTS
+
+// RENDER PRODUCT
 const almohadonesDiv = document.getElementById('productList');
 const almohadonesTable = document.getElementById('productTable');
-
-// console.log(almohadonesDiv);
+const offcanvasCartDropdown = document.getElementById('offcanvasCartDropdown');
+const navbarCartDropdown = document.getElementById('navbarCartDropdown');
 
 const renderProducts = (data) => {
   almohadonesDiv.innerHTML = '';
+  almohadonesTable.innerHTML = '';
+
   for (const producto of data) {
     if (producto.id === productoSelected) {
       //RENDER PRODUCT GALLERY - SWIPER
@@ -110,7 +129,7 @@ const renderProducts = (data) => {
                 <li class="ecd-border-bt mb-3"><p>${producto.descripcion}</p></li>
                 <li class="mt-4 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
                 <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
-                <!-- <li class="mb-3 p-0"><p class="m-0 p-0">${producto.stock[0]}</p></li> -->
+                <li class="mb-3 p-0"><p class="m-0 p-0">PRECIO: ${producto.precio}</p></li>
                 <li class="mb-2">
                   <h6 class="text-uppercase text-primary">
                     <strong>Selecciona el color: <span></span></strong>
@@ -137,45 +156,107 @@ const renderProducts = (data) => {
                 </li>
                 <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
                 <li class="list-group-item text-center border-0 mt-2">
-                  <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">CONTINUAR COMPRANDO</button>
-                </li>
+                  <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/productos.html">CONTINUAR COMPRANDO</a>
+                  </li>
               </ul>
             </div>
           </div>
         </aside>
       `;
 
+      //   CONTINUAR COMPRANDO
+      // <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">
+      // </button>;
+
       document.querySelector('.agregarAlCarrito').onclick = function () {
-        //preventDefault();
-        console.log(producto);
-        console.log(productoSelected);
-        // addToCart(producto);
+        // if ($('.dropdown').find('.dropdown-menu').is(":hidden")){
+        //   $('.dropdown-toggle').dropdown('toggle');
         addToCart(producto);
       };
     }
   }
 };
 
+// RENDER OFFCANVAS CART && MENUE DROPDOWN CART
+const renderOffcanvasCart = (cart) => {
+  console.log(cart);
+  offcanvasCartDropdown.innerHTML = '';
+
+  for (const itemInCart of cart) {
+    let precio = itemInCart.precio;
+
+    const options = {
+      style: 'currency',
+      currency: 'ARS',
+    };
+    const precioARS = new Intl.NumberFormat('es-AR', options).format(precio);
+    console.log(precioARS);
+
+    offcanvasCartDropdown.innerHTML += `
+      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
+        <figure class="p-0 m-0 align-self-center">
+          <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
+        </figure>
+        <div class="container d-flex flex-column align-items-start ps-2">
+          <h6 class="text-uppercase pt-1 text-primary m-0">${itemInCart.nombre}</h6>
+          <p class="m-0 p-0"><small>Color: ${itemInCart.colors[0]}</small></p>
+          <p class="m-0 p-0"><small>Material: ${itemInCart.material}</small></p>
+          <p class="m-0 p-0">Precio: ${itemInCart.precio}</p>
+        </div>
+        <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
+      </li>
+    `;
+    navbarCartDropdown.innerHTML += `
+      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
+        <figure class="p-0 m-0 align-self-center">
+          <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
+        </figure>
+        <div class="container d-flex flex-column align-items-start ps-2">
+          <h6 class="text-uppercase pt-1 text-primary m-0">${itemInCart.nombre}</h6>
+          <p class="m-0 p-0"><small>Color: ${itemInCart.colors[0]}</small></p>
+          <p class="m-0 p-0"><small>Material: ${itemInCart.material}</small></p>
+          <p class="m-0 p-0">Precio: ${itemInCart.precio}</p>
+        </div>
+        <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
+      </li>
+    `;
+  }
+};
+
+const cartDropdown = document.querySelector('#cartDropdown');
+
+console.log(cartDropdown);
+
+const openCartDropdown = () => {
+  cartDropdown.dropdown('show');
+  console.log(cartDropdown);
+};
+
+const myModal = document.getElementById('myModal');
+
+myModal.addEventListener('show.bs.modal', (event) => {
+  if (!data) {
+    return event.preventDefault(); // stops modal from being shown
+  }
+});
+
 // ADD TO CART
 const addToCart = (producto) => {
-  // console.info('addToCart CALLED');
-  // console.log(productoSelected);
-  cart.push(producto);
-  localStorage.setItem('cart', JSON.stringify(cart));
+  // CHECK IF productoSelected EXISTS IN CART
+  if (cart.find((p) => p.id == productoSelected)) {
+  } else {
+    cart.push(producto);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log('ADDING TO CART WORKED');
+    renderOffcanvasCart(cart);
+    openCartDropdown();
+  }
+
   // document.querySelector('#cartDropdown').className = 'btn dropdown-toggle shadow-none show';
 
   const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
   const dropdownList = [...dropdownElementList].map((dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl));
-
-  const cartDropdown = document.querySelector('#cartDropdown');
-  cartDropdown.getins;
+  // const cartDropdown = document.querySelector('#cartDropdown');
 
   console.log(cart);
-};
-
-const setProduct = (obj) => {
-  console.log(obj);
-  const producto = {
-    id: obj.querySelector('.btn-comprar').dataset.id,
-  };
 };

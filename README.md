@@ -4,6 +4,8 @@
 
 Shopping website for a company that designs, produces and installs curtains, pillows, throws and more.
 
+https://entrecortinas.netlify.app/
+
 https://github.com/ferjencoder/ecd_scss
 
 https://ferjencoder.github.io/ecd_scss/

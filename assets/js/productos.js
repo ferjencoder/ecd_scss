@@ -3,8 +3,6 @@
 let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-//localStorage.setItem('item', JSON.stringify(producto));
-
 const productList = document.getElementById('product-list'); //items
 const productTemplate = document.getElementById('product-template').content; //templateCard
 const fragment = document.createDocumentFragment();
