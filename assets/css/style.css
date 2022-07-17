@@ -14,6 +14,80 @@
   background-color: rgba(var(--bs-ecd-clr-10-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.ecd-pop-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #000;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  overflow-anchor: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecd-pop-button {
+    transition: none;
+  }
+}
+.ecd-pop-button:not(.collapsed) {
+  color: transparent;
+  background-color: transparent;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.ecd-pop-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'><path fill-rule='evenodd' d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 302.6l-103.1 103.1C270.7 414.6 260.9 416 256 416c-4.881 0-14.65-1.391-22.65-9.398L129.4 302.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 306.8V128c0-17.69 14.33-32 32-32s32 14.31 32 32v178.8l49.38-49.38c12.5-12.5 32.75-12.5 45.25 0S395.1 290.1 382.6 302.6z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.ecd-pop-button::after {
+  flex-shrink: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'><path fill-rule='evenodd' d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 302.6l-103.1 103.1C270.7 414.6 260.9 416 256 416c-4.881 0-14.65-1.391-22.65-9.398L129.4 302.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 306.8V128c0-17.69 14.33-32 32-32s32 14.31 32 32v178.8l49.38-49.38c12.5-12.5 32.75-12.5 45.25 0S395.1 290.1 382.6 302.6z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.9rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecd-pop-button::after {
+    transition: none;
+  }
+}
+.ecd-pop-button:hover {
+  z-index: 2;
+}
+
+.ecd-pop-button:focus {
+  z-index: 3;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: transparent;
+}
+
+.ecd-shadow {
+  border-radius: 0px;
+  background: #e0e0e0;
+  box-shadow: inset 10px 10px 20px #cccccc, inset -10px -10px 20px #f4f4f4;
+}
+.ecd-shadow:active {
+  box-shadow: none;
+}
+.ecd-shadow:hover {
+  box-shadow: none;
+}
+.ecd-shadow:focus {
+  box-shadow: none;
+}
+
 :root {
   --bs-blue: rgb(178, 208, 255);
   --bs-indigo: rgb(132, 152, 207);
@@ -76,41 +150,6 @@
 
 .ecd-border-light {
   border: 1px solid rgba(121, 85, 105, 0.486);
-}
-
-.swiper-container {
-  width: 111px;
-  height: 520px;
-  justify-content: center;
-}
-
-.ecd-btn-prev:hover {
-  opacity: 1;
-}
-
-.ecd-btn-prev::before {
-  color: #000;
-  background-color: #fff;
-  padding: 0.3em;
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  flex-direction: column;
-  text-align: center;
-  opacity: 0.5;
-}
-.ecd-btn-prev::before::before:hover {
-  opacity: 1;
-}
-.ecd-btn-prev::before::after:hover {
-  opacity: 1;
-}
-.ecd-btn-prev::before:hover {
-  opacity: 1;
-}
-
-.ecd-btn-next {
-  bottom: 0;
 }
 
 /*!
@@ -5466,7 +5505,7 @@ textarea.form-control-lg {
 .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
   top: -1px;
   border-width: 0.4rem 0.4rem 0;
-  border-top-color: #000;
+  border-top-color: rgb(72, 50, 65);
 }
 
 .bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^=right] {
@@ -5480,7 +5519,7 @@ textarea.form-control-lg {
 .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
   right: -1px;
   border-width: 0.4rem 0.4rem 0.4rem 0;
-  border-right-color: #000;
+  border-right-color: rgb(72, 50, 65);
 }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[data-popper-placement^=bottom] {
@@ -5492,7 +5531,7 @@ textarea.form-control-lg {
 .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
   bottom: -1px;
   border-width: 0 0.4rem 0.4rem;
-  border-bottom-color: #000;
+  border-bottom-color: rgb(72, 50, 65);
 }
 
 .bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^=left] {
@@ -5506,7 +5545,7 @@ textarea.form-control-lg {
 .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
   left: -1px;
   border-width: 0.4rem 0 0.4rem 0.4rem;
-  border-left-color: #000;
+  border-left-color: rgb(72, 50, 65);
 }
 
 .tooltip-inner {
@@ -5514,7 +5553,7 @@ textarea.form-control-lg {
   padding: 0.25rem 0.5rem;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: rgb(72, 50, 65);
 }
 
 .popover {
@@ -11159,80 +11198,6 @@ textarea.form-control-lg {
   letter-spacing: 0.09rem;
 }
 
-.ecd-pop-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
-  color: #000;
-  text-align: left;
-  background-color: #fff;
-  border: 0;
-  overflow-anchor: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ecd-pop-button {
-    transition: none;
-  }
-}
-.ecd-pop-button:not(.collapsed) {
-  color: transparent;
-  background-color: transparent;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-}
-
-.ecd-pop-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'><path fill-rule='evenodd' d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 302.6l-103.1 103.1C270.7 414.6 260.9 416 256 416c-4.881 0-14.65-1.391-22.65-9.398L129.4 302.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 306.8V128c0-17.69 14.33-32 32-32s32 14.31 32 32v178.8l49.38-49.38c12.5-12.5 32.75-12.5 45.25 0S395.1 290.1 382.6 302.6z'/%3e%3c/svg%3e");
-  transform: rotate(-180deg);
-}
-
-.ecd-pop-button::after {
-  flex-shrink: 0;
-  width: 1.9rem;
-  height: 1.9rem;
-  margin-left: auto;
-  content: "";
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'><path fill-rule='evenodd' d='M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 302.6l-103.1 103.1C270.7 414.6 260.9 416 256 416c-4.881 0-14.65-1.391-22.65-9.398L129.4 302.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 306.8V128c0-17.69 14.33-32 32-32s32 14.31 32 32v178.8l49.38-49.38c12.5-12.5 32.75-12.5 45.25 0S395.1 290.1 382.6 302.6z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 1.9rem;
-  transition: transform 0.2s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ecd-pop-button::after {
-    transition: none;
-  }
-}
-.ecd-pop-button:hover {
-  z-index: 2;
-}
-
-.ecd-pop-button:focus {
-  z-index: 3;
-  border-color: transparent;
-  outline: 0;
-  box-shadow: transparent;
-}
-
-.ecd-shadow {
-  border-radius: 0px;
-  background: #e0e0e0;
-  box-shadow: inset 10px 10px 20px #cccccc, inset -10px -10px 20px #f4f4f4;
-}
-.ecd-shadow:active {
-  box-shadow: none;
-}
-.ecd-shadow:hover {
-  box-shadow: none;
-}
-.ecd-shadow:focus {
-  box-shadow: none;
-}
-
 .ecd-accordion-button {
   position: relative;
   display: flex;
@@ -11365,7 +11330,7 @@ textarea.form-control-lg {
 
 .btn-favourite:hover {
   color: rgb(151, 16, 16);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .ecd-btn-counter, .ecd-btn-counter-hover {
@@ -11765,6 +11730,49 @@ textarea.form-control-lg {
 
 li {
   list-style: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 639px;
+}
+
+.swiper-slide {
+  width: 710px;
+  height: 639px;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  width: 710px;
+  height: 639px;
+  /* height: 80%;
+  width: 100%; */
+}
+
+.gallery-thumbs {
+  width: 100px;
+  height: 639px;
+  box-sizing: border-box;
+  /* padding: 5px 0; */
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 100%;
+  opacity: 0.6;
+  background-size: contain;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+/* SWIPER */
+.swiper-container {
+  width: 111px;
+  height: 528px;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

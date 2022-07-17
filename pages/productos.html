@@ -26,10 +26,14 @@
     <meta property="og:url" content="https://entrecortinas.netlify.app/" />
     <meta property="og:image" content="../assets/img/ecd-website-snap.jpg" />
 
-    <!-- CSS & FONTS -->
+    <!-- FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/kal6lby.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
+
     <title>Productos || Entre Cortinas</title>
   </head>
   <body>
@@ -136,7 +140,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="offcanvasPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                            <input type="password" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" placeholder="Contraseña" />
+                            <input type="password" autocomplete="pass" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" placeholder="Contraseña" />
                           </div>
                           <div class="mb-1">
                             <div class="form-check">
@@ -315,7 +319,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="navbarPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" placeholder="Contraseña" />
+                        <input type="password" autocomplete="pass" class="form-control shadow-none ecd-border-full" id="navbarPassword" placeholder="Contraseña" />
                       </div>
                       <div class="mb-1">
                         <div class="form-check">
@@ -630,663 +634,59 @@
         </article>
       </section>
 
-      <!-- HERO SECTION CARDS ONE -->
-      <section class="my-5 text-center">
-        <div class="container-xxl mt-5 p-0 text-center">
-          <div class="row g-3 mx-3">
-            <!-- CARD ONE  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card shadow-sm position-relative">
-                <img src="../assets/img/ecd-co-rustica-liviana-02-558x501.jpg" width="558" height="auto" alt="Cotina tradicional rústica, material algodón." class="card-img-top" />
+      <!-- HERO GALLERY -->
 
-                <!-- CARD ONE TOAST  -->
-
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnSeven">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD ONE TEXT  -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">VOILE DE ALGODON</h6>
-                  <p class="card-text"><strong class="">RUSTICAS LIVIANAS</strong></p>
-                  <p class="card-text">Lino clásico belga, Chambrey Blue, Gray y Flagstone</p>
-                  <ul class="list-group-horizontal d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                  </ul>
-                  <a href="./cotizate.html" rel="nofollow" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD TWO  -->
-
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-co-tradicional-liviana-02-558x501.jpg" width="558" height="auto" alt="Cotina tradicional liviana, material gasa de algodón." class="card-img-top" />
-
-                <!-- CARD TWO TOAST -->
-
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnEight">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastEight" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD TWO CONTENT -->
-
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">GASA DE ALGODÓN</h6>
-                  <p class="card-text">
-                    <strong class="">TRADICIONAL LIVIANA</strong>
-                  </p>
-                  <p class="card-text">Sheer White, Broadway White, Marfil y Grey</p>
-                  <ul class="d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                  </ul>
-                  <a href="./cotizate.html" rel="nofollow" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD THREE  -->
-
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-co-tradicional-liviana-01-558x501.jpg" width="558" height="auto" alt="Cortina tradicional liviana de lino crudo belga" class="card-img-top" />
-
-                <!-- CARD THREE TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnNine">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastNine" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- CARD THREE TEXT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">LINO CRUDO</h6>
-                  <p class="card-text">
-                    <strong class="">BEST SELLER</strong>
-                  </p>
-                  <p class="card-text">Lino Belga Clásico, Lino Sheer White, Marfil</p>
-                  <ul class="d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <a href="./cotizate.html" rel="nofollow" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section class="container-ecd px-5">
+        <div id="product-list" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5 px-xl-5">
+          <!-- MAGIC HAPPENS HERE -->
         </div>
       </section>
 
-      <!-- HERO TEXT TWO  -->
-      <section class="container-fluid d-flex align-items-center my-5 py-5">
-        <article class="col d-sm-flex d-md-flex flex-column border-start-0 text-center py-5">
-          <h6 class="mt-3 text-serif fw-bold h1">CORTINAS BLACKOUT</h6>
-          <h6 class="mb-2 text-serif h3">NUESTRA COLECCION</h6>
-          <h6 class="text-logo h3">semi sombra o full blackout</h6>
-        </article>
-      </section>
+      <div class="container my-5 py-5"></div>
 
-      <!-- HERO SECTION CARDS TWO  -->
-      <section class="my-5 text-center">
-        <div class="container-xxl mt-5 p-0 text-center">
-          <div class="row g-3 mx-3">
-            <!-- SECTION TWO - CARD FOUR  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-co-rustica-blackout-03-558x501.jpg" width="558" height="auto" alt="Cortina rústica blackout lino gris" class="card-img-top" />
-                <!-- SECTION TWO - CARD FOUR TOAST  -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTen">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
+      <template id="product-template">
+        <div class="col">
+          <div class="card border-0">
+            <figure class="position-relative m-0">
+              <img id="" src="" class="card-img-top product-img" alt="" />
+              <button type="button" class="btnFavourite bg-transparent border-0 position-absolute top-0 end-0 p-1 shadow-none fa-solid fa-heart btn-favourite" id="liveToastBtnSeven">
+                <span class=""></span>
+              </button>
+              <!-- <div type="div" class="btn ecd-btn-card position-absolute bottom-0 end-0" id="">$<span>${producto.precio}</span></div> -->
+              <!-- <button type="button" class="btn-comprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase"> -->
+              <a class="btn-comprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase"></a>
+              <!-- </button> -->
+            </figure>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <!-- <div class="toast-body">Agregaste ${producto.nombre} a <a href="../pages/favoritos.html">tus favoritos</a></div> -->
+                  <div class="toast-body">
+                    <p id="toast-body"></p>
+                    <a href="../pages/favoritos.html">tus favoritos</a>
                   </div>
-                </div>
-
-                <!-- SECTION TWO - CARD FOUR TEXT  -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">TRADICIONAL BLACKOUT</h6>
-                  <p class="card-text"><strong>FULL BLACKOUT</strong></p>
-                  <p class="card-text">Navy, Midnight Denim, Capuccino, Ivory</p>
-                  <ul class="d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Navy.jpg" class="cardSwatch" width="32" alt="Muestra material Navy" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Emery Linen-Cotton, Midnight Denim.jpg" class="cardSwatch" width="32" alt="Muestra material Lino Denim" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Cappuccino.jpg" class="cardSwatch" width="32" alt="Muestra material Gamuzado Cappuccino" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Gamuzado Marfil" /></li>
-                  </ul>
-                  <a href="./cotizate.html" rel="nofollow" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
+                  <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
               </div>
             </div>
-
-            <!-- SECTION TWO - CARD FIVE  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-co-tradicional-blackout-03-558x501.jpg" width="558" height="auto" alt="Cortina semi blackout lino crudo" class="card-img-top" />
-                <!-- SECTION TWO - CARD FIVE TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnEleven">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastEleven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- SECTION TWO - CARD FIVE CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">TRADICIONAL BLACKOUT</h6>
-                  <p class="card-text">
-                    <strong class="">SEMI BLACKOUT</strong>
-                  </p>
-                  <p class="card-text">Lino Flax Blue, Grey, Ivory.</p>
-                  <ul class="d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra material Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Chambray Gray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                  </ul>
-                  <a href="./cotizate.html" rel="nofollow" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
-                </div>
+            <div class="card-body p-0">
+              <h6 id="product-name" class="card-title fw-bold text-uppercase mb-0 mt-2"></h6>
+              <div class="clearfix">
+                <ul id="swatch-list" class="d-flex p-0 pt-1 m-0 float-start">
+                  <li class="cardSwatch p-1 ps-0"><img id="product-swatch0" src="" width="28" alt="Muestra material Classic Ivory" /></li>
+                  <li class="cardSwatch p-1"><img id="product-swatch1" src="" width="28" alt="Muestra material lino blanco" /></li>
+                  <li class="cardSwatch p-1"><img id="product-swatch2" src="" width="28" alt="Muestra material lino marfil" /></li>
+                  <li class="cardSwatch p-1"><img id="product-swatch3" src="" width="28" alt="Muestra material lino marfil" /></li>
+                </ul>
+                <span id="stock" class="badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1"></span>
               </div>
-            </div>
-
-            <!-- SECTION TWO - CARD SIX -->
-
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-co-tradicional-blackout-01-558x501.jpg" width="558" height="auto" alt="Cortina full blackout lino gris oscuro" class="card-img-top" />
-                <!-- SECTION TWO - CARD SIX TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwelve">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwelve" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION TWO - CARD SIX CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold h5">BLACKOUT TRADICIONAL</h6>
-                  <p class="card-text"><strong>FULL BLACKOUT</strong></p>
-                  <p class="card-text">Stripe Charcoal, Navy, Porcelain, Sandal</p>
-                  <ul class="list-group-horizontal d-flex p-0 pb-3 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Riviera Stripe, Charcoal.jpg" class="cardSwatch" width="32" alt="Muestra material Charcoal" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Riviera Stripe, Navy.jpg" class="cardSwatch" width="32" alt="Muestra material Navy" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Riviera Stripe, Porcelain Blue.jpg" class="cardSwatch" width="32" alt="Muestra material Porcelain Blue" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Riviera Stripe, Sandalwood.jpg" class="cardSwatch" width="32" alt="Muestra material Sandalwood" /></li>
-                  </ul>
-                  <a href="./cotizate.html" class="ecd-btn-outlined-p text-decoration-none">Cotizate!</a>
-                </div>
-              </div>
+              <p id="product-material" class="m-0"></p>
+              <p id="product-alto" class="m-0"></p>
+              <p id="product-ancho" class="m-0"></p>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- HERO TEXT THREE  -->
-      <section class="container-fluid d-flex align-items-center my-5 py-5" id="almohadones-section">
-        <article class="col d-sm-flex d-md-flex flex-column border-start-0 text-center py-5">
-          <h6 class="mt-3 text-serif fw-bold h1">ALMOHADONES DE COLECCION</h6>
-          <h6 class="mb-2 text-serif h3">NUESTROS PREFERIDOS</h6>
-          <h6 class="text-logo h3">dan calidez, estilo, selección</h6>
-        </article>
-      </section>
-
-      <!-- HERO SECTION CARDS THREE -->
-      <section class="my-5 text-center">
-        <div class="container-xxl mt-5 p-0 text-center">
-          <div class="row g-3 mx-3">
-            <!-- SECTION THREE - CARD SEVEN -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card shadow-sm">
-                <img src="../assets/img/ecd-al-rustico-lino-01-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Almohadón tusor cuadrado. Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm." />
-                <!-- SECTION THREE - CARD SEVEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnThirteen">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastThirteen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION THREE - CARD SEVEN CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold mb-0 h5">ALMOHADÓN TUSOR CUADRADO</h6>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="list-group-horizontal d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                  </ul>
-                  <div class="cad-text">
-                    <p class="card-text h6">$4.200</p>
-                    <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnSixteen">Comprar</button>
-                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                      <div id="liveToastSixteen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="d-flex">
-                          <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                          <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD EIGHT  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-tejido-01-558x501.jpg" width="558" height="auto" alt="Almohadón tejido ochos. Material lana natural." class="card-img-top" />
-                <!-- SECTION THREE - CARD EIGHT TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnFourteen">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastFourteen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION THREE - CARD EIGHT CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif text-uppercase fw-bold mb-0 h5">Almohadón tejido ochos</h6>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                  </ul>
-                  <p class="card-text h6">$4.500</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnSeventeen">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastSeventeen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD NINE  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-rustico-lino-03-558x501.jpg" width="558" height="auto" alt="Almohadón lino texturado" class="card-img-top" />
-                <!-- SECTION THREE - CARD NINE TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnFifteen">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastFifteen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION THREE - CARD NINE TEXT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold text-uppercase mb-0 h5">Almohadón lino texturado</h6>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <p class="card-text h6">$3.800</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnNineteen">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastNineteen" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HERO TEXT FOUR  -->
-      <section class="container-fluid d-flex text-center my-5 py-5" id="mantas-section">
-        <article class="col d-sm-flex d-md-flex flex-column py-5">
-          <h6 class="mt-3 text-serif fw-bold h1">MANTAS Y THROWS</h6>
-          <h6 class="mb-2 text-serif h3">NUESTRA COLECCIÓN</h6>
-          <h6 class="text-logo h3">abrigo, confort, calidez, diseño</h6>
-        </article>
-      </section>
-
-      <!-- HERO SECTION CARDS FOUR -->
-      <section class="my-5 text-center">
-        <div class="container-xxl mt-5 p-0 text-center">
-          <div class="row g-3 mx-3">
-            <!-- SECTION FOUR - CARD TEN -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card shadow-sm">
-                <img src="../assets/img/ecd-mn-tejida-04-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Manta tejida ombre blanco y azul. Material lana. Medida: 1,20 x 1,50 cm." />
-                <!-- SECTION FOUR - CARD TEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwenty">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwenty" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FOUR - CARD TEN CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold mb-0 h5">MANTA OMBRE AZUL</h6>
-                  <p class="card-text">Lana natural. Medidas: 1,20 x 1,50 cm.</p>
-                  <ul class="list-group-horizontal d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                  </ul>
-                  <div class="cad-text">
-                    <p class="card-text h6">$8.200</p>
-                    <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnTwentyOne">Comprar</button>
-                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                      <div id="liveToastTwentyOne" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="d-flex">
-                          <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                          <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION FOUR - CARD ELEVEN  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-mn-tejida-07-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Mantas tejidas varios colores pastels. Material lana natural. Medida: 1,20 x 1,50 cm." />
-                <!-- SECTION FOUR - CARD ELEVEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwentyTwo">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwentyTwo" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FOUR - CARD ELEVEN CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif text-uppercase fw-bold mb-0 h5">Mantas tejidas snug</h6>
-                  <p class="card-text">Material lana natural. Medida: 1,20 x 1,50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                  </ul>
-                  <p class="card-text h6">$7.500</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnTwentyThree">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastTwentyThree" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION FOUR - CARD TWELVE  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-mn-tejida-05-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Manta tejida ombre blanco y azul. Material lana. Medida: 1,20 x 1,50 cm." />
-                <!-- SECTION FOUR - CARD TWELVE TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwentyFour">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwentyFour" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FOUR - CARD TWELVE TEXT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold text-uppercase mb-0 h5">Manta tejida natural</h6>
-                  <p class="card-text">Material lana natural. Medida: 1,20 x 1,50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <p class="card-text h6">$9.200</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnTwentyFive">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastTwentyFive" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HERO TEXT FIVE  -->
-      <section class="container-fluid d-flex text-center my-5 py-5" id="manteles-section">
-        <article class="col d-sm-flex d-md-flex flex-column py-5">
-          <h6 class="mt-3 text-serif fw-bold h1">SELECCIÓN DE MANTELES</h6>
-          <h6 class="mb-2 text-serif h3">NUESTRA COLECCIÓN</h6>
-          <h6 class="text-logo h3">estilo, telas especiales, selección</h6>
-        </article>
-      </section>
-
-      <!-- HERO SECTION CARDS FIVE -->
-      <section class="my-5 text-center">
-        <div class="container-xxl mt-5 p-0 text-center">
-          <div class="row g-3 mx-3">
-            <!-- SECTION FIVE - CARD THIRDTEEN -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card shadow-sm">
-                <img src="../assets/img/ecd-ma-lino-01-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Mantel azul con arabescos en crudo. Material lino. Medida: 1,70 x 2,60 cm." />
-                <!-- SECTION FIVE - CARD THIRDTEEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwentySix">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwentySix" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FIVE - CARD THIRDTEEN CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold mb-0 h5">MANTEL AZUL Y CRUDO</h6>
-                  <p class="card-text">Material cero arrugas. Medidas: 1,70 x 2,60 cm.</p>
-                  <ul class="list-group-horizontal d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                  </ul>
-                  <div class="cad-text">
-                    <p class="card-text h6">$16.200</p>
-                    <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnTwentySeven">Comprar</button>
-                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                      <div id="liveToastTwentySeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="d-flex">
-                          <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                          <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION FIVE - CARD FOURTEEN  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-ma-lino-04-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Mantel blanco bordado en arabescos celestes. Material lino. Medida: 1,70 x 2,60 cm." />
-                <!-- SECTION FIVE - CARD FOURTEEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnTwentyEight">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastTwentyEight" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FIVE - CARD FOURTEEN CONTENT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif text-uppercase fw-bold mb-0 h5">Mantel bordado celeste</h6>
-                  <p class="card-text">Material cero arrugas. Medidas: 1,70 x 2,60 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                  </ul>
-                  <p class="card-text h6">$4.500</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnTwentyNine">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastTwentyNine" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION FIVE - CARD FIFTEEN  -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <img src="../assets/img/ecd-ma-lino-03-558x501.jpg" width="558" height="auto" class="card-img-top" alt="Mantel blanco bordado. Material lino. Medida: 1,70 x 2,60 cm." />
-                <!-- SECTION FIVE - CARD FIFTEEN TOAST -->
-                <button type="button" class="btn position-absolute top-0 end-0 shadow-none" id="liveToastBtnThirty">
-                  <span class="fa-solid fa-heart"></span>
-                </button>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                  <div id="liveToastThirty" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body">Agregaste un producto a <a href="../pages/favoritos.html">tus favoritos</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- SECTION FIVE - CARD FIFTEEN TEXT -->
-                <div class="card-body text-center">
-                  <h6 class="card-title text-serif fw-bold text-uppercase mb-0 h5">Mantel bordado</h6>
-                  <p class="card-text">Material cero arrugas. Medidas: 1,70 x 2,60 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <p class="card-text h6">$16.200</p>
-                  <button type="button" class="ecd-btn-outlined-p text-decoration-none" id="liveToastBtnThirtyOne">Comprar</button>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="liveToastThirtyOne" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HERO TEXT SIX  -->
-      <section class="container-fluid d-flex text-center my-5 py-5">
-        <article class="col d-sm-flex d-md-flex flex-column py-5">
-          <h6 class="mt-3 text-serif fw-bold h1">SELECCIÓN DE ALFOMBRAS</h6>
-          <h6 class="mb-2 text-serif h3">NUESTRA COLECCIÓN</h6>
-          <h6 class="text-logo h3">próximamente!</h6>
-        </article>
-      </section>
-
-      <!-- HERO IMG SECTION => ALMOHADONES -->
-      <section class="container-xxl my-5 pt-5">
-        <div class="row g-3">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="card">
-              <img src="../assets/img/ecd-almohadones-500x600.jpg" width="500" height="auto" alt="Almohadones gris y blanco" class="card-img-top" />
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="card">
-              <img src="../assets/img/ecd-alfombra-500x600.jpg" width="500" height="auto" alt="Alfombra tejida" class="card-img-top" />
-            </div>
-          </div>
-        </div>
-      </section>
+      </template>
     </main>
 
     <!-- FOOTER -->
@@ -1373,6 +773,7 @@
 
     <!-- SCRIPTS -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../app.js"></script>
+    <script src="../assets/js/productos.js" defer></script>
+    <script src="../assets/js/favourites.js" defer></script>
   </body>
 </html>

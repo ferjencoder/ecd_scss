@@ -1,19 +1,11 @@
 .gitignore
 .vscode/settings.json
-.vscode/settings.json
 /node_modules
+/trash
 app-liveT.js
 carousel.html
 crm/ecd-CRM.xd
 index-txt.html
-pages/contacto-copy.html
-pages/cotizate-copy.html
-pages/info-copy.html
-pages/productos-copy.html
-pages/productos-copy-1.html
-pages/productos-liveT.html
-pages/productos-popover.html
-pages/productos-toast.html
 scss/
 scss
 template_test.html
@@ -23,6 +15,3 @@ theme
 theming-kit.html
 pages/carrito-tmp.html
 important.txt
-carousel.html
-carousel.html
-pages/productos-zoom.html

@@ -1,293 +1,138 @@
-const productos = [
-  {
-    id: 1654981998441,
-    nombre: 'Almohadón Tusor Cuadrado',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lana de lino',
-    alto: 50,
-    ancho: 50,
-    colors: ['gris', 'azul', 'cambray', 'carbon', 'durazno', 'indigo'],
-    swatch: [
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    img100: [],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [10, 5, 4, 6],
-    descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998441/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998442,
-    nombre: 'Almohadón Tusor Guardas',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Tusor',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [10, 5, 4, 6],
-    descripcion: 'Almohadón de tusor Guardas de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-02-558x501.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-02-558x501.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998442/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998443,
-    nombre: 'Almohadón Liso Lino',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lino',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [10, 5, 4, 6],
-    descripcion: 'Almohadón lino liso de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-03-558x501.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-03-558x501.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998443/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998444,
-    nombre: 'Almohadón Lino Suave',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lino suave',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [10, 5, 4, 6],
-    descripcion: 'Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998444/ecd-al-satinado-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-satinado-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998444/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998445,
-    nombre: 'Almohadón Satinado Midnight',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Satinado Midnight',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [10, 5, 4, 6],
-    descripcion: 'Almohadón Satinado Midnight de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998445/ecd-al-satinado-02-558x501.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-satinado-02-558x501.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998445/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998446,
-    nombre: 'Almohadón Tejido Chenille',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lana chenille',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [8, 5, 4, 6],
-    descripcion: 'Almohadón Tejido Chenille de lana chenille de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998446/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998446/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998447,
-    nombre: 'Almohadón Tejido Chenille',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lana chenille',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [8, 5, 4, 6],
-    descripcion: 'Almohadón Tejido Chenille de lana chenille de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998447/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998447/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998448,
-    nombre: 'Almohadón Tejido Chenille',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lana chenille',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [8, 5, 4, 6],
-    descripcion: 'Almohadón Tejido Chenille de lana chenille de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998448/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998448/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-  {
-    id: 1654981998449,
-    nombre: 'Almohadón Tejido Chenille',
-    productor: 'ecd',
-    tipo: 'almohadón',
-    material: 'Lana chenille',
-    alto: 50,
-    ancho: 50,
-    colors: ['arcilla', 'cambray', 'eucaliptus', 'lino'],
-    swatch: [
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-60x54s-arcilla.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-60x54s-cambray.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-60x54s-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-60x54s-lino.jpg',
-    ],
-    precio: 4500,
-    productURL: '../pages/1654981998440.html',
-    stock: [8, 5, 4, 6],
-    descripcion: 'Almohadón Tejido Chenille de lana chenille de 50cm x 50cm con relleno. Funda lavable.',
-    productIMG: [
-      '../assets/img/productos/al/1654981998449/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-tejido-01-558x501.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567g-arcilla.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567v-arcilla.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567g-cambray.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567v-cambray.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567g-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567v-eucaliptus.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567g-lino.jpg',
-      '../assets/img/productos/al/1654981998449/ecd-al-rustico-lino-01-630x567v-lino.jpg',
-    ],
-  },
-];
+'use strict';
+//PENSAR PARA FAVOURITES
+let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-console.table(productos);
+//localStorage.setItem('item', JSON.stringify(producto));
+
+const productList = document.getElementById('product-list'); //items
+const productTemplate = document.getElementById('product-template').content; //templateCard
+const fragment = document.createDocumentFragment();
+
+document.addEventListener('DOMContentLoaded', () => {
+  fectchData();
+});
+
+productList.addEventListener('click', (e) => {
+  selectProduct(e);
+});
+
+const fectchData = async () => {
+  try {
+    const res = await fetch('../assets/js/api.json');
+    const data = await res.json();
+    renderProducts(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+/* //! crear for para iterar sobre los swatches y crear elements hasta 5 y luego añadir un
+//! "+3 más" text como link que lleve al producto tmb
+//* console.log(producto.id + " " + producto.colors.length);
+
+//* producto.colors.length >= 4 ? console.log(`${producto.id} + mayor que 4`) : console.log(`${producto.id} + menor que 4`);
+
+//"colors": ["arcilla", "cambray", "eucaliptus", "lino"],
+
+// if (producto.colors.length >= 4) {
+//   for (let i = 0; i <= producto.colors.length; i++) {
+//     console.log("#product-swatch" + i);
+//     console.log(producto.img40[i]);
+//     productTemplate.querySelector("#product-swatch" + i).setAttribute("src", producto.img40[i]);
+//   }
+// }
+
+// producto.colors.length >= 4 ? for (let i = 0; i <= producto.colors.length; i++) {
+//     productTemplate.querySelector(`#product-swatch[${i}] `).setAttribute('src', producto.colors[i]);
+//   } :  console.log(error);
+ */
+
+const renderProducts = (data) => {
+  productList.innerHTML = '';
+  data.forEach((producto) => {
+    productTemplate.querySelector('#product-name').textContent = producto.nombre;
+    productTemplate.querySelector('#product-material').textContent = 'Material: ' + producto.material;
+    productTemplate.querySelector('#product-alto').textContent = 'Medidas: ' + producto.medidas;
+    productTemplate.querySelector('.product-img').setAttribute('src', producto.img500[0]);
+    productTemplate.querySelector('.product-img').setAttribute('alt', producto.descripcion);
+    productTemplate.querySelector('#product-swatch0').setAttribute('src', producto.img40[0]);
+    productTemplate.querySelector('#product-swatch1').setAttribute('src', producto.img40[1]);
+    productTemplate.querySelector('#product-swatch2').setAttribute('src', producto.img40[2]);
+    productTemplate.querySelector('#product-swatch3').setAttribute('src', producto.img40[3]);
+    productTemplate.querySelector('#stock').textContent = producto.stock[0] + ' en stock';
+    productTemplate.querySelector('.btn-comprar').dataset.id = producto.id;
+    productTemplate.querySelector('.btn-comprar').textContent = '$ ' + producto.precio;
+    productTemplate.querySelector('.btn-comprar').href = '../pages/producto.html';
+    productTemplate.querySelector('.btnFavourite').dataset.id = producto.id;
+    productTemplate.querySelector('#toast-body').textContent = producto.nombre;
+    //console.log(producto);
+    const clone = productTemplate.cloneNode(true);
+    fragment.appendChild(clone);
+  });
+  productList.appendChild(fragment);
+};
+
+const selectProduct = (e) => {
+  e.target.className.includes('btn-comprar') ? setProduct(e.target.parentElement) : '';
+  e.target.stopPropagation;
+  console.log(e.target.parentElement);
+  //console.log(cart);
+};
+
+const setProduct = (obj) => {
+  console.log(obj);
+  const producto = {
+    id: obj.querySelector('.btn-comprar').dataset.id,
+  };
+
+  //cart.includes(producto) ? cart.splice(producto) : cart.push(producto);
+  console.log(producto);
+  console.log(cart);
+  localStorage.setItem('item', JSON.stringify(producto));
+};
+
+// let btnFavouriteArray = [];
+
+// btnFavouriteArray = document.querySelectorAll('btn-favourite');
+
+// console.log(btnFavouriteArray);
+
+// $('btn-comprar').hover(function (event) {
+//   e.target.content = 'comprar';
+// });
+
+// FAVOURITES
+//let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+//const favouriteBtn = document.querySelector(".btn-favourite"); //items
+productList.addEventListener('click', (e) => {
+  //console.log(e);
+  addToFavourites(e);
+});
+
+const addToFavourites = (e) => {
+  e.target.className.includes('btn-favourite') ? setFavourites(e.target.parentElement.parentElement) : '';
+  e.stopPropagation;
+  // console.log(e.target);
+  //console.log(favourites);
+};
+
+const setFavourites = (obj) => {
+  //console.log(obj);
+  const producto = {
+    id: obj.querySelector('.btn-favourite').dataset.id,
+  };
+
+  if (favourites.includes(producto)) {
+    console.log('Funka');
+  } else {
+    favourites.push(producto);
+    localStorage.setItem('item', producto);
+    console.log(localStorage);
+  }
+
+  //favourites.includes(producto) ? console.log("yes") : favourites.push(producto);
+  // console.log(producto);
+  console.log('Favourites');
+  console.log(favourites);
+};
