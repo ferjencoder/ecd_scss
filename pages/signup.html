@@ -7,9 +7,9 @@
     <meta name="language" content="Spanish" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
-    <meta name="description" content="Tus Favoritos de Entre Cortinas. Inspirate y compartí tus favoritos. Chequea nuestros diseños exclusivos en almohadones, mantas, cortinas y mucho más." />
+    <meta name="description" content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
-    <link rel="canonical" href="https://entrecortinas.netlify.app/favoritos.html" />
+    <link rel="canonical" href="https://entrecortinas.netlify.app/contacto.html" />
 
     <!-- FAV+ICONS -->
     <link rel="icon" href="../assets/img/ico/favicon-32x32.png" />
@@ -34,7 +34,7 @@
     <!-- NETLIFY -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <title>Tus Favoritos || Entre Cortinas</title>
+    <title>Sign up || Entre Cortinas</title>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -79,9 +79,12 @@
                       </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link px-4 py-3" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" aria-label="Botón ingreso de usuario" aria-controls="user" aria-selected="false">
+                      <div data-netlify-identity-button>
+                        <i class="fa-solid fa-user fa-xl"> </i>
+                      </div>
+                      <!-- <button class="nav-link px-4 py-3" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" aria-label="Botón ingreso de usuario" aria-controls="user" aria-selected="false">
                         <i class="fa-solid fa-user fa-xl"></i>
-                      </button>
+                      </button> -->
                     </li>
                     <li class="nav-item" role="presentation">
                       <button class="nav-link px-4 py-3" id="favourite-tab" data-bs-toggle="tab" data-bs-target="#favourite" type="button" aria-label="Botón sección favoritos" aria-controls="favourite" aria-selected="false">
@@ -283,38 +286,17 @@
               <button type="button" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Ingresar con usuario" aria-expanded="false">
                 <i class="fa-solid fa-user fa-1x"></i>
               </button>
+
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 400px">
                 <ul class="list-group list-group-flush p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">ingresa con tu usuario</h6>
                   </li>
-                  <li class="list-group-item bg-white">
-                    <form class="p-3 d-flex flex-column" name="loginnavbar" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                      <p class="visually-hidden">
-                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                      </p>
-                      <div class="mb-3">
-                        <label for="navbarEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
-                        <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" autocomplete="username" placeholder="email@ejemplo.com" />
-                      </div>
-                      <div class="mb-3">
-                        <label for="navbarPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" autocomplete="current-password" placeholder="Contraseña" />
-                      </div>
-                      <div class="mb-1">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input shadow-none ecd-border-full" id="navbarDropdownCheck" />
-                          <label class="form-check-label" for="navbarDropdownCheck"> Recordame </label>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn ecd-btn-outlined-p text-uppercase align-self-end shadow-none m-0 end-0" aria-label="Ingresar a panel de usuario">ingresar</button>
-                    </form>
+                  <li class="list-group-item bg-white text-center">
+                    <div data-netlify-identity-button class="btn ecd-btn-outlined-p text-uppercase align-self-end shadow-none m-0 end-0 text-white text-decoration-none" aria-label="Ingresar a panel de usuario"></div>
                   </li>
                   <li class="list-group-item shadow-none">
-                    <a class="dropdown-item-text text-center text-primary text-decoration-underline" href="#">¿Olvidaste tu contraseña?</a>
-                  </li>
-                  <li class="list-group-item shadow-none">
-                    <a class="dropdown-item-text text-center text-primary" href="../pages/signup.html">¿Todavía no tenes cuenta? Creala <strong class="text-decoration-underline"> aquí</strong>.</a>
+                    <a class="dropdown-item-text text-center text-primary text-decoration-none" href="#">¿Todavía no tenes cuenta? Creala aquí.</a>
                   </li>
                   <li class="list-group-item border-bottom-0 shadow-none">
                     <p class="dropdown-item-text text-wrap text-sm-start p-0 m-0">Tener una cuenta te permite comprar más rápido, hacer seguimiento de tus órdenes y mucho más.</p>
@@ -438,110 +420,106 @@
       </nav>
     </header>
 
-    <!-- HERO TEXT -->
-    <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-9">
-      <div class="row justify-content-center">
-        <article class="col-lg-4 d-none d-lg-flex">
-          <div class="d-block text-center px-3">
-            <h6 class="text-serif-nav fw-bold text-uppercase">imagina</h6>
-            <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
-          </div>
-          <div class="vr"></div>
-        </article>
-        <article class="col-12 col-md-6 col-lg-4 d-flex">
-          <div class="d-block text-center px-3">
-            <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
-            <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
-          </div>
-          <div class="vr d-none d-md-flex"></div>
-        </article>
-        <article class="d-none d-md-flex col-md-6 col-lg-4">
-          <div class="d-block text-center px-3">
-            <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
-            <ul class="p-0 m-0">
-              <li>
-                <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
-              </li>
-              <li>
-                <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
-              </li>
-              <li>
-                <p class="mb-0 text-uppercase text-sub-hero"></p>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+    <!-- MAIN CONTENT CONTACTO -->
+    <main>
+      <!-- HERO TEXT -->
+      <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-10">
+        <div class="row justify-content-center">
+          <article class="col-lg-4 d-none d-lg-flex">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold text-uppercase">imagina</h6>
+              <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
+            </div>
+            <div class="vr"></div>
+          </article>
+          <article class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
+              <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
+            </div>
+            <div class="vr d-none d-md-flex"></div>
+          </article>
+          <article class="d-none d-md-flex col-md-6 col-lg-4">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
+              <ul class="p-0 m-0">
+                <li>
+                  <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
+                </li>
+                <li>
+                  <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
+                </li>
+                <li>
+                  <p class="mb-0 text-uppercase text-sub-hero"></p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <!-- HERO TEXT ONE  -->
-    <section class="container-fluid d-flex align-items-center my-5 py-5">
-      <article class="col d-sm-flex d-md-flex flex-column border-start-0 text-center">
-        <h2 class="mt-3 text-serif fw-bold h1">INSPIRATE CON TUS FAVORITOS</h2>
-        <h3 class="mb-2 text-serif">ARMA TU COLECCIÓN</h3>
-        <h3 class="text-logo">sencillez, armonía, estilo, selección</h3>
-      </article>
-    </section>
+      <!-- SECTION CONTACTO -->
+      <section class="container-ecd d-flex mt-5 justify-content-center">
+        <div class="mb-5">
+          <div class="row ecd-border-full flex-row-reverse flex-xl-row">
+            <div class="col-12 col-xl-6 d-none d-xl-flex p-0">
+              <div class="img-fluid">
+                <img src="../assets/img/ecd-manta-tejida-01.jpg" width="720" height="800" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
+              </div>
+            </div>
+            <div class="col-12 col-xl-6 p-3 d-flex flex-column">
+              <div class="form d-flex flex-column">
+                <h2 class="my-2 mt-4 text-serif h1 text-center">DEJANOS TU MENSAJE</h2>
+                <hr class="bg-black align-self-center" style="width: 250px; height: 1px" />
+                <div class="m-0 text-center">
+                  <p class="m-0">Contactanos a través de este formulario o a nuestro correo:</p>
+                  <a href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20" class="my-2 link-primary">contacto@entrecortinas.com.ar</a>
+                </div>
+              </div>
+              <div class="input-group d-flex justify-content-center">
+                <form name="contact" action="/rta-contacto" method="POST" class="mt-4 d-flex flex-column" style="width: 400px">
+                  <label for="name" class="visually-hidden-focusable">Nombre: </label>
+                  <input type="text" name="name" id="name" placeholder="Nombre y Apellido" class="mb-3 form-control ecd-border-full shadow-none" />
 
-    <!-- MAIN CONTENT - FAVORITOS -->
-    <main class="mx-5">
-      <!-- HERO SECTION CARDS ONE -->
-      <section class="my-5 text-center">
-        <div class="container-fluid mt-5">
-          <div class="row g-3">
-            <!-- SECTION THREE - CARD SEVEN -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card shadow-sm">
-                <img src="../assets/img/ecd-al-rustico-lino-01-558x501.jpg" width="558" height="501" class="card-img-top" alt="Almohadón tusor cuadrado. Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm." />
-                <!-- SECTION THREE - CARD SEVEN CONTENT -->
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif fw-bold mb-0">ALMOHADÓN TUSOR CUADRADO</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="list-group-horizontal d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                  </ul>
-                  <div class="cad-text">
-                    <p class="card-text h5">$4.200</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD EIGHT  -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-tejido-01-558x501.jpg" width="558" height="501" alt="Almohadón tejido ochos. Material lana natural." class="card-img-top" />
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif text-uppercase fw-bold mb-0">Almohadón tejido ochos</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                  </ul>
-                  <p class="card-text h5">$4.500</p>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD NINE  -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-rustico-lino-03-558x501.jpg" width="558" height="501" alt="Almohadón lino texturado" class="card-img-top" />
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif fw-bold text-uppercase mb-0">Almohadón lino texturado</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <p class="card-text h5">$3.800</p>
-                </div>
+                  <label for="telefono" class="visually-hidden-focusable">Telefono: </label>
+                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono ej. 299 555 1111" class="mb-3 form-control ecd-border-full shadow-none" />
+
+                  <label for="email" class="visually-hidden-focusable">Email: </label>
+                  <input type="email" name="email" id="email" placeholder="email" class="mb-3 form-control ecd-border-full shadow-none" />
+
+                  <label for="message" class="visually-hidden-focusable">Mensaje: </label>
+                  <textarea name="message" id="message" class="mb-3 form-control ecd-border-full shadow-none" placeholder="Mensaje"></textarea>
+
+                  <button type="submit" value="Send Message" class="m-0 shadow-none bg-transparent border-0 text-center">
+                    <p class="btn mb-3 shadow-none ecd-btn-outlined-p text-end">Enviar</p>
+                  </button>
+                </form>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- SECTION INFO UTIL -->
+      <section class="container-ecd d-flex my-5 justify-content-center">
+        <div class="row ecd-border-full p-0 m-0 d-flex">
+          <div class="col-12 col-xl-6 d-xl-flex d-flex flex-column m-0 p-5 text-center align-content-center justify-content-center">
+            <h6 class="fw-bold mb-0 text-serif">TELEFONO</h6>
+            <hr class="d-inline-block d-xl-flex bg-primary my-2 align-self-center" width="150" height="2" />
+            <div class="pb-2"><a href="tel:+542995555555" type="call">+54 9 299 555 5555</a></div>
+            <h6 class="fw-bold mb-0 mt-2 text-serif">VISITANOS EN NUESTRO LOCAL</h6>
+            <hr class="d-inline-block d-xl-flex bg-primary my-2 align-self-center" width="150" height="2" />
+            <p>Av. San Martín 100, Capital, Mendoza.</p>
+            <h6 class="fw-bold mb-0 mt-2 text-serif">HORARIOS DE ATENCION</h6>
+            <hr class="d-inline-block d-xl-flex bg-primary my-2 align-self-center" width="150" height="2" />
+            <p>Lunes a viernes de 09:00 a 13:00 hs y de 14:30 a 17:00 hs.</p>
+            <h6 class="fw-bold mb-0 mt-2 text-serif">MEDIOS DE PAGO</h6>
+            <hr class="d-inline-block d-xl-flex bg-primary my-2 align-self-center" width="150" height="2" />
+            <p class="m-0 p-0">Efectivo - Transferencia - Cheque - Tarjetas de débito/crédito - Mercado Pago</p>
+          </div>
+          <figure class="col-12 col-xl-6 d-flex p-0 m-0 justify-content-end">
+            <img src="../assets/img/ecd-manta-simil-piel-01.jpg" width="500" height="450" alt="Dos mantas simil piel una gris y otra marrón." class="mt-0 img-fluid" />
+          </figure>
         </div>
       </section>
     </main>
@@ -614,7 +592,7 @@
                   <input type="email" name="email" id="newsletter" class="form-control shadow-none text-center" placeholder="Ingresá tu correo electrónico" />
                   <p>*Este campo es obligatorio</p>
                   <div data-netlify-recaptcha="true" class="mt-2" style="height: 70px"></div>
-                  <button type="submit" class="btn ecd-btn-outlined-p">Suscribite</button>
+                  <button type="submit" class="btn ecd-btn-footer">Suscribite</button>
                 </form>
               </li>
             </ul>
