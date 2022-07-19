@@ -133,11 +133,11 @@
                         <form class="p-3 d-flex flex-column" name="loginoffnavbar" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                           <div class="mb-3">
                             <label for="offcanvasEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
-                            <input type="email" class="form-control shadow-none ecd-border-full" id="offcanvasEmail" placeholder="email@ejemplo.com" />
+                            <input type="email" class="form-control shadow-none ecd-border-full" id="offcanvasEmail" autocomplete="username" placeholder="email@ejemplo.com" />
                           </div>
                           <div class="mb-3">
                             <label for="offcanvasPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                            <input type="password" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" placeholder="Contraseña" />
+                            <input type="password" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" autocomplete="current-password" placeholder="Contraseña" />
                           </div>
                           <div class="mb-1">
                             <div class="form-check">
@@ -291,11 +291,11 @@
                       </p>
                       <div class="mb-3">
                         <label for="navbarEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
-                        <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" placeholder="email@ejemplo.com" />
+                        <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" autocomplete="username" placeholder="email@ejemplo.com" />
                       </div>
                       <div class="mb-3">
                         <label for="navbarPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" placeholder="Contraseña" />
+                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" autocomplete="current-password" placeholder="Contraseña" />
                       </div>
                       <div class="mb-1">
                         <div class="form-check">
@@ -397,9 +397,10 @@
             <!-- Carrito -->
             <div class="dropdown">
               <button type="button" id="cartDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
-                <i class="fa-solid fa-bag-shopping fa-1x"></i><span class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+6 <span class="visually-hidden">Carrito de compras</span></span>
+                <i class="fa-solid fa-bag-shopping fa-1x"></i>
+                <span id="cartItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary"><span class="visually-hidden">Carrito de compras</span></span>
               </button>
-              <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px">
+              <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" aria-labelledby="cartDropdown" style="width: 450px">
                 <ul class="list-group list-group-flush p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
@@ -435,12 +436,46 @@
     </header>
 
     <main class="bg-gray bg-light pb-5">
+      <!-- HERO TEXT -->
+      <section class="container-fluid d-flex mb-5 py-2 justify-content-center bg-ecd-clr-9">
+        <div class="row justify-content-center">
+          <article class="col-lg-4 d-none d-lg-flex">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold">IMAGINA</h6>
+              <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
+            </div>
+            <div class="vr"></div>
+          </article>
+          <article class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
+              <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
+            </div>
+            <div class="vr d-none d-md-flex"></div>
+          </article>
+          <article class="d-none d-md-flex col-md-6 col-lg-4">
+            <div class="d-block text-center px-3">
+              <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
+              <ul class="p-0 m-0">
+                <li>
+                  <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
+                </li>
+                <li>
+                  <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
+                </li>
+                <li><p class="mb-0 text-uppercase text-sub-hero"></p></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <!-- HERO TEXT ONE  -->
-      <section class="container-fluid d-flex align-items-center py-5">
+      <!-- <section class="container-fluid d-flex align-items-center py-5">
         <article class="col d-sm-flex d-md-flex flex-column border-start-0 text-center">
           <h1 class="mt-0 text-serif fw-bold h1">TU CARRITO DE COMPRAS</h1>
         </article>
-      </section>
+      </section> -->
 
       <!-- MAIN CONTENT -->
       <section class="">
@@ -540,10 +575,11 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="../assets/js/producto.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/swiper-bundle.js"></script>
-    <script src="../assets/js/swiper-custom.js"></script>
+    <script src="../assets/js/producto.js"></script>
+    <!-- <script src="../assets/js/swiper-custom.js"></script> -->
     <!-- <script src="../assets/js/carrito.js"></script> -->
   </body>
 </html>

@@ -7,10 +7,7 @@
     <meta name="language" content="Spanish" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
-    <meta
-      name="description"
-      content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más."
-    />
+    <meta name="description" content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
     <link rel="canonical" href="https://entrecortinas.netlify.app/contacto.html" />
 
@@ -126,6 +123,7 @@
                       </ul>
                     </div>
                   </div>
+                  <!-- USER PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
@@ -135,11 +133,11 @@
                         <form class="p-3 d-flex flex-column" name="loginoffnavbar" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                           <div class="mb-3">
                             <label for="offcanvasEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
-                            <input type="email" class="form-control shadow-none ecd-border-full" id="offcanvasEmail" placeholder="email@ejemplo.com" />
+                            <input type="email" class="form-control shadow-none ecd-border-full" id="offcanvasEmail" autocomplete="username" placeholder="email@ejemplo.com" />
                           </div>
                           <div class="mb-3">
                             <label for="offcanvasPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                            <input type="password" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" placeholder="Contraseña" />
+                            <input type="password" class="form-control shadow-none ecd-border-full" id="offcanvasPassword" autocomplete="current-password" placeholder="Contraseña" />
                           </div>
                           <div class="mb-1">
                             <div class="form-check">
@@ -157,6 +155,7 @@
                       <li class="list-group-item border-bottom-0 shadow-none"><p class="dropdown-item-text text-wrap text-sm-start p-0 m-0">Tener una cuenta te permite comprar más rápido, hacer seguimiento de tus órdenes y mucho más.</p></li>
                     </ul>
                   </div>
+                  <!-- FAVOURITE PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="favourite" role="tabpanel" aria-labelledby="favourite-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
@@ -226,42 +225,20 @@
                       </li>
                     </ul>
                   </div>
+                  <!-- SHOPPING PANE - OFFCANVAS -->
                   <div class="tab-pane fade" id="shopping" role="tabpanel" aria-labelledby="shopping-tab">
                     <ul class="list-group list-group-flush p-0 m-0">
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
                         <h6 class="m-0 p-2">mi carrito</h6>
                       </li>
-                      <!-- favourite example one -->
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-tejido-01-100x100.jpg" width="100" height="100" alt="Almohadón tejido ochos. Material: Lana de algodón natural. Color: crudo." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tejido ochos</h6>
-                          <p class="m-0 p-0"><small>Color: crudo</small></p>
-                          <p class="m-0 p-0"><small>Material: Lana de algodón natural</small></p>
-                          <p class="m-0 p-0">$ 4.500</p>
-                        </div>
-                        <span class="badge bg-success rounded-pill text-dark position-absolute bottom-0 end-0 m-2">5 en stock</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-02-100x100.jpg" width="100" height="100" alt="Mantel crudo tejido. Material: Algodón natural. Color: crudo." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">mantel crudo tejido</h6>
-                          <p class="m-0 p-0"><small>Color: crudo</small></p>
-                          <p class="m-0 p-0"><small>Material: Algodón natural</small></p>
-                          <p class="m-0 p-0">$ 6.750</p>
-                        </div>
-                        <span class="badge bg-danger rounded-pill text-dark position-absolute bottom-0 end-0 m-2">1 en stock</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-03-100x100.jpg" width="100" height="100" alt="Individual trenzado. Material: Lana trenzada. Color: varios colores." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">individual trenzado</h6>
-                          <p class="m-0 p-0"><small>Color: varios colores</small></p>
-                          <p class="m-0 p-0"><small>Material: Lana trenzada</small></p>
-                          <p class="m-0 p-0">$3.800</p>
-                        </div>
-                        <span class="badge bg-success rounded-pill text-dark position-absolute bottom-0 end-0 m-2">4 en stock</span>
-                      </li>
+                    </ul>
+
+                    <ul id="offcanvasCartDropdown" class="list-group list-group-flush p-0 m-0 ecd-border-bt">
+                      <!-- MAGIC HAPPENS HERE -->
+                    </ul>
+
+                    <!-- goto cart link -->
+                    <ul class="list-group list-group-flush p-0 m-0 ecd-border-bt">
                       <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
                         <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
                       </li>
@@ -293,7 +270,7 @@
               <div class="dropdown-menu dropdown-menu-end mt-2 border-primary-border" style="width: 400px">
                 <form class="input-group px-4 py-3">
                   <input class="form-control shadow-none ecd-border-full" type="search" placeholder="Buscar..." aria-label="Search" />
-                  <button class="btn ecd-btn-outlined shadow-none" type="submit" id="button-addon2" aria-label="Buscar">Buscar</button>
+                  <button class="btn ecd-btn-outlined shadow-none" type="submit" id="buscar" aria-label="Buscar">Buscar</button>
                 </form>
               </div>
             </div>
@@ -314,11 +291,11 @@
                       </p>
                       <div class="mb-3">
                         <label for="navbarEmail" class="form-label text-uppercase"><small>Ingresa tu email</small></label>
-                        <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" placeholder="email@ejemplo.com" />
+                        <input type="email" class="form-control shadow-none ecd-border-full" id="navbarEmail" autocomplete="username" placeholder="email@ejemplo.com" />
                       </div>
                       <div class="mb-3">
                         <label for="navbarPassword" class="form-label text-uppercase"><small>Contraseña</small></label>
-                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" placeholder="Contraseña" />
+                        <input type="password" class="form-control shadow-none ecd-border-full" id="navbarPassword" autocomplete="current-password" placeholder="Contraseña" />
                       </div>
                       <div class="mb-1">
                         <div class="form-check">
@@ -419,7 +396,7 @@
             </div>
             <!-- Carrito -->
             <div class="dropdown">
-              <button type="button" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
+              <button type="button" id="cartDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
                 <i class="fa-solid fa-bag-shopping fa-1x"></i><span class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+6 <span class="visually-hidden">Carrito de compras</span></span>
               </button>
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px">
@@ -427,37 +404,11 @@
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
                   </li>
-                  <!-- favourite example one -->
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-tejido-01-100x100.jpg" width="100" height="100" alt="Almohadón tejido ochos. Material: Lana de algodón natural. Color: crudo." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tejido ochos</h6>
-                      <p class="m-0 p-0"><small>Color: crudo</small></p>
-                      <p class="m-0 p-0"><small>Material: Lana de algodón natural</small></p>
-                      <p class="m-0 p-0">$ 4.500</p>
-                    </div>
-                    <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">5 en stock</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-02-100x100.jpg" width="100" height="100" alt="Mantel crudo tejido. Material: Algodón natural. Color: crudo." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">mantel crudo tejido</h6>
-                      <p class="m-0 p-0"><small>Color: crudo</small></p>
-                      <p class="m-0 p-0"><small>Material: Algodón natural</small></p>
-                      <p class="m-0 p-0">$ 6.750</p>
-                    </div>
-                    <span class="badge bg-danger rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">1 en stock</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-03-100x100.jpg" width="100" height="100" alt="Individual trenzado. Material: Lana trenzada. Color: varios colores." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">individual trenzado</h6>
-                      <p class="m-0 p-0"><small>Color: varios colores</small></p>
-                      <p class="m-0 p-0"><small>Material: Lana trenzada</small></p>
-                      <p class="m-0 p-0">$3.800</p>
-                    </div>
-                    <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 mt-1 me-1">4 en stock</span>
-                  </li>
+                </ul>
+                <ul id="navbarCartDropdown" class="list-group list-group-flush p-0 m-0">
+                  <!-- MAGIC HAPPENS HERE -->
+                </ul>
+                <ul class="list-group list-group-flush p-0 m-0">
                   <li class="list-group-item d-flex justify-content-center align-items-center position-relative border-top">
                     <a class="text-uppercase align-content-center small text-primary" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
                   </li>
@@ -522,34 +473,37 @@
       </section>
 
       <!-- SECTION CONTACTO -->
-      <section class="container d-flex justify-content-center mt-5">
-        <div class="container-xxl mb-5">
+      <section class="container-ecd d-flex mt-5 justify-content-center">
+        <div class="mb-5">
           <div class="row ecd-border-full flex-row-reverse flex-xl-row">
             <div class="col-12 col-xl-6 d-none d-xl-flex p-0">
               <div class="img-fluid">
-                <img src="../assets/img/ecd-manta-tejida-01.jpg" width="820" height="900" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
+                <img src="../assets/img/ecd-manta-tejida-01.jpg" width="720" height="800" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
               </div>
             </div>
             <div class="col-12 col-xl-6 p-3 d-flex flex-column">
-              <div class="form w-100 d-flex flex-column">
+              <div class="form d-flex flex-column">
                 <h2 class="my-2 mt-4 text-serif h1 text-center">DEJANOS TU MENSAJE</h2>
-                <hr class="bg-black align-self-center" style="width: 250px; height: 2" />
+                <hr class="bg-black align-self-center" style="width: 250px; height: 1px" />
                 <div class="m-0 text-center">
                   <p class="m-0">Contactanos a través de este formulario o a nuestro correo:</p>
                   <a href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20" class="my-2 link-primary">contacto@entrecortinas.com.ar</a>
                 </div>
               </div>
               <div class="input-group d-flex justify-content-center">
-                <form name="contact" action="/rta-contacto.html" method="POST" data-netlify-recaptcha="true" data-netlify="true" class="mt-4 d-flex flex-column">
+                <form name="contact" action="/rta-contacto.html" method="POST" class="mt-4 d-flex flex-column" style="width: 400px">
                   <label for="name" class="visually-hidden-focusable">Nombre: </label>
-                  <input type="text" name="name" id="name" placeholder="Nombre y Apellido" style="min-width: 350" class="mb-3 form-control ecd-border-full shadow-none" />
+                  <input type="text" name="name" id="name" placeholder="Nombre y Apellido" class="mb-3 form-control ecd-border-full shadow-none" />
+
                   <label for="telefono" class="visually-hidden-focusable">Telefono: </label>
-                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono ej. 299 527 1223" style="min-width: 350" class="mb-3 form-control ecd-border-full shadow-none" />
+                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono ej. 299 555 1111" class="mb-3 form-control ecd-border-full shadow-none" />
+
                   <label for="email" class="visually-hidden-focusable">Email: </label>
-                  <input type="email" name="email" id="email" placeholder="email" style="min-width: 350" class="mb-3 form-control ecd-border-full shadow-none" />
+                  <input type="email" name="email" id="email" placeholder="email" class="mb-3 form-control ecd-border-full shadow-none" />
+
                   <label for="message" class="visually-hidden-focusable">Mensaje: </label>
-                  <textarea name="message" id="message" style="height: 150px; min-width: 350" class="mb-3 form-control ecd-border-full shadow-none" placeholder="Mensaje"></textarea>
-                  <div data-netlify-recaptcha="true" class="mt-2" width="auto" height="70"></div>
+                  <textarea name="message" id="message" class="mb-3 form-control ecd-border-full shadow-none" placeholder="Mensaje"></textarea>
+
                   <button type="submit" value="Send Message" class="m-0 shadow-none bg-transparent border-0 text-center">
                     <p class="btn mb-3 shadow-none ecd-btn-outlined-p text-end">Enviar</p>
                   </button>
@@ -561,7 +515,7 @@
       </section>
 
       <!-- SECTION INFO UTIL -->
-      <section class="container d-flex my-5">
+      <section class="container-ecd d-flex my-5 justify-content-center">
         <div class="row ecd-border-full p-0 m-0 d-flex">
           <div class="col-12 col-xl-6 d-xl-flex d-flex flex-column m-0 p-5 text-center align-content-center justify-content-center">
             <h6 class="fw-bold mb-0 text-serif">TELEFONO</h6>
@@ -577,8 +531,8 @@
             <hr class="d-inline-block d-xl-flex bg-primary my-2 align-self-center" width="150" height="2" />
             <p class="m-0 p-0">Efectivo - Transferencia - Cheque - Tarjetas de débito/crédito - Mercado Pago</p>
           </div>
-          <figure class="col-12 col-xl-6 d-flex justify-content-center p-0 m-0">
-            <img src="../assets/img/ecd-manta-simil-piel-01.jpg" width="1000" height="900" alt="Dos mantas simil piel una gris y otra marrón." class="mt-0 img-fluid" />
+          <figure class="col-12 col-xl-6 d-flex p-0 m-0 justify-content-end">
+            <img src="../assets/img/ecd-manta-simil-piel-01.jpg" width="500" height="450" alt="Dos mantas simil piel una gris y otra marrón." class="mt-0 img-fluid" />
           </figure>
         </div>
       </section>

@@ -3,8 +3,9 @@
 let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-const productList = document.getElementById('product-list'); //items
-const productTemplate = document.getElementById('product-template').content; //templateCard
+const favouriteBtn = document.querySelector('.btn-favourite');
+const productList = document.getElementById('product-list');
+const productTemplate = document.getElementById('product-template').content;
 const fragment = document.createDocumentFragment();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,8 @@ const fectchData = async () => {
     const data = await res.json();
     renderProducts(data);
   } catch (error) {
-    console.log(error);
+    console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
+    console.error(error);
   }
 };
 
@@ -74,8 +76,6 @@ const renderProducts = (data) => {
 const selectProduct = (e) => {
   e.target.className.includes('btn-comprar') ? setProduct(e.target.parentElement) : '';
   e.target.stopPropagation;
-  console.log(e.target.parentElement);
-  //console.log(cart);
 };
 
 const setProduct = (obj) => {
@@ -83,54 +83,43 @@ const setProduct = (obj) => {
   const producto = {
     id: obj.querySelector('.btn-comprar').dataset.id,
   };
-
-  //cart.includes(producto) ? cart.splice(producto) : cart.push(producto);
-  console.log(producto);
-  console.log(cart);
-  localStorage.setItem('item', JSON.stringify(producto));
+  localStorage.setItem('itemCart', JSON.stringify(producto));
 };
 
-// let btnFavouriteArray = [];
-
-// btnFavouriteArray = document.querySelectorAll('btn-favourite');
-
-// console.log(btnFavouriteArray);
-
-// $('btn-comprar').hover(function (event) {
-//   e.target.content = 'comprar';
-// });
-
 // FAVOURITES
-//let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-//const favouriteBtn = document.querySelector(".btn-favourite"); //items
 productList.addEventListener('click', (e) => {
-  //console.log(e);
   addToFavourites(e);
 });
 
 const addToFavourites = (e) => {
   e.target.className.includes('btn-favourite') ? setFavourites(e.target.parentElement.parentElement) : '';
   e.stopPropagation;
-  // console.log(e.target);
-  //console.log(favourites);
 };
 
 const setFavourites = (obj) => {
-  //console.log(obj);
-  const producto = {
+  console.log(obj);
+  const productoFavourite = {
     id: obj.querySelector('.btn-favourite').dataset.id,
   };
+  localStorage.setItem('itemFavourite', JSON.stringify(productoFavourite));
 
-  if (favourites.includes(producto)) {
+  if (favourites.find((data) => data.id == productoFavourite.id)) {
     console.log('Funka');
   } else {
-    favourites.push(producto);
-    localStorage.setItem('item', producto);
-    console.log(localStorage);
-  }
+    favourites.push(productoFavourite);
+    localStorage.setItem('favourites', JSON.stringify(favourites));
 
-  //favourites.includes(producto) ? console.log("yes") : favourites.push(producto);
-  // console.log(producto);
-  console.log('Favourites');
+    Swal.fire({
+      position: 'bottom-end',
+      html: '<i class="fa-solid fa-heart"></i> ' + `Agregaste: <b>${producto.nombre}</b> a tus favoritos! ` + '<a href="../pages/favoritos.html"><b>VER FAVORITOS</b></a> ' + '',
+      showConfirmButton: false,
+      iconColor: 'rgba(121, 85, 105, 1)',
+      width: 500,
+      padding: '2em',
+      background: 'rgba(255, 255, 255, 0.9)',
+      showCloseButton: true,
+      timer: 4000,
+    });
+  }
   console.log(favourites);
 };

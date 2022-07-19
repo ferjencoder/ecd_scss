@@ -1,7 +1,7 @@
 [
   {
     "id": 1654981998441,
-    "nombre": "Almohadón Tusor Cuadrado 1",
+    "nombre": "Almohadón Tusor Rayas",
     "productor": "ecd",
     "tipo": "almohadón",
     "material": "Lana de lino",
@@ -14,7 +14,6 @@
     "stock": [10, 5, 4, 6],
     "descripcion": "Almohadón de tusor composición lino natural de 50cm x 50cm con relleno. Funda lavable.",
     "img40": ["../assets/img/productos/al/1654981998441/1654981998441_arcilla_s_40x36.jpg", "../assets/img/productos/al/1654981998441/1654981998441_cambray_s_40x36.jpg", "../assets/img/productos/al/1654981998441/1654981998441_eucaliptus_s_40x36.jpg", "../assets/img/productos/al/1654981998441/1654981998441_lino_s_40x36.jpg"],
-
     "img100": [
       "../assets/img/productos/al/1654981998441/1654981998441_arcilla_e_100x90.jpg",
       "../assets/img/productos/al/1654981998441/1654981998441_arcilla_p_100x90.jpg",

@@ -1,11 +1,10 @@
 'use strict';
 
-// CHECK CART
+// FETCH CART FROM LOCAL STORAGE
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-console.log(cart);
 
 // FETCH SELECTED PRODUCT FROM LOCAL STORAGE
-let productoStored = JSON.parse(localStorage.getItem('item'));
+let productoStored = JSON.parse(localStorage.getItem('itemCart'));
 let productoSelected = Number(productoStored.id);
 
 // WAIT FOR DOCUMENT TO LOAD TO CALL FETCH
@@ -25,7 +24,6 @@ const fectchData = async () => {
   } catch (error) {
     console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
     console.error(error);
-  } finally {
   }
 };
 
@@ -70,8 +68,21 @@ const callSwiper = () => {
 // RENDER PRODUCTS
 
 // RENDER PRODUCT
+
+function precioFormat(precio) {
+  let precioToFormat = itemInCart.precio;
+  const options = {
+    style: 'currency',
+    currency: 'ARS',
+  };
+  const precioARS = new Intl.NumberFormat('es-AR', options).format(precioToFormat);
+  console.log(precioARS);
+  return precioARS;
+}
+
 const almohadonesDiv = document.getElementById('productList');
 const almohadonesTable = document.getElementById('productTable');
+const cartItemsPill = document.getElementById('cartItemsPill');
 const offcanvasCartDropdown = document.getElementById('offcanvasCartDropdown');
 const navbarCartDropdown = document.getElementById('navbarCartDropdown');
 
@@ -81,6 +92,8 @@ const renderProducts = (data) => {
 
   for (const producto of data) {
     if (producto.id === productoSelected) {
+      //const precioFormat = precioFormat(producto.precio);
+
       //RENDER PRODUCT GALLERY - SWIPER
       almohadonesDiv.innerHTML += `
         <div class="col-2 m-0 p-0">
@@ -164,35 +177,45 @@ const renderProducts = (data) => {
         </aside>
       `;
 
-      //   CONTINUAR COMPRANDO
-      // <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">
-      // </button>;
-
       document.querySelector('.agregarAlCarrito').onclick = function () {
-        // if ($('.dropdown').find('.dropdown-menu').is(":hidden")){
-        //   $('.dropdown-toggle').dropdown('toggle');
         addToCart(producto);
       };
     }
   }
 };
 
-// RENDER OFFCANVAS CART && MENUE DROPDOWN CART
+// RENDER OFFCANVAS CART && MENU DROPDOWN CART
 const renderOffcanvasCart = (cart) => {
-  console.log(cart);
   offcanvasCartDropdown.innerHTML = '';
+  navbarCartDropdown.innerHTML = '';
+  cartItemsPill.innerHTML = cart.length;
 
-  for (const itemInCart of cart) {
-    let precio = itemInCart.precio;
-
-    const options = {
-      style: 'currency',
-      currency: 'ARS',
-    };
-    const precioARS = new Intl.NumberFormat('es-AR', options).format(precio);
-    console.log(precioARS);
-
-    offcanvasCartDropdown.innerHTML += `
+  if (cart.length == undefined) {
+    offcanvasCartDropdown.innerHTML = `
+      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
+        <div class="container d-flex flex-column align-items-start ps-2">
+          <h6 class="text-uppercase pt-1 text-primary m-0">Tu carrito está vacío</h6>
+        </div>
+      </li>
+    `;
+    navbarCartDropdown.innerHTML = `
+      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
+        <div class="container d-flex flex-column align-items-start ps-2">
+          <h6 class="text-uppercase pt-1 text-primary m-0">Tu carrito está vacío</h6>
+        </div>
+      </li>
+    `;
+  } else {
+    for (const itemInCart of cart) {
+      // let precio = itemInCart.precio;
+      // const options = {
+      //   style: 'currency',
+      //   currency: 'ARS',
+      // };
+      // const precioARS = new Intl.NumberFormat('es-AR', options).format(precio);
+      // console.log(precioARS);
+      // const precioFormat = precioFormat(itemInCart.precio);
+      offcanvasCartDropdown.innerHTML += `
       <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
         <figure class="p-0 m-0 align-self-center">
           <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
@@ -206,7 +229,8 @@ const renderOffcanvasCart = (cart) => {
         <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
       </li>
     `;
-    navbarCartDropdown.innerHTML += `
+
+      navbarCartDropdown.innerHTML += `
       <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
         <figure class="p-0 m-0 align-self-center">
           <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
@@ -220,43 +244,32 @@ const renderOffcanvasCart = (cart) => {
         <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
       </li>
     `;
+    }
   }
 };
-
-const cartDropdown = document.querySelector('#cartDropdown');
-
-console.log(cartDropdown);
-
-const openCartDropdown = () => {
-  cartDropdown.dropdown('show');
-  console.log(cartDropdown);
-};
-
-const myModal = document.getElementById('myModal');
-
-myModal.addEventListener('show.bs.modal', (event) => {
-  if (!data) {
-    return event.preventDefault(); // stops modal from being shown
-  }
-});
 
 // ADD TO CART
 const addToCart = (producto) => {
   // CHECK IF productoSelected EXISTS IN CART
-  if (cart.find((p) => p.id == productoSelected)) {
+  console.log(producto);
+  if (cart.find((producto) => producto.id == productoSelected)) {
   } else {
     cart.push(producto);
     localStorage.setItem('cart', JSON.stringify(cart));
-    console.log('ADDING TO CART WORKED');
+    cartItemsPill.innerHTML = cart.length;
     renderOffcanvasCart(cart);
-    openCartDropdown();
+    // openCartDropdown();
+    Swal.fire({
+      position: 'bottom-end',
+      html: '<i class="fa-solid fa-heart"></i> ' + `Agregaste: <b>${producto.nombre}</b> a tu carrito! ` + '<a href="../pages/carrito.html"><b>VER CARRITO</b></a> ' + '',
+      showConfirmButton: false,
+      iconColor: 'rgba(121, 85, 105, 1)',
+      width: 500,
+      padding: '2em',
+      background: 'rgba(255, 255, 255, 0.9)',
+      showCloseButton: true,
+      timer: 4000,
+    });
   }
-
-  // document.querySelector('#cartDropdown').className = 'btn dropdown-toggle shadow-none show';
-
-  const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
-  const dropdownList = [...dropdownElementList].map((dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl));
-  // const cartDropdown = document.querySelector('#cartDropdown');
-
   console.log(cart);
 };
