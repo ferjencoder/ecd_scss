@@ -47,11 +47,14 @@ const renderCartItems = (cart) => {
         </td>
         <td class="text-center numeroFormat" id="subtotal">${cartItem.precio}</td>
         <td>
-          <button type="button" class="btn shadow-none eliminarProducto" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+          <button type="button" class="btn shadow-none eliminarProducto onclick='eliminar(${cartItem.id}" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
         </td>
       </tr>    
 `;
   });
+  document.querySelector('.eliminarProducto').onclick = function () {
+    eliminar(cart);
+  };
 };
 
 const renderCartSummary = (cart) => {
@@ -76,3 +79,20 @@ const renderCartSummary = (cart) => {
   </tr>
   `;
 };
+
+function eliminar(cart) {
+  console.log(cart);
+
+  cart.forEach((cartItem) => {
+    console.log(cartItem);
+    // let indice = cart.findIndex((cartItem) => cartItem.id == id);
+    if (cart.find((cartItem) => cartItem.id)) console.log(id.id);
+    //console.log(prod);
+    console.log(indice);
+    carrito.splice(indice, 1); //eliminando del carro
+    let fila = document.getElementById(`fila${id}`);
+    document.getElementById('tablabody').removeChild(fila); //eliminando de la tabla
+    document.getElementById('gastoTotal').innerText = `Total: $ ${calcularTotal()}`;
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  });
+}
