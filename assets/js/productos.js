@@ -45,7 +45,7 @@ const fectchData = async () => {
 //   } :  console.log(error);
  */
 
-// ADD LISTENER TO CLICKS IN
+// ADD LISTENER TO CLICKS IN PRODUCTS CONTAINER LIST
 productList.addEventListener('click', (e) => {
   selectProduct(e);
 });
@@ -77,8 +77,9 @@ const renderProducts = (data) => {
 };
 
 // EVENT TO CAPTURE CLICK ON ADD TO CART BTN
-const selectProduct = (e) => {
+const selectProduct = function (e) {
   e.target.className.includes('btn-comprar') ? setProduct(e.target.parentElement) : '';
+  e.e.preventDefault();
   e.target.stopPropagation;
   console.log(e);
 };
