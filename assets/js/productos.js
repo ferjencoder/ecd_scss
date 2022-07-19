@@ -1,5 +1,5 @@
 'use strict';
-//PENSAR PARA FAVOURITES
+//GET CART & FAVOURITES FROM LOCAL STORAGE
 let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -12,15 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   fectchData();
 });
 
-productList.addEventListener('click', (e) => {
-  selectProduct(e);
-});
-
 const fectchData = async () => {
   try {
     const res = await fetch('../assets/js/api.json');
     const data = await res.json();
     renderProducts(data);
+    console.log(data);
   } catch (error) {
     console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
     console.error(error);
@@ -48,6 +45,12 @@ const fectchData = async () => {
 //   } :  console.log(error);
  */
 
+// ADD LISTENER TO CLICKS IN
+productList.addEventListener('click', (e) => {
+  selectProduct(e);
+});
+
+// RENDER ALL PRODUCTS FROM JASON FETCHED DATA
 const renderProducts = (data) => {
   productList.innerHTML = '';
   data.forEach((producto) => {
@@ -66,16 +69,18 @@ const renderProducts = (data) => {
     productTemplate.querySelector('.btn-comprar').href = '../pages/producto.html';
     productTemplate.querySelector('.btnFavourite').dataset.id = producto.id;
     productTemplate.querySelector('#toast-body').textContent = producto.nombre;
-    //console.log(producto);
+
     const clone = productTemplate.cloneNode(true);
     fragment.appendChild(clone);
   });
   productList.appendChild(fragment);
 };
 
+// EVENT TO CAPTURE CLICK ON ADD TO CART BTN
 const selectProduct = (e) => {
   e.target.className.includes('btn-comprar') ? setProduct(e.target.parentElement) : '';
   e.target.stopPropagation;
+  console.log(e);
 };
 
 const setProduct = (obj) => {
