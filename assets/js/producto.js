@@ -43,12 +43,33 @@ const callSwiper = () => {
     direction: 'vertical',
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 7,
+    slidesPerView: 5,
     freeMode: true,
-    watchSlidesProgress: true,
+    grabCursor: true,
+    // watchSlidesProgress: true,
+    breakpoints: {
+      '@0.00': {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      '@0.75': {
+        slidesPerView: 6,
+        spaceBetween: 10,
+      },
+      '@1.00': {
+        slidesPerView: 7,
+        spaceBetween: 10,
+      },
+      // '@1.50': {
+      //   slidesPerView: 4,
+      //   spaceBetween: 50,
+      // },
+    },
   });
   let galleryTop = new Swiper('.gallery-top', {
     direction: 'vertical',
+    loop: true,
+    // spaceBetween: 10,
     thumbs: {
       swiper: galleryThumbs,
     },
@@ -98,35 +119,35 @@ const renderProducts = (data) => {
 
       //RENDER PRODUCT GALLERY - SWIPER
       almohadonesDiv.innerHTML += `
-        <div class="col-2 m-0 p-0">
+        <div class="col-2 m-0 me-1 p-0">
           <div class="swiper gallery-thumbs">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" style="background-image: url(${producto.img100[0]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[1]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[2]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[3]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[4]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[5]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[6]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[7]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[8]})"></div>
-              <div class="swiper-slide" style="background-image: url(${producto.img100[9]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[0]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[1]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[2]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[3]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[4]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[5]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[6]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[7]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[8]})"></div>
+              <div class="swiper-slide img-fluid" style="background-image: url(${producto.img100[9]})"></div>
             </div>
           </div>
         </div>
-        <div class="col-10 m-0 p-0">
+        <div class="col-10 m-0 ms-1 p-0">
           <div class="swiper gallery-top m-0 p-0">
             <div class="swiper-wrapper">
-              <div id="slide-0" class="swiper-slide"><img src="${producto.img1000[0]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-1" class="swiper-slide"><img src="${producto.img1000[1]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-2" class="swiper-slide"><img src="${producto.img1000[2]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-3" class="swiper-slide"><img src="${producto.img1000[3]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-4" class="swiper-slide"><img src="${producto.img1000[4]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-5" class="swiper-slide"><img src="${producto.img1000[5]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-6" class="swiper-slide"><img src="${producto.img1000[6]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-7" class="swiper-slide"><img src="${producto.img1000[7]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-8" class="swiper-slide"><img src="${producto.img1000[8]}" alt="${producto.descripcion}" /></div>
-              <div id="slide-9" class="swiper-slide"><img src="${producto.img1000[9]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-0" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[0]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-1" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[1]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-2" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[2]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-3" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[3]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-4" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[4]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-5" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[5]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-6" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[6]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-7" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[7]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-8" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[8]}" alt="${producto.descripcion}" /></div>
+              <div id="slide-9" class="swiper-slide card card-img-top m-0 p-0 border-0 img-fluid"><img src="${producto.img1000[9]}" alt="${producto.descripcion}" /></div>
             </div>
           </div>
         </div>
@@ -214,3 +235,17 @@ const addToCart = (producto) => {
   }
   console.log(cart);
 };
+
+//todo THUMBS GALLERY WITH SWIPER
+//todo 1. Make thumbs auto populate based on
+//todo thumbs img ratio, now is predefined
+//todo to 7 tthumb slides
+
+//todo 2. Apply forEach to get dynamic array
+//todo 2. of slides
+
+//todo 3. Add swiper paralax to hero img
+
+//info OFICIAL SWIPER https://youtu.be/l4kFO6VQPfA
+
+//info https://swiperjs.com/swiper-api

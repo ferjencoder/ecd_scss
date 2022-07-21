@@ -11417,9 +11417,16 @@ textarea.form-control-lg {
 }
 
 .text-logo {
+  color: #000;
   font-size: 3rem;
   font-family: al-fresco, sans-serif;
   letter-spacing: 0.09rem;
+}
+
+.textImg {
+  font-size: 3em;
+  margin-bottom: 0;
+  font-family: garamond-premier-pro, serif;
 }
 
 .ecd-accordion-button {
@@ -11962,27 +11969,23 @@ li {
 }
 
 .swiper {
-  width: 100%;
-  height: 639px;
+  height: 528px;
 }
 
 .swiper-slide {
-  width: 710px;
-  height: 639px;
   background-size: cover;
   background-position: center;
 }
 
 .gallery-top {
-  width: 710px;
-  height: 639px;
+  object-fit: cover;
   /* height: 80%;
   width: 100%; */
 }
 
 .gallery-thumbs {
+  object-fit: scale-down;
   width: 100px;
-  height: 639px;
   box-sizing: border-box;
   /* padding: 5px 0; */
 }
