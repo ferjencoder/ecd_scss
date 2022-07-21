@@ -7,9 +7,9 @@
     <meta name="language" content="Spanish" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
-    <meta name="description" content="Entre Cortinas. Conocé nuestros productos. Disponemos de modelos exclusivos de almohadones, manteles, mantas, cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
+    <meta name="description" content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
-    <link rel="canonical" href="https://entrecortinas.netlify.app/productos.html" />
+    <link rel="canonical" href="https://entrecortinas.netlify.app/carrito.html" />
 
     <!-- FAV+ICONS -->
     <link rel="icon" href="../assets/img/ico/favicon-32x32.png" />
@@ -36,13 +36,20 @@
 
     <!-- BOOTSTRAP -->
     <script src="../assets/js/bootstrap.bundle.min.js" defer></script>
+
     <!-- NETLIFY -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    <!-- SWIPER -->
+    <script src="../assets/js/swiper-bundle.js" defer></script>
+
     <!-- SCRIPTS -->
-    <script src="../assets/js/productos.js" defer></script>
-    <script src="../assets/js/favourites.js" defer></script>
-    <script src="../assets/js/toasts.js" defer></script>
     <script src="../app.js" defer></script>
+    <script src="../assets/js/productos.js" defer></script>
+    <script src="../assets/js/toasts.js" defer></script>
 
     <title>Productos || Entre Cortinas</title>
   </head>
@@ -67,12 +74,15 @@
       <!-- START ECD NAVBAR -->
       <nav class="row">
         <div class="navbar navbar-expand-lg container-fluid navbar-light bg-white border-bottom border-primary-border p-0 ecd-navbar">
-          <!-- Logo -->
+          <!-- LOGO -->
           <div class="col-12 col-lg-3 d-flex justify-content-between justify-content-lg-center px-4">
             <a class="nav-link active" aria-current="page" href="../index.html"><img width="200" src="../assets/img/ico/ecd_logo.svg" alt="Logo Entre Cortinas y link a la página de inicio" height="40" /></a>
             <button class="navbar-toggler d-lg-none shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Botón para activar menu lateral" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- OFFCANVAS -->
+
+            <!-- OFFCANVAS HOME MENU -->
             <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header bg-primary">
                 <figure class="offcanvas-title" id="offcanvasNavbarLabel">
@@ -81,6 +91,7 @@
                 <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body d-lg-none p-0">
+                <!-- OFFCANVAS HOME ICON -->
                 <div class="container-fluid bg-gray p-0">
                   <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -88,16 +99,19 @@
                         <i class="fa-solid fa-bars fa-xl"></i>
                       </button>
                     </li>
+                    <!-- OFFCANVAS USER ICON -->
                     <li class="nav-item" role="presentation">
                       <button class="nav-link px-4 py-3" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" aria-label="Botón ingreso de usuario" aria-controls="user" aria-selected="false">
                         <i class="fa-solid fa-user fa-xl"></i>
                       </button>
                     </li>
+                    <!-- OFFCANVAS FAVOURITE ICON -->
                     <li class="nav-item" role="presentation">
                       <button class="nav-link px-4 py-3" id="favourite-tab" data-bs-toggle="tab" data-bs-target="#favourite" type="button" aria-label="Botón sección favoritos" aria-controls="favourite" aria-selected="false">
                         <i class="fa-solid fa-heart fa-xl"></i>
                       </button>
                     </li>
+                    <!-- OFFCANVAS CART ICON -->
                     <li class="nav-item" role="presentation">
                       <button class="nav-link px-4 py-3" id="shopping-tab" data-bs-toggle="tab" data-bs-target="#shopping" type="button" aria-label="Botón carrito de compras" aria-controls="shopping" aria-selected="false">
                         <i class="fa-solid fa-bag-shopping fa-xl"></i>
@@ -106,6 +120,7 @@
                   </ul>
                 </div>
                 <div class="tab-content" id="myTabContent">
+                  <!-- HOME PANE - OFFCANVAS -->
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="container py-4 px-0">
                       <ul class="list-group list-group-flush">
@@ -251,7 +266,7 @@
                       <!-- MAGIC HAPPENS HERE -->
                     </ul>
 
-                    <!-- goto cart link -->
+                    <!-- GOTO CART LINK -->
                     <ul class="list-group list-group-flush p-0 m-0 ecd-border-bt">
                       <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
                         <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
@@ -262,8 +277,8 @@
               </div>
             </div>
           </div>
-          <!-- End offcanvas -->
-          <!-- Links -->
+          <!-- END OFFCANVAS -->
+          <!-- LINKS -->
           <div class="d-none d-lg-flex col-lg-6 p-0 m-0">
             <nav class="collapse navbar-collapse navbar navbar-light justify-content-center bg-white p-0 m-0" id="navbarSupportedContent">
               <div class="container-fluid d-flex justify-content-center p-0 m-0">
@@ -274,9 +289,9 @@
               </div>
             </nav>
           </div>
-          <!-- Buttons -->
+          <!-- BUTTONS -->
           <div class="d-none d-lg-flex col-lg-3 pe-4 justify-content-center">
-            <!-- Search -->
+            <!-- MENU SEARCH -->
             <div class="dropdown">
               <button type="button" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Buscar" aria-expanded="false">
                 <i class="fa-solid fa-magnifying-glass fa-1x"></i>
@@ -288,9 +303,9 @@
                 </form>
               </div>
             </div>
-            <!-- User -->
+            <!-- MENU USER -->
             <div class="dropdown">
-              <button type="button" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Ingresar con usuario" aria-expanded="false">
+              <button type="button" id="userDropdownFromMenu" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Ingresar con usuario" aria-expanded="false">
                 <i class="fa-solid fa-user fa-1x"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 400px">
@@ -332,11 +347,13 @@
                 </ul>
               </div>
             </div>
-            <!-- Favourites -->
+            <!-- MENU FAVOURITES -->
             <div class="dropdown">
               <button type="button" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Menu usuario" aria-expanded="false">
-                <i class="fa-solid fa-heart fa-1x"></i><span class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+3 <span class="visually-hidden">Favourites</span></span>
+                <i class="fa-solid fa-heart fa-1x"></i>
+                <span id="favouriteItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+3 <span class="visually-hidden">Favourites</span></span>
               </button>
+
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 450px">
                 <ul class="list-group list-group-flush p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary">
@@ -408,12 +425,14 @@
                 </ul>
               </div>
             </div>
-            <!-- Carrito -->
+
+            <!-- MENU CART -->
             <div class="dropdown">
-              <button type="button" id="cartDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
-                <i class="fa-solid fa-bag-shopping fa-1x"></i><span class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+6 <span class="visually-hidden">Carrito de compras</span></span>
+              <button type="button" id="cartMenuDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
+                <i class="fa-solid fa-bag-shopping fa-1x"></i>
+                <span id="cartItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+6 <span class="visually-hidden">Carrito de compras</span></span>
               </button>
-              <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px" aria-labelledby="cartDropdown">
+              <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px" aria-labelledby="cartMenuDropdown">
                 <ul class="list-group list-group-flush p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
@@ -431,7 +450,7 @@
             </div>
           </div>
         </div>
-        <!-- ecd navbar -->
+        <!-- ECD NAVBAR -->
       </nav>
       <!-- START NAVBAR PRODUCTOS -->
       <nav class="row">
@@ -444,7 +463,7 @@
             <a class="nav-link text-black text-spacing-lg text-uppercase ps-3 text-serif-nav" href="../pages/productos.html#toldos">Outdoor</a>
           </div>
         </div>
-        <!-- End navbar productos -->
+        <!-- END NAVBAR PRODUCTOS -->
       </nav>
     </header>
 
@@ -483,31 +502,33 @@
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="container-fluid m-0 p-0">
+    <main class="container-ecd m-0 p-0">
       <!-- HERO SECTION POPS -->
-      <section class="container-fluid text-center">
+      <section class="container-ecd text-center">
         <div class="heroInspire">
           <!-- POP  -->
           <div class="happyIconContainer">
-            <div class="happyIcon">
-              <div class="btn btnPin btnBagPop popBkg">
-                <aside>
-                  <p style="margin-bottom: 0rem">
-                    <strong>CORTINAS</strong>
-                  </p>
-                  <p style="margin-bottom: 0.1rem">TRADICIONAL LINO</p>
-                  <p><strong>$3.500/ml</strong></p>
-                </aside>
-                <a href="./cotizate.html" class="ecd-btn-outlined-p">COTIZATE</a>
+            <div class="popperContainer">
+              <div class="happyIcon">
+                <div class="btn btnPin btnBagPop popBkg bottom-50 end-20">
+                  <aside>
+                    <p style="margin-bottom: 0rem">
+                      <strong>CORTINAS</strong>
+                    </p>
+                    <p style="margin-bottom: 0.1rem">TRADICIONAL LINO</p>
+                    <p><strong>$3.500/ml</strong></p>
+                  </aside>
+                  <a href="./cotizate.html" class="ecd-btn-outlined-p">COMPRAR</a>
+                </div>
               </div>
+              <button class="btnPopper btn btnPin btnBag shadow-none top-50 end-20" type="button">
+                <span class="plusIcon fa-solid fa-circle-plus" id="popperToggler"></span>
+              </button>
             </div>
-            <button class="btnPopper btn btnPin btnBag shadow-none" type="button">
-              <span class="plusIcon fa-solid fa-circle-plus" id="popperToggler"></span>
-            </button>
 
             <!-- POP ONE -->
             <div class="happyIconOne">
-              <div class="btn btnPin btnBagOnePop popBkg">
+              <div class="btn btnPin btnBagOnePop popBkg bottom-50 end-35">
                 <aside>
                   <p style="margin-bottom: 0.1rem">
                     <strong>THROWS MANTA</strong>
@@ -516,23 +537,15 @@
                   <p><strong>$3.650</strong></p>
                 </aside>
                 <a href="#" class="ecd-btn-outlined-p">COMPRAR</a>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                  <div id="popAlertOne" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                      <div class="toast-body bg-success">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                      <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-            <button class="btnPopperOne btn btnPin btnBagOne shadow-none" type="button">
+            <button class="btnPopperOne btn btnPin btnBagOne shadow-none top-50 end-35" type="button">
               <span class="plusIcon fa-solid fa-circle-plus" id="popperTogglerOne"></span>
             </button>
 
             <!-- POP TWO -->
             <div class="happyIconTwo">
-              <div class="btn btnPin btnBagTwoPop popBkg">
+              <div class="btn btnPin btnBagTwoPop popBkg bottom-50 end-55">
                 <aside>
                   <p style="margin-bottom: 0rem">
                     <strong>ALMOHADON</strong>
@@ -543,13 +556,13 @@
                 <a href="./carrito.html" class="ecd-btn-outlined-p">COMPRAR</a>
               </div>
             </div>
-            <button class="btnPopperTwo btn btnPin btnBagTwo shadow-none" type="button">
+            <button class="btnPopperTwo btn btnPin btnBagTwo shadow-none top-50 end-55" type="button">
               <span class="plusIcon fa-solid fa-circle-plus" id="popperTogglerTwo"></span>
             </button>
 
             <!-- POP THREE -->
             <div class="happyIconThree">
-              <div class="btn btnPin btnBagThreePop popBkg">
+              <div class="btn btnPin btnBagThreePop popBkg bottom-50 start-20">
                 <aside>
                   <p style="margin-bottom: 0.1rem">
                     <strong>ALMOHADON</strong>
@@ -560,13 +573,13 @@
                 <a href="./carrito.html" class="ecd-btn-outlined-p">COMPRAR</a>
               </div>
             </div>
-            <button class="btnPopperThree btn btnPin btnBagThree shadow-none" type="button">
+            <button class="btnPopperThree btn btnPin btnBagThree shadow-none top-50 start-20" type="button">
               <span class="plusIcon fa-solid fa-circle-plus" id="popperTogglerThree"></span>
             </button>
 
             <!-- POP FOUR -->
             <div class="happyIconFour">
-              <div class="btn btnPin btnBagFourPop popBkg">
+              <div class="btn btnPin btnBagFourPop popBkg bottom-50 start-5">
                 <aside>
                   <p style="margin-bottom: 0.1rem">
                     <strong>ALMOHADON</strong>
@@ -577,16 +590,42 @@
                 <a href="./carrito.html" class="ecd-btn-outlined-p">COMPRAR</a>
               </div>
             </div>
-            <button class="btnPopperFour btn btnPin btnBagFour shadow-none" type="button">
+            <button class="btnPopperFour btn btnPin btnBagFour shadow-none top-50 start-5" type="button">
               <span class="plusIcon fa-solid fa-circle-plus" id="popperTogglerFour"></span>
             </button>
 
             <!-- POP IMG -->
-            <figure>
-              <img src="../assets/img/ecd-hero-09.jpg" class="img-fluid" width="auto" height="750" alt="Curtains and a grey sofa, with pillows and a blanket." />
+            <figure class="popImg">
+              <img src="../assets/img/productos/al/1654981998443/1654981998443_durazno_h_2000x1000.jpg" class="card-img" alt="Curtains and a grey sofa, with pillows and a blanket." />
+              <figcaption class="position-absolute top-5 end-10">
+                <h1 class="text-serif text-start">INSPIRATE</h1>
+              </figcaption>
             </figure>
           </div>
         </div>
+
+        <template>
+          <div class="popperContainer">
+            <figure class="popImg">
+              <img src="../assets/img/productos/al/1654981998443/1654981998443_durazno_h_2000x1000.jpg" class="card-img" alt="Curtains and a grey sofa, with pillows and a blanket." />
+            </figure>
+            <div id="pin1" class="box">
+              <button class="btnPopper btn btnPin btnBag shadow-none" type="button">
+                <span class="plusIcon fa-solid fa-circle-plus" id="popperToggler"></span>
+              </button>
+              <div class="pin-text btn btnPin btnBagPop popBkg">
+                <aside>
+                  <p style="margin-bottom: 0rem">
+                    <strong>CORTINAS</strong>
+                  </p>
+                  <p style="margin-bottom: 0.1rem">TRADICIONAL LINO</p>
+                  <p><strong>$3.500/ml</strong></p>
+                </aside>
+                <a href="./cotizate.html" class="ecd-btn-outlined-p">COTIZATE</a>
+              </div>
+            </div>
+          </div>
+        </template>
       </section>
 
       <!-- HERO TEXT ONE  -->
@@ -611,18 +650,17 @@
         <div class="col">
           <div class="card border-0">
             <figure class="position-relative m-0">
-              <img id="" src="" class="card-img-top product-img" alt="" />
+              <img src="" class="card-img-top productoImg" alt="" />
               <button type="button" class="btnFavourite bg-transparent border-0 position-absolute top-0 end-0 p-1 shadow-none fa-solid fa-heart btn-favourite" id="liveToastBtnSeven">
                 <span class=""></span>
               </button>
-              <a class="btn-comprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase"></a>
+              <a class="btnComprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase"></a>
             </figure>
             <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
               <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
-                  <!-- <div class="toast-body">Agregaste ${producto.nombre} a <a href="../pages/favoritos.html">tus favoritos</a></div> -->
                   <div class="toast-body">
-                    <p id="toast-body"></p>
+                    <p class="toastProductoNombre"></p>
                     <a href="../pages/favoritos.html">tus favoritos</a>
                   </div>
                   <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -630,19 +668,19 @@
               </div>
             </div>
             <div class="card-body p-0">
-              <h6 id="product-name" class="card-title fw-bold text-uppercase mb-0 mt-2"></h6>
+              <h6 class="productoNombre card-title fw-bold text-uppercase mb-0 mt-2"></h6>
               <div class="clearfix">
                 <ul id="swatch-list" class="d-flex p-0 pt-1 m-0 float-start">
-                  <li class="cardSwatch p-1 ps-0"><img id="product-swatch0" src="" width="28" alt="Muestra material Classic Ivory" /></li>
-                  <li class="cardSwatch p-1"><img id="product-swatch1" src="" width="28" alt="Muestra material lino blanco" /></li>
-                  <li class="cardSwatch p-1"><img id="product-swatch2" src="" width="28" alt="Muestra material lino marfil" /></li>
-                  <li class="cardSwatch p-1"><img id="product-swatch3" src="" width="28" alt="Muestra material lino marfil" /></li>
+                  <li class="cardSwatch p-1 ps-0"><img id="productoSwatch0" src="" width="28" alt="Muestra material Classic Ivory" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch1" src="" width="28" alt="Muestra material lino blanco" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch2" src="" width="28" alt="Muestra material lino marfil" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch3" src="" width="28" alt="Muestra material lino marfil" /></li>
                 </ul>
-                <span id="stock" class="badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1"></span>
+                <span class="productoStock badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1"></span>
               </div>
-              <p id="product-material" class="m-0"></p>
-              <p id="product-alto" class="m-0"></p>
-              <p id="product-ancho" class="m-0"></p>
+              <p class="m-0 productoMaterial"></p>
+              <p class="productoMedidas m-0"></p>
+              <!-- <p class="productoAncho m-0"></p> -->
             </div>
           </div>
         </div>

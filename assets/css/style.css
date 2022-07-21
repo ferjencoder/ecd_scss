@@ -6441,20 +6441,76 @@ textarea.form-control-lg {
   top: 0 !important;
 }
 
+.top-5 {
+  top: 5% !important;
+}
+
+.top-10 {
+  top: 10% !important;
+}
+
+.top-15 {
+  top: 15% !important;
+}
+
+.top-20 {
+  top: 20% !important;
+}
+
 .top-25 {
   top: 25% !important;
+}
+
+.top-30 {
+  top: 30% !important;
+}
+
+.top-35 {
+  top: 35% !important;
 }
 
 .top-40 {
   top: 40% !important;
 }
 
+.top-45 {
+  top: 45% !important;
+}
+
 .top-50 {
   top: 50% !important;
 }
 
+.top-55 {
+  top: 55% !important;
+}
+
+.top-60 {
+  top: 60% !important;
+}
+
+.top-65 {
+  top: 65% !important;
+}
+
+.top-70 {
+  top: 70% !important;
+}
+
 .top-75 {
   top: 75% !important;
+}
+
+.top-80 {
+  top: 80% !important;
+}
+
+.top-85 {
+  top: 85% !important;
+}
+
+.top-90 {
+  top: 90% !important;
 }
 
 .top-95 {
@@ -6469,20 +6525,76 @@ textarea.form-control-lg {
   bottom: 0 !important;
 }
 
+.bottom-5 {
+  bottom: 5% !important;
+}
+
+.bottom-10 {
+  bottom: 10% !important;
+}
+
+.bottom-15 {
+  bottom: 15% !important;
+}
+
+.bottom-20 {
+  bottom: 20% !important;
+}
+
 .bottom-25 {
   bottom: 25% !important;
+}
+
+.bottom-30 {
+  bottom: 30% !important;
+}
+
+.bottom-35 {
+  bottom: 35% !important;
 }
 
 .bottom-40 {
   bottom: 40% !important;
 }
 
+.bottom-45 {
+  bottom: 45% !important;
+}
+
 .bottom-50 {
   bottom: 50% !important;
 }
 
+.bottom-55 {
+  bottom: 55% !important;
+}
+
+.bottom-60 {
+  bottom: 60% !important;
+}
+
+.bottom-65 {
+  bottom: 65% !important;
+}
+
+.bottom-70 {
+  bottom: 70% !important;
+}
+
 .bottom-75 {
   bottom: 75% !important;
+}
+
+.bottom-80 {
+  bottom: 80% !important;
+}
+
+.bottom-85 {
+  bottom: 85% !important;
+}
+
+.bottom-90 {
+  bottom: 90% !important;
 }
 
 .bottom-95 {
@@ -6497,20 +6609,76 @@ textarea.form-control-lg {
   left: 0 !important;
 }
 
+.start-5 {
+  left: 5% !important;
+}
+
+.start-10 {
+  left: 10% !important;
+}
+
+.start-15 {
+  left: 15% !important;
+}
+
+.start-20 {
+  left: 20% !important;
+}
+
 .start-25 {
   left: 25% !important;
+}
+
+.start-30 {
+  left: 30% !important;
+}
+
+.start-35 {
+  left: 35% !important;
 }
 
 .start-40 {
   left: 40% !important;
 }
 
+.start-45 {
+  left: 45% !important;
+}
+
 .start-50 {
   left: 50% !important;
 }
 
+.start-55 {
+  left: 55% !important;
+}
+
+.start-60 {
+  left: 60% !important;
+}
+
+.start-65 {
+  left: 65% !important;
+}
+
+.start-70 {
+  left: 70% !important;
+}
+
 .start-75 {
   left: 75% !important;
+}
+
+.start-80 {
+  left: 80% !important;
+}
+
+.start-85 {
+  left: 85% !important;
+}
+
+.start-90 {
+  left: 90% !important;
 }
 
 .start-95 {
@@ -6525,20 +6693,76 @@ textarea.form-control-lg {
   right: 0 !important;
 }
 
+.end-5 {
+  right: 5% !important;
+}
+
+.end-10 {
+  right: 10% !important;
+}
+
+.end-15 {
+  right: 15% !important;
+}
+
+.end-20 {
+  right: 20% !important;
+}
+
 .end-25 {
   right: 25% !important;
+}
+
+.end-30 {
+  right: 30% !important;
+}
+
+.end-35 {
+  right: 35% !important;
 }
 
 .end-40 {
   right: 40% !important;
 }
 
+.end-45 {
+  right: 45% !important;
+}
+
 .end-50 {
   right: 50% !important;
 }
 
+.end-55 {
+  right: 55% !important;
+}
+
+.end-60 {
+  right: 60% !important;
+}
+
+.end-65 {
+  right: 65% !important;
+}
+
+.end-70 {
+  right: 70% !important;
+}
+
 .end-75 {
   right: 75% !important;
+}
+
+.end-80 {
+  right: 80% !important;
+}
+
+.end-85 {
+  right: 85% !important;
+}
+
+.end-90 {
+  right: 90% !important;
 }
 
 .end-95 {
@@ -11650,60 +11874,64 @@ textarea.form-control-lg {
   font-family: Segoe UI, sans-serif;
   color: rgb(72, 50, 65);
   background: rgba(255, 255, 255, 0.36);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgb(255, 255, 255);
 }
 
-.btnBag {
-  top: 18.1%;
-  right: 68%;
+figcaption {
+  z-index: 1;
 }
 
 .btnBagPop {
-  top: 2%;
-  right: 64.5%;
+  z-index: 99;
 }
 
 .btnBagOne {
-  top: 60%;
-  right: 37%;
+  z-index: 98;
 }
 
 .btnBagOnePop {
-  top: 43.7%;
-  right: 33.4%;
+  z-index: 99;
 }
 
 .btnBagTwo {
-  top: 45%;
-  right: 58%;
+  z-index: 98;
 }
 
 .btnBagTwoPop {
-  top: 28.7%;
-  right: 54.4%;
+  z-index: 99;
 }
 
 .btnBagThree {
-  top: 45%;
-  right: 73%;
+  z-index: 98;
 }
 
 .btnBagThreePop {
-  top: 28.7%;
-  right: 69.4%;
+  z-index: 99;
 }
 
 .btnBagFour {
-  top: 39%;
-  right: 81%;
+  z-index: 98;
 }
 
 .btnBagFourPop {
-  top: 32%;
-  right: 82.5%;
+  z-index: 99;
+}
+
+.popImg {
+  object-fit: cover;
+}
+
+.happyIconContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.happyIconContainer img {
+  max-width: 100%;
+  display: block;
 }
 
 .ecd-navbar i {

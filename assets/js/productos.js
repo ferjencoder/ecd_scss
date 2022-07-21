@@ -1,13 +1,37 @@
 'use strict';
-//GET CART & FAVOURITES FROM LOCAL STORAGE
-let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-const favouriteBtn = document.querySelector('.btn-favourite');
-const productList = document.getElementById('product-list');
+// //GET CART & FAVOURITES FROM LOCAL STORAGE
+// let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+// let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// // FETCH SELECTED FAVOURITE PRODUCT FROM LOCAL STORAGE
+// let favouriteStored = JSON.parse(localStorage.getItem('itemFavourite'));
+// let favouriteSelected = Number(favouriteStored.id);
+// console.log(favouriteSelected);
+
+console.log('PRODUCTOS', { cart });
+console.log('PRODUCTOS', { favourites });
+
+// GLOBAL SCOPE VARIABLES
+// const btnFavourite = document.querySelector('.btnFavourite');
+// const productList = document.getElementById('product-list');
 const productTemplate = document.getElementById('product-template').content;
 const fragment = document.createDocumentFragment();
 
+const tmpProductoNombre = productTemplate.querySelector('.productoNombre');
+const tmpProductoMaterial = productTemplate.querySelector('.productoMaterial');
+const tmpProductoMedidas = productTemplate.querySelector('.productoMedidas');
+const tmpProductoImg = productTemplate.querySelector('.productoImg');
+const tmpProductoSwatch0 = productTemplate.querySelector('#productoSwatch0');
+const tmpProductoSwatch1 = productTemplate.querySelector('#productoSwatch1');
+const tmpProductoSwatch2 = productTemplate.querySelector('#productoSwatch2');
+const tmpProductoSwatch3 = productTemplate.querySelector('#productoSwatch3');
+const tmpProductoStock = productTemplate.querySelector('.productoStock');
+const tmpBtnComprar = productTemplate.querySelector('.btnComprar');
+const tmpBtnFavourite = productTemplate.querySelector('.btnFavourite');
+const tmpToastProductoNombre = productTemplate.querySelector('.toastProductoNombre');
+
+// AFTER DOM IS LOADED FETCH DATA FROM JSON
 document.addEventListener('DOMContentLoaded', () => {
   fectchData();
 });
@@ -17,6 +41,8 @@ const fectchData = async () => {
     const res = await fetch('../assets/js/api.json');
     const data = await res.json();
     renderProducts(data);
+    // callFavourite(data);
+    // setFavourites(data);
     console.log(data);
   } catch (error) {
     console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
@@ -50,82 +76,83 @@ productList.addEventListener('click', (e) => {
   selectProduct(e);
 });
 
-// RENDER ALL PRODUCTS FROM JASON FETCHED DATA
+// RENDER ALL PRODUCTS FROM JSON FETCHED DATA
 const renderProducts = (data) => {
   productList.innerHTML = '';
+
   data.forEach((producto) => {
-    productTemplate.querySelector('#product-name').textContent = producto.nombre;
-    productTemplate.querySelector('#product-material').textContent = 'Material: ' + producto.material;
-    productTemplate.querySelector('#product-alto').textContent = 'Medidas: ' + producto.medidas;
-    productTemplate.querySelector('.product-img').setAttribute('src', producto.img500[0]);
-    productTemplate.querySelector('.product-img').setAttribute('alt', producto.descripcion);
-    productTemplate.querySelector('#product-swatch0').setAttribute('src', producto.img40[0]);
-    productTemplate.querySelector('#product-swatch1').setAttribute('src', producto.img40[1]);
-    productTemplate.querySelector('#product-swatch2').setAttribute('src', producto.img40[2]);
-    productTemplate.querySelector('#product-swatch3').setAttribute('src', producto.img40[3]);
-    productTemplate.querySelector('#stock').textContent = producto.stock[0] + ' en stock';
-    productTemplate.querySelector('.btn-comprar').dataset.id = producto.id;
-    productTemplate.querySelector('.btn-comprar').textContent = '$ ' + producto.precio;
-    productTemplate.querySelector('.btn-comprar').href = '../pages/producto.html';
-    productTemplate.querySelector('.btnFavourite').dataset.id = producto.id;
-    productTemplate.querySelector('#toast-body').textContent = producto.nombre;
+    tmpProductoNombre.textContent = producto.nombre;
+    tmpProductoMaterial.textContent = 'Material: ' + producto.material;
+    tmpProductoMedidas.textContent = 'Medidas: ' + producto.medidas;
+    tmpProductoImg.setAttribute('src', producto.img500[0]);
+    tmpProductoImg.setAttribute('alt', producto.descripcion);
+    tmpProductoSwatch0.setAttribute('src', producto.img40[0]);
+    tmpProductoSwatch1.setAttribute('src', producto.img40[1]);
+    tmpProductoSwatch2.setAttribute('src', producto.img40[2]);
+    tmpProductoSwatch3.setAttribute('src', producto.img40[3]);
+    tmpProductoStock.textContent = producto.stock[0] + ' en stock';
+    tmpBtnComprar.dataset.id = producto.id;
+    tmpBtnComprar.textContent = '$ ' + producto.precio;
+    tmpBtnComprar.href = '../pages/producto.html';
+    tmpBtnFavourite.dataset.id = producto.id;
+    tmpToastProductoNombre.textContent = producto.nombre;
 
     const clone = productTemplate.cloneNode(true);
     fragment.appendChild(clone);
   });
+
   productList.appendChild(fragment);
 };
 
 // EVENT TO CAPTURE CLICK ON ADD TO CART BTN
 const selectProduct = function (e) {
-  e.target.className.includes('btn-comprar') ? setProduct(e.target.parentElement) : '';
-  e.e.preventDefault();
+  //e.preventDefault();
   e.target.stopPropagation;
-  console.log(e);
+  e.target.className.includes('btnComprar') ? setProduct(e.target.parentElement) : '';
 };
 
 const setProduct = (obj) => {
   console.log(obj);
   const producto = {
-    id: obj.querySelector('.btn-comprar').dataset.id,
+    id: obj.querySelector('.btnComprar').dataset.id,
   };
+  console.log(producto);
   localStorage.setItem('itemCart', JSON.stringify(producto));
 };
 
-// FAVOURITES
-productList.addEventListener('click', (e) => {
-  addToFavourites(e);
-});
+// const setFavourites = (e) => {
+//   console.log(e);
+//   const productoFavourite = {
+//     id: e.querySelector('.btnFavourite').dataset.id,
+//   };
+//   localStorage.setItem('itemFavourite', JSON.stringify(productoFavourite));
+// };
 
-const addToFavourites = (e) => {
-  e.target.className.includes('btn-favourite') ? setFavourites(e.target.parentElement.parentElement) : '';
-  e.stopPropagation;
-};
+// const callFavourite = (data) => {
+//   for (const producto of data) {
+//     if (producto.id == itemFavourite) {
+//     }
+//   }
+// };
 
-const setFavourites = (obj) => {
-  console.log(obj);
-  const productoFavourite = {
-    id: obj.querySelector('.btn-favourite').dataset.id,
-  };
-  localStorage.setItem('itemFavourite', JSON.stringify(productoFavourite));
+// if (favourites.find((data) => data.id == productoFavourite.id)) {
+//   console.log(data);
+//   console.log('Funka');
+// } else {
+//   // favourites.push(productoFavourite);
+//   localStorage.setItem('favourites', JSON.stringify(favourites));
 
-  if (favourites.find((data) => data.id == productoFavourite.id)) {
-    console.log('Funka');
-  } else {
-    favourites.push(productoFavourite);
-    localStorage.setItem('favourites', JSON.stringify(favourites));
-
-    Swal.fire({
-      position: 'bottom-end',
-      html: '<i class="fa-solid fa-heart"></i> ' + `Agregaste: <b>${producto.nombre}</b> a tus favoritos! ` + '<a href="../pages/favoritos.html"><b>VER FAVORITOS</b></a> ' + '',
-      showConfirmButton: false,
-      iconColor: 'rgba(121, 85, 105, 1)',
-      width: 500,
-      padding: '2em',
-      background: 'rgba(255, 255, 255, 0.9)',
-      showCloseButton: true,
-      timer: 4000,
-    });
-  }
-  console.log(favourites);
-};
+//   // Swal.fire({
+//   //   position: 'bottom-end',
+//   //   html: '<i class="fa-solid fa-heart"></i> ' + `Agregaste: <b>${producto.nombre}</b> a tus favoritos! ` + '<a href="../pages/favoritos.html"><b>VER FAVORITOS</b></a> ' + '',
+//   //   showConfirmButton: false,
+//   //   iconColor: 'rgba(121, 85, 105, 1)',
+//   //   width: 500,
+//   //   padding: '2em',
+//   //   background: 'rgba(255, 255, 255, 0.9)',
+//   //   showCloseButton: true,
+//   //   timer: 4000,
+//   // });
+// }
+// console.log(favourites);
+// // };

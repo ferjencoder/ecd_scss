@@ -1,25 +1,35 @@
 'use strict';
 
-// FETCH CART FROM LOCAL STORAGE
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// // FETCH CART FROM LOCAL STORAGE
+// let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
 
-// FETCH SELECTED PRODUCT FROM LOCAL STORAGE
-let productoStored = JSON.parse(localStorage.getItem('itemCart'));
-let productoSelected = Number(productoStored.id);
+// // FETCH SELECTED PRODUCT FROM LOCAL STORAGE
+// let productoStored = JSON.parse(localStorage.getItem('itemCart'));
+// let productoSelected = Number(productoStored.id);
+
+// // FETCH SELECTED FAVOURITE PRODUCT FROM LOCAL STORAGE
+// let favouriteStored = JSON.parse(localStorage.getItem('itemFavourite'));
+// let favouriteSelected = Number(favouriteStored.id);
+
+console.log('PRODUCTO.JS', { cart });
+console.log('PRODUCTO.JS', { favourites });
+
+// GLOBAL SCOPE VARIABLES
+const almohadonesDiv = document.getElementById('productList');
+const almohadonesTable = document.getElementById('productTable');
 
 // WAIT FOR DOCUMENT TO LOAD TO CALL FETCH
 document.addEventListener('DOMContentLoaded', () => {
   fectchData();
 });
 
-// FETCH / GET DATA FROM JSON FILE (LATER ON API) AND CALL RENDER PRODUCTS AND SWIPER
-//info get favourites to work
+// FETCH / GET DATA FROM JSON FILE (LATER ON API) AND CALL RENDER PRODUCTS AND SWIPE
 const fectchData = async () => {
   try {
     const res = await fetch(`../assets/js/api.json`);
     const data = await res.json();
     renderProducts(data);
-    renderOffcanvasCart(cart);
     callSwiper();
   } catch (error) {
     console.error('Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.');
@@ -65,8 +75,6 @@ const callSwiper = () => {
 //   //  console.log("DONE SWIPIN'");
 // };
 
-// RENDER PRODUCTS
-
 // RENDER PRODUCT
 
 function precioFormat(precio) {
@@ -79,12 +87,6 @@ function precioFormat(precio) {
   console.log(precioARS);
   return precioARS;
 }
-
-const almohadonesDiv = document.getElementById('productList');
-const almohadonesTable = document.getElementById('productTable');
-const cartItemsPill = document.getElementById('cartItemsPill');
-const offcanvasCartDropdown = document.getElementById('offcanvasCartDropdown');
-const navbarCartDropdown = document.getElementById('navbarCartDropdown');
 
 const renderProducts = (data) => {
   almohadonesDiv.innerHTML = '';
@@ -164,13 +166,16 @@ const renderProducts = (data) => {
                     </div>
                   </div>
                 </li>
-                <li class="list-group-item text-center ecd-border-bt mt-5 pb-3">
+                <li class="list-group-item text-center border-0 mt-5 pb-0">
                   <button id="" class="agregarAlCarrito btn ecd-btn-outlined w-100 shadow-none" type="button">AGREGAR AL CARRITO</button>
+                </li>
+                <li class="list-group-item text-center ecd-border-bt pb-3">
+                  <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/carrito.html">VER CARRITO</a>
                 </li>
                 <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
                 <li class="list-group-item text-center border-0 mt-2">
                   <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/productos.html">CONTINUAR COMPRANDO</a>
-                  </li>
+                </li>
               </ul>
             </div>
           </div>
@@ -180,70 +185,6 @@ const renderProducts = (data) => {
       document.querySelector('.agregarAlCarrito').onclick = function () {
         addToCart(producto);
       };
-    }
-  }
-};
-
-// RENDER OFFCANVAS CART && MENU DROPDOWN CART
-const renderOffcanvasCart = (cart) => {
-  offcanvasCartDropdown.innerHTML = '';
-  navbarCartDropdown.innerHTML = '';
-  cartItemsPill.innerHTML = cart.length;
-
-  if (cart.length == undefined) {
-    offcanvasCartDropdown.innerHTML = `
-      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-        <div class="container d-flex flex-column align-items-start ps-2">
-          <h6 class="text-uppercase pt-1 text-primary m-0">Tu carrito está vacío</h6>
-        </div>
-      </li>
-    `;
-    navbarCartDropdown.innerHTML = `
-      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-        <div class="container d-flex flex-column align-items-start ps-2">
-          <h6 class="text-uppercase pt-1 text-primary m-0">Tu carrito está vacío</h6>
-        </div>
-      </li>
-    `;
-  } else {
-    for (const itemInCart of cart) {
-      // let precio = itemInCart.precio;
-      // const options = {
-      //   style: 'currency',
-      //   currency: 'ARS',
-      // };
-      // const precioARS = new Intl.NumberFormat('es-AR', options).format(precio);
-      // console.log(precioARS);
-      // const precioFormat = precioFormat(itemInCart.precio);
-      offcanvasCartDropdown.innerHTML += `
-      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-        <figure class="p-0 m-0 align-self-center">
-          <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
-        </figure>
-        <div class="container d-flex flex-column align-items-start ps-2">
-          <h6 class="text-uppercase pt-1 text-primary m-0">${itemInCart.nombre}</h6>
-          <p class="m-0 p-0"><small>Color: ${itemInCart.colors[0]}</small></p>
-          <p class="m-0 p-0"><small>Material: ${itemInCart.material}</small></p>
-          <p class="m-0 p-0">Precio: ${itemInCart.precio}</p>
-        </div>
-        <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
-      </li>
-    `;
-
-      navbarCartDropdown.innerHTML += `
-      <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
-        <figure class="p-0 m-0 align-self-center">
-          <img class="ps-1" src="${itemInCart.img100[0]}" width="100" height="100" alt="${itemInCart.descripcion}" />
-        </figure>
-        <div class="container d-flex flex-column align-items-start ps-2">
-          <h6 class="text-uppercase pt-1 text-primary m-0">${itemInCart.nombre}</h6>
-          <p class="m-0 p-0"><small>Color: ${itemInCart.colors[0]}</small></p>
-          <p class="m-0 p-0"><small>Material: ${itemInCart.material}</small></p>
-          <p class="m-0 p-0">Precio: ${itemInCart.precio}</p>
-        </div>
-        <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${itemInCart.stock[0]}</span>
-      </li>
-    `;
     }
   }
 };

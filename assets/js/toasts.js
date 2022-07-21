@@ -1,284 +1,26 @@
-//<<<-- TOASTS ---------------------------------------------------------------------------->
-const toastTriggerOne = document.getElementById('liveToastBtnOne');
-const toastLiveExampleOne = document.getElementById('liveToastOne');
-if (toastTriggerOne) {
-  toastTriggerOne.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleOne);
+//////////////////////////////////////////////////////////////
+// START UNDER CONSTRUCTION
+const btnsToastsTriggers = [];
+const toastsDivs = [];
 
-    toast.show();
+for (let i = 0; i < btnsToastsTriggers.length; i++)
+  //example 80. Working With Classes
+
+  btnsToastsTriggers[i].addEventListener('click', function () {
+    console.log('btn clicked');
+    toastsDivs.classList.remove('hidden');
   });
-}
 
-const toastTriggerTwo = document.getElementById('liveToastBtnTwo');
-const toastLiveExampleTwo = document.getElementById('liveToastTwo');
-if (toastTriggerTwo) {
-  toastTriggerTwo.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwo);
+const btnsPoppersTriggers = [];
+const poppersDivs = [];
 
-    toast.show();
+for (let i = 0; i < btnsPoppersTriggers.length; i++)
+  btnsPoppersTriggers[i].addEventListener('click', function () {
+    console.log('btn clicked');
+    poppersDivs.classList.remove('hidden');
   });
-}
-const toastTriggerThree = document.getElementById('liveToastBtnThree');
-const toastLiveExampleThree = document.getElementById('liveToastThree');
-if (toastTriggerThree) {
-  toastTriggerThree.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleThree);
-
-    toast.show();
-  });
-}
-const toastTriggerFour = document.getElementById('liveToastBtnFour');
-const toastLiveExampleFour = document.getElementById('liveToastFour');
-if (toastTriggerFour) {
-  toastTriggerFour.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleFour);
-
-    toast.show();
-  });
-}
-const toastTriggerFive = document.getElementById('liveToastBtnFive');
-const toastLiveExampleFive = document.getElementById('liveToastFive');
-if (toastTriggerFive) {
-  toastTriggerFive.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleFive);
-
-    toast.show();
-  });
-}
-const toastTriggerSix = document.getElementById('liveToastBtnSix');
-const toastLiveExampleSix = document.getElementById('liveToastSix');
-if (toastTriggerSix) {
-  toastTriggerSix.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleSix);
-
-    toast.show();
-  });
-}
-const toastTriggerSeven = document.getElementById('liveToastBtnSeven');
-const toastLiveExampleSeven = document.getElementById('liveToastSeven');
-if (toastTriggerSeven) {
-  toastTriggerSeven.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleSeven);
-
-    toast.show();
-  });
-}
-const toastTriggerEight = document.getElementById('liveToastBtnEight');
-const toastLiveExampleEight = document.getElementById('liveToastEight');
-if (toastTriggerEight) {
-  toastTriggerEight.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleEight);
-
-    toast.show();
-  });
-}
-const toastTriggerNine = document.getElementById('liveToastBtnNine');
-const toastLiveExampleNine = document.getElementById('liveToastNine');
-if (toastTriggerNine) {
-  toastTriggerNine.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleNine);
-
-    toast.show();
-  });
-}
-const toastTriggerTen = document.getElementById('liveToastBtnTen');
-const toastLiveExampleTen = document.getElementById('liveToastTen');
-if (toastTriggerTen) {
-  toastTriggerTen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTen);
-
-    toast.show();
-  });
-}
-const toastTriggerEleven = document.getElementById('liveToastBtnEleven');
-const toastLiveExampleEleven = document.getElementById('liveToastEleven');
-if (toastTriggerEleven) {
-  toastTriggerEleven.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleEleven);
-
-    toast.show();
-  });
-}
-const toastTriggerTwelve = document.getElementById('liveToastBtnTwelve');
-const toastLiveExampleTwelve = document.getElementById('liveToastTwelve');
-if (toastTriggerTwelve) {
-  toastTriggerTwelve.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwelve);
-
-    toast.show();
-  });
-}
-const toastTriggerThirteen = document.getElementById('liveToastBtnThirteen');
-const toastLiveExampleThirteen = document.getElementById('liveToastThirteen');
-if (toastTriggerThirteen) {
-  toastTriggerThirteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleThirteen);
-
-    toast.show();
-  });
-}
-const toastTriggerFourteen = document.getElementById('liveToastBtnFourteen');
-const toastLiveExampleFourteen = document.getElementById('liveToastFourteen');
-if (toastTriggerFourteen) {
-  toastTriggerFourteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleFourteen);
-
-    toast.show();
-  });
-}
-const toastTriggerFifteen = document.getElementById('liveToastBtnFifteen');
-const toastLiveExampleFifteen = document.getElementById('liveToastFifteen');
-if (toastTriggerFifteen) {
-  toastTriggerFifteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleFifteen);
-
-    toast.show();
-  });
-}
-const toastTriggerSixteen = document.getElementById('liveToastBtnSixteen');
-const toastLiveExampleSixteen = document.getElementById('liveToastSixteen');
-if (toastTriggerSixteen) {
-  toastTriggerSixteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleSixteen);
-
-    toast.show();
-  });
-}
-const toastTriggerSeventeen = document.getElementById('liveToastBtnSeventeen');
-const toastLiveExampleSeventeen = document.getElementById('liveToastSeventeen');
-if (toastTriggerSeventeen) {
-  toastTriggerSeventeen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleSeventeen);
-
-    toast.show();
-  });
-}
-const toastTriggerEighteen = document.getElementById('liveToastBtnEighteen');
-const toastLiveExampleEighteen = document.getElementById('liveToastEighteen');
-if (toastTriggerEighteen) {
-  toastTriggerEighteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleEighteen);
-
-    toast.show();
-  });
-}
-const toastTriggerNineteen = document.getElementById('liveToastBtnNineteen');
-const toastLiveExampleNineteen = document.getElementById('liveToastNineteen');
-if (toastTriggerNineteen) {
-  toastTriggerNineteen.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleNineteen);
-
-    toast.show();
-  });
-}
-const toastTriggerTwenty = document.getElementById('liveToastBtnTwenty');
-const toastLiveExampleTwenty = document.getElementById('liveToastTwenty');
-if (toastTriggerTwenty) {
-  toastTriggerTwenty.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwenty);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyOne = document.getElementById('liveToastBtnTwentyOne');
-const toastLiveExampleTwentyOne = document.getElementById('liveToastTwentyOne');
-if (toastTriggerTwentyOne) {
-  toastTriggerTwentyOne.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyOne);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyTwo = document.getElementById('liveToastBtnTwentyTwo');
-const toastLiveExampleTwentyTwo = document.getElementById('liveToastTwentyTwo');
-if (toastTriggerTwentyTwo) {
-  toastTriggerTwentyTwo.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyTwo);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyThree = document.getElementById('liveToastBtnTwentyThree');
-const toastLiveExampleTwentyThree = document.getElementById('liveToastTwentyThree');
-if (toastTriggerTwentyThree) {
-  toastTriggerTwentyThree.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyThree);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyFour = document.getElementById('liveToastBtnTwentyFour');
-const toastLiveExampleTwentyFour = document.getElementById('liveToastTwentyFour');
-if (toastTriggerTwentyFour) {
-  toastTriggerTwentyFour.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyFour);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyFive = document.getElementById('liveToastBtnTwentyFive');
-const toastLiveExampleTwentyFive = document.getElementById('liveToastTwentyFive');
-if (toastTriggerTwentyFive) {
-  toastTriggerTwentyFive.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyFive);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentySix = document.getElementById('liveToastBtnTwentySix');
-const toastLiveExampleTwentySix = document.getElementById('liveToastTwentySix');
-if (toastTriggerTwentySix) {
-  toastTriggerTwentySix.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentySix);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentySeven = document.getElementById('liveToastBtnTwentySeven');
-const toastLiveExampleTwentySeven = document.getElementById('liveToastTwentySeven');
-if (toastTriggerTwentySeven) {
-  toastTriggerTwentySeven.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentySeven);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyEight = document.getElementById('liveToastBtnTwentyEight');
-const toastLiveExampleTwentyEight = document.getElementById('liveToastTwentyEight');
-if (toastTriggerTwentyEight) {
-  toastTriggerTwentyEight.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyEight);
-
-    toast.show();
-  });
-}
-const toastTriggerTwentyNine = document.getElementById('liveToastBtnTwentyNine');
-const toastLiveExampleTwentyNine = document.getElementById('liveToastTwentyNine');
-if (toastTriggerTwentyNine) {
-  toastTriggerTwentyNine.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleTwentyNine);
-
-    toast.show();
-  });
-}
-const toastTriggerThirty = document.getElementById('liveToastBtnThirty');
-const toastLiveExampleThirty = document.getElementById('liveToastThirty');
-if (toastTriggerThirty) {
-  toastTriggerThirty.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleThirty);
-
-    toast.show();
-  });
-}
-const toastTriggerThirtyOne = document.getElementById('liveToastBtnThirtyOne');
-const toastLiveExampleThirtyOne = document.getElementById('liveToastThirtyOne');
-if (toastTriggerThirtyOne) {
-  toastTriggerThirtyOne.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExampleThirtyOne);
-
-    toast.show();
-  });
-}
+// END UNDER CONSTRUCTION
+//////////////////////////////////////////////////////////////
 
 // ALERTS TOASTS PRODUCTOS
 const alertTriggerOne = document.getElementById('alertBtnOne');
@@ -290,6 +32,15 @@ if (alertTriggerOne) {
     toast.show();
   });
 }
+
+//! //////////////////////////////////////////////////////////////
+//! START REFACTOR CODE ASAP
+
+//<<<-- POPOVERS ------------------------------------------------------------------------->
+// let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+// let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+//   return new bootstrap.Popover(popoverTriggerEl);
+// });
 
 //<<<------ ALL POPS ----------------------------------------------------------
 const btnPop = document.querySelector('.btnPopper');
@@ -401,13 +152,292 @@ btnPopFour.addEventListener('click', () => {
   }
 });
 
-const openModal = function (e) {
-  e.preventDefault();
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+//! END REFACTOR CODE ASAP
+//! //////////////////////////////////////////////////////////////
 
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
+//* //////////////////////////////////////////////////////////////
+//* START TOASTS TO BE DECIDED
+//<<<-- TOASTS ---------------------------------------------------------------------------->
+// const toastTriggerOne = document.getElementById('liveToastBtnOne');
+// const toastLiveExampleOne = document.getElementById('liveToastOne');
+// if (toastTriggerOne) {
+//   toastTriggerOne.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleOne);
+
+//     toast.show();
+//   });
+// }
+
+// const toastTriggerTwo = document.getElementById('liveToastBtnTwo');
+// const toastLiveExampleTwo = document.getElementById('liveToastTwo');
+// if (toastTriggerTwo) {
+//   toastTriggerTwo.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwo);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerThree = document.getElementById('liveToastBtnThree');
+// const toastLiveExampleThree = document.getElementById('liveToastThree');
+// if (toastTriggerThree) {
+//   toastTriggerThree.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleThree);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerFour = document.getElementById('liveToastBtnFour');
+// const toastLiveExampleFour = document.getElementById('liveToastFour');
+// if (toastTriggerFour) {
+//   toastTriggerFour.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleFour);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerFive = document.getElementById('liveToastBtnFive');
+// const toastLiveExampleFive = document.getElementById('liveToastFive');
+// if (toastTriggerFive) {
+//   toastTriggerFive.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleFive);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerSix = document.getElementById('liveToastBtnSix');
+// const toastLiveExampleSix = document.getElementById('liveToastSix');
+// if (toastTriggerSix) {
+//   toastTriggerSix.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleSix);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerSeven = document.getElementById('liveToastBtnSeven');
+// const toastLiveExampleSeven = document.getElementById('liveToastSeven');
+// if (toastTriggerSeven) {
+//   toastTriggerSeven.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleSeven);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerEight = document.getElementById('liveToastBtnEight');
+// const toastLiveExampleEight = document.getElementById('liveToastEight');
+// if (toastTriggerEight) {
+//   toastTriggerEight.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleEight);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerNine = document.getElementById('liveToastBtnNine');
+// const toastLiveExampleNine = document.getElementById('liveToastNine');
+// if (toastTriggerNine) {
+//   toastTriggerNine.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleNine);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTen = document.getElementById('liveToastBtnTen');
+// const toastLiveExampleTen = document.getElementById('liveToastTen');
+// if (toastTriggerTen) {
+//   toastTriggerTen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerEleven = document.getElementById('liveToastBtnEleven');
+// const toastLiveExampleEleven = document.getElementById('liveToastEleven');
+// if (toastTriggerEleven) {
+//   toastTriggerEleven.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleEleven);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwelve = document.getElementById('liveToastBtnTwelve');
+// const toastLiveExampleTwelve = document.getElementById('liveToastTwelve');
+// if (toastTriggerTwelve) {
+//   toastTriggerTwelve.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwelve);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerThirteen = document.getElementById('liveToastBtnThirteen');
+// const toastLiveExampleThirteen = document.getElementById('liveToastThirteen');
+// if (toastTriggerThirteen) {
+//   toastTriggerThirteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleThirteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerFourteen = document.getElementById('liveToastBtnFourteen');
+// const toastLiveExampleFourteen = document.getElementById('liveToastFourteen');
+// if (toastTriggerFourteen) {
+//   toastTriggerFourteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleFourteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerFifteen = document.getElementById('liveToastBtnFifteen');
+// const toastLiveExampleFifteen = document.getElementById('liveToastFifteen');
+// if (toastTriggerFifteen) {
+//   toastTriggerFifteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleFifteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerSixteen = document.getElementById('liveToastBtnSixteen');
+// const toastLiveExampleSixteen = document.getElementById('liveToastSixteen');
+// if (toastTriggerSixteen) {
+//   toastTriggerSixteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleSixteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerSeventeen = document.getElementById('liveToastBtnSeventeen');
+// const toastLiveExampleSeventeen = document.getElementById('liveToastSeventeen');
+// if (toastTriggerSeventeen) {
+//   toastTriggerSeventeen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleSeventeen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerEighteen = document.getElementById('liveToastBtnEighteen');
+// const toastLiveExampleEighteen = document.getElementById('liveToastEighteen');
+// if (toastTriggerEighteen) {
+//   toastTriggerEighteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleEighteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerNineteen = document.getElementById('liveToastBtnNineteen');
+// const toastLiveExampleNineteen = document.getElementById('liveToastNineteen');
+// if (toastTriggerNineteen) {
+//   toastTriggerNineteen.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleNineteen);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwenty = document.getElementById('liveToastBtnTwenty');
+// const toastLiveExampleTwenty = document.getElementById('liveToastTwenty');
+// if (toastTriggerTwenty) {
+//   toastTriggerTwenty.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwenty);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyOne = document.getElementById('liveToastBtnTwentyOne');
+// const toastLiveExampleTwentyOne = document.getElementById('liveToastTwentyOne');
+// if (toastTriggerTwentyOne) {
+//   toastTriggerTwentyOne.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyOne);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyTwo = document.getElementById('liveToastBtnTwentyTwo');
+// const toastLiveExampleTwentyTwo = document.getElementById('liveToastTwentyTwo');
+// if (toastTriggerTwentyTwo) {
+//   toastTriggerTwentyTwo.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyTwo);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyThree = document.getElementById('liveToastBtnTwentyThree');
+// const toastLiveExampleTwentyThree = document.getElementById('liveToastTwentyThree');
+// if (toastTriggerTwentyThree) {
+//   toastTriggerTwentyThree.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyThree);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyFour = document.getElementById('liveToastBtnTwentyFour');
+// const toastLiveExampleTwentyFour = document.getElementById('liveToastTwentyFour');
+// if (toastTriggerTwentyFour) {
+//   toastTriggerTwentyFour.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyFour);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyFive = document.getElementById('liveToastBtnTwentyFive');
+// const toastLiveExampleTwentyFive = document.getElementById('liveToastTwentyFive');
+// if (toastTriggerTwentyFive) {
+//   toastTriggerTwentyFive.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyFive);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentySix = document.getElementById('liveToastBtnTwentySix');
+// const toastLiveExampleTwentySix = document.getElementById('liveToastTwentySix');
+// if (toastTriggerTwentySix) {
+//   toastTriggerTwentySix.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentySix);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentySeven = document.getElementById('liveToastBtnTwentySeven');
+// const toastLiveExampleTwentySeven = document.getElementById('liveToastTwentySeven');
+// if (toastTriggerTwentySeven) {
+//   toastTriggerTwentySeven.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentySeven);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyEight = document.getElementById('liveToastBtnTwentyEight');
+// const toastLiveExampleTwentyEight = document.getElementById('liveToastTwentyEight');
+// if (toastTriggerTwentyEight) {
+//   toastTriggerTwentyEight.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyEight);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerTwentyNine = document.getElementById('liveToastBtnTwentyNine');
+// const toastLiveExampleTwentyNine = document.getElementById('liveToastTwentyNine');
+// if (toastTriggerTwentyNine) {
+//   toastTriggerTwentyNine.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleTwentyNine);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerThirty = document.getElementById('liveToastBtnThirty');
+// const toastLiveExampleThirty = document.getElementById('liveToastThirty');
+// if (toastTriggerThirty) {
+//   toastTriggerThirty.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleThirty);
+
+//     toast.show();
+//   });
+// }
+// const toastTriggerThirtyOne = document.getElementById('liveToastBtnThirtyOne');
+// const toastLiveExampleThirtyOne = document.getElementById('liveToastThirtyOne');
+// if (toastTriggerThirtyOne) {
+//   toastTriggerThirtyOne.addEventListener('click', () => {
+//     const toast = new bootstrap.Toast(toastLiveExampleThirtyOne);
+
+//     toast.show();
+//   });
+// }
+
+//* END TOASTS TO BE DECIDED
+//* //////////////////////////////////////////////////////////////
