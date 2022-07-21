@@ -11921,6 +11921,7 @@ figcaption {
 }
 
 .popImg {
+  color: rgb(32, 255, 136);
   object-fit: cover;
 }
 

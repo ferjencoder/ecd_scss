@@ -120,28 +120,6 @@ const setProduct = (obj) => {
   localStorage.setItem('itemCart', JSON.stringify(producto));
 };
 
-// const setFavourites = (e) => {
-//   console.log(e);
-//   const productoFavourite = {
-//     id: e.querySelector('.btnFavourite').dataset.id,
-//   };
-//   localStorage.setItem('itemFavourite', JSON.stringify(productoFavourite));
-// };
-
-// const callFavourite = (data) => {
-//   for (const producto of data) {
-//     if (producto.id == itemFavourite) {
-//     }
-//   }
-// };
-
-// if (favourites.find((data) => data.id == productoFavourite.id)) {
-//   console.log(data);
-//   console.log('Funka');
-// } else {
-//   // favourites.push(productoFavourite);
-//   localStorage.setItem('favourites', JSON.stringify(favourites));
-
 //   // Swal.fire({
 //   //   position: 'bottom-end',
 //   //   html: '<i class="fa-solid fa-heart"></i> ' + `Agregaste: <b>${producto.nombre}</b> a tus favoritos! ` + '<a href="../pages/favoritos.html"><b>VER FAVORITOS</b></a> ' + '',

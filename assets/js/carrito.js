@@ -40,7 +40,7 @@ const renderCartItems = (cart) => {
           <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group" role="group" aria-label="First group">
               <button type="button" class="btn ecd-btn-counter-hover min">-</button>
-              <button class="d-block btn ecd-btn-counter num">${cartItem.cantidad}</button>
+              <button class="d-block btn ecd-btn-counter num">1</button>
               <button type="button" class="btn ecd-btn-counter-hover plus">+</button>
             </div>
           </div>
@@ -58,12 +58,20 @@ const renderCartItems = (cart) => {
 };
 
 const renderCartSummary = (cart) => {
+  let subtotal = 0;
+  console.log(cart);
+  cart.forEach((cartItem) => {
+    console.log(cartItem.precio);
+    subtotal += Number(cartItem.precio);
+    console.log(subtotal);
+  });
+
   cartSummary.innerHTML = '';
 
   cartSummary.innerHTML = `
   <tr>
     <td>SUBTOTAL</td>
-    <td class="text-end subtotalCheckOut numeroFormat">0</td>
+    <td class="text-end subtotalCheckOut numeroFormat">${subtotal}</td>
   </tr>
   <tr>
     <td>IMPUESTOS</td>
@@ -75,7 +83,7 @@ const renderCartSummary = (cart) => {
   </tr>
   <tr>
     <td class="fw-bold">TOTAL</td>
-    <td class="text-end fw-bold totalCheckOut numeroFormat">0</td>
+    <td class="text-end fw-bold totalCheckOut numeroFormat">${subtotal}</td>
   </tr>
   `;
 };
@@ -91,8 +99,11 @@ function eliminar(cart) {
     console.log(indice);
     carrito.splice(indice, 1); //eliminando del carro
     let fila = document.getElementById(`fila${id}`);
-    document.getElementById('tablabody').removeChild(fila); //eliminando de la tabla
+    document.getElementById('tablaBody').removeChild(fila); //eliminando de la tabla
     document.getElementById('gastoTotal').innerText = `Total: $ ${calcularTotal()}`;
     localStorage.setItem('carrito', JSON.stringify(carrito));
   });
 }
+
+//todo CONVERT NUMBERS TO ARS
+//todo SETTING UP DETAILED MESSAGE WHEN FINALIZAR COMPRA IS CLICKED
