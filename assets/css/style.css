@@ -88,6 +88,18 @@
   box-shadow: none;
 }
 
+#ecdToast {
+  display: none;
+}
+
+.hiddenToast {
+  display: none;
+}
+
+.showToast {
+  display: contents;
+}
+
 :root {
   --bs-blue: rgb(178, 208, 255);
   --bs-indigo: rgb(132, 152, 207);
@@ -11560,13 +11572,23 @@ textarea.form-control-lg {
 }
 
 .btn-favourite:hover {
-  color: rgb(151, 16, 16);
+  color: rgb(174, 7, 7);
   transition: all 0.3s ease;
+}
+
+.btn-favourite-msj {
+  color: rgb(174, 7, 7);
+}
+
+.hidden {
+  display: none;
 }
 
 .ecd-btn-counter, .ecd-btn-counter-hover {
   background-color: transparent;
   font-size: 0.875em;
+  width: 38px;
+  height: 29px;
   color: black;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -11586,6 +11608,8 @@ textarea.form-control-lg {
 }
 
 .num {
+  width: 42px;
+  height: 29px;
   padding: 0.2em 1.5rem;
 }
 
@@ -11775,7 +11799,6 @@ textarea.form-control-lg {
   border: 1px solid rgba(121, 85, 105, 0.5);
 }
 
-/* _imagehero.scss */
 .btnLike {
   border: 0;
   font-size: 1.5rem;
@@ -11969,31 +11992,40 @@ li {
 }
 
 .swiper {
-  height: 528px;
+  max-height: 639px;
+  height: 639px;
 }
 
 .swiper-slide {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery-top {
-  object-fit: cover;
+  object-fit: scale-down;
+  height: 639px;
   /* height: 80%;
   width: 100%; */
 }
 
 .gallery-thumbs {
   object-fit: scale-down;
-  width: 100px;
+  width: 100%;
+  max-height: 639px;
   box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
   /* padding: 5px 0; */
 }
 
 .gallery-thumbs .swiper-slide {
   width: 100%;
+  height: auto;
   opacity: 0.6;
+  object-fit: scale-down;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
@@ -12003,8 +12035,49 @@ li {
 /* SWIPER */
 .swiper-container {
   width: 111px;
-  height: 528px;
+  height: auto;
   justify-content: center;
+}
+
+@media (max-width: 400px) and (min-width: 200px) {
+  .swiper {
+    max-height: 200px;
+  }
+
+  .gallery-top {
+    object-fit: scale-down;
+    height: 200px;
+  }
+}
+@media (max-width: 576px) and (min-width: 401px) {
+  .swiper {
+    max-height: 340px;
+  }
+
+  .gallery-top {
+    object-fit: scale-down;
+    height: 340px;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .swiper {
+    max-height: 420px;
+  }
+
+  .gallery-top {
+    object-fit: scale-down;
+    height: 420px;
+  }
+}
+@media (max-width: 100%) and (min-width: 769px) {
+  .swiper {
+    max-height: 650px;
+  }
+
+  .gallery-top {
+    object-fit: scale-down;
+    height: 650px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

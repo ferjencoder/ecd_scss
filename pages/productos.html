@@ -47,9 +47,8 @@
     <script src="../assets/js/swiper-bundle.js" defer></script>
 
     <!-- SCRIPTS -->
-    <script src="../app.js" defer></script>
-    <script src="../assets/js/productos.js" defer></script>
     <script src="../assets/js/toasts.js" defer></script>
+    <script src="../app.js" defer></script>
 
     <title>Productos || Entre Cortinas</title>
   </head>
@@ -107,7 +106,7 @@
                     </li>
                     <!-- OFFCANVAS FAVOURITE ICON -->
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link offcanvasFavouritesDropdown px-4 py-3" id="favourite-tab" data-bs-toggle="tab" data-bs-target="#favourite" type="button" aria-label="Botón sección favoritos" aria-controls="favourite" aria-selected="false">
+                      <button class="nav-link offcanvasFDropdown px-4 py-3" id="favourite-tab" data-bs-toggle="tab" data-bs-target="#favourite" type="button" aria-label="Botón sección favoritos" aria-controls="favourite" aria-selected="false">
                         <i class="fa-solid fa-heart fa-xl"></i>
                       </button>
                     </li>
@@ -123,7 +122,7 @@
                   <!-- HOME PANE - OFFCANVAS -->
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="container py-4 px-0">
-                      <ul class="list-group list-group-flush">
+                      <ul class="list-group">
                         <li class="list-group-item list-group-item-action py-3 m-0">
                           <div class="accordion accordion-flush p-0 m-0" id="accordionFlushExample">
                             <div class="accordion-item py-2 ps-4 pe-5 m-0 bg-transparent">
@@ -190,67 +189,14 @@
                       <li class="dropdown-header text-uppercase text-center py-2 mt-2 align-items-center text-primary border-bottom">
                         <h6 class="m-0 py-2">mis favoritos</h6>
                       </li>
-                      <li class="list-group-item bg-white d-flex flex-row p-2 align-items-start position-relative">
-                        <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                          <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnOne" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Comprar" title="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                        </div>
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-co-tradicional-liviana-01-100x100.jpg" width="100" height="100" alt="Cortina rústica liviana. Material lino clásico belga" /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">cortina rústica liviana</h6>
-                          <p class="m-0 p-0"><small>Lino clásico belga</small></p>
-                          <a href=""><small>Eliminar</small></a>
-                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                            <div id="liveToastOne" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                              <div class="d-flex">
-                                <div class="toast-body bg-white">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                                <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item bg-white d-flex p-2 align-items-start position-relative">
-                        <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                          <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnTwo" data-bs-toggle="tooltip" data-bs-placement="right" title="Comprar" aria-label="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                        </div>
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-rustico-lino-01-100x100.jpg" width="100" height="100" alt="Almohadón tusor cuadrado. Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tusor cuadrado</h6>
-                          <p class="m-0 p-0"><small>Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm.</small></p>
-                          <a href=""><small>Eliminar</small></a>
-                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                            <div id="liveToastTwo" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                              <div class="d-flex">
-                                <div class="toast-body bg-white">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                                <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item bg-white d-flex p-2 align-items-start position-relative">
-                        <div class="position-absolute top-0 end-0 pt-2 pe-3">
-                          <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                            <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnThree" data-bs-toggle="tooltip" data-bs-placement="right" title="Comprar" aria-label="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                          </div>
-                        </div>
-                        <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-01-100x100.jpg" width="100" height="100" alt="Individual rústico. Trenzado en algodón. Lavable. Medidas: 30 cm x 45 cm." /></figure>
-                        <div class="container d-flex flex-column align-items-start ps-2">
-                          <h6 class="text-uppercase pt-1 text-primary m-0">Individual rústico</h6>
-                          <p class="m-0 p-0"><small>Trenzado en algodón. Lavable. Medidas: 30 cm x 45 cm.</small></p>
-                          <a href=""><small>Eliminar</small></a>
-                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                            <div id="liveToastThree" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                              <div class="d-flex">
-                                <div class="toast-body bg-white">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                                <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="d-flex px-2 py-3 justify-content-center position-relative bg-white">
-                        <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/favoritos.html">ver todos los favoritos</a>
+                    </ul>
+                    <ul id="offcanvasFavouritesUl" class="list-group list-group-flush p-0 m-0">
+                      <!-- MAGIC HAPPENS HERE -->
+                    </ul>
+                    <!-- GOTO CART LINK -->
+                    <ul class="list-group p-0 m-0 ecd-border-bt">
+                      <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
+                        <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
                       </li>
                     </ul>
                   </div>
@@ -261,15 +207,13 @@
                         <h6 class="m-0 p-2">mi carrito</h6>
                       </li>
                     </ul>
-
-                    <ul id="offcanvasCartDropdown" class="list-group list-group-flush p-0 m-0 ecd-border-bt">
+                    <ul id="offcanvasCartUl" class="list-group p-0 m-0 ecd-border-bt">
                       <!-- MAGIC HAPPENS HERE -->
                     </ul>
-
                     <!-- GOTO CART LINK -->
-                    <ul class="list-group list-group-flush p-0 m-0 ecd-border-bt">
+                    <ul class="list-group p-0 m-0 ecd-border-bt">
                       <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
-                        <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
+                        <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/carrito.html"><strong>mi carrito</strong></a>
                       </li>
                     </ul>
                   </div>
@@ -309,7 +253,7 @@
                 <i class="fa-solid fa-user fa-1x"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 400px">
-                <ul class="list-group list-group-flush p-0 m-0">
+                <ul class="list-group p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">ingresa con tu usuario</h6>
                   </li>
@@ -349,101 +293,73 @@
             </div>
             <!-- MENU FAVOURITES -->
             <div class="dropdown">
-              <button type="button" class="favouritesMenuDropdown btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Menu usuario" aria-expanded="false">
+              <button type="button" class="btnFavouritesMenuDropdown btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Menu usuario" aria-expanded="false">
                 <i class="fa-solid fa-heart fa-1x"></i>
-                <span id="favouriteItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+3 <span class="visually-hidden">Favourites</span></span>
+                <span id="favouriteItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary"> <span class="visually-hidden">Favourites</span></span>
               </button>
 
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 450px">
-                <ul class="list-group list-group-flush p-0 m-0">
+                <ul class="list-group p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary">
                     <h6 class="m-0 p-0 fw-bold">mis favoritos</h6>
                   </li>
-                  <!-- favourite example one -->
-                  <li class="list-group-item border-top bg-white d-flex flex-row p-2 align-items-start position-relative">
-                    <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                      <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnFour" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Comprar" title="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                    </div>
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-co-tradicional-liviana-01-100x100.jpg" width="100" height="100" alt="Cortina rústica liviana. Material lino clásico belga" /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">cortina rústica liviana</h6>
-                      <p class="m-0 p-0"><small>Lino clásico belga</small></p>
-                      <a href=""><small>Eliminar</small></a>
-                      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                        <div id="liveToastFour" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                          <div class="d-flex">
-                            <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                            <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item bg-white d-flex p-2 align-items-start position-relative">
-                    <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                      <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnFive" data-bs-toggle="tooltip" data-bs-placement="right" title="Comprar" aria-label="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                    </div>
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-al-rustico-lino-01-100x100.jpg" width="100" height="100" alt="Almohadón tusor cuadrado. Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">almohadón tusor cuadrado</h6>
-                      <p class="m-0 p-0"><small>Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm.</small></p>
-                      <a href=""><small>Eliminar</small></a>
-                      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                        <div id="liveToastFive" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                          <div class="d-flex">
-                            <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                            <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item bg-white d-flex p-2 align-items-start position-relative">
-                    <div class="position-absolute top-0 end-0 pt-2 pe-3">
-                      <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                        <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnSix" data-bs-toggle="tooltip" data-bs-placement="right" title="Comprar" aria-label="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                      </div>
-                    </div>
-                    <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-ma-rustico-trenzado-01-100x100.jpg" width="100" height="100" alt="Individual rústico. Trenzado en algodón. Lavable. Medidas: 30 cm x 45 cm." /></figure>
-                    <div class="container d-flex flex-column align-items-start ps-2">
-                      <h6 class="text-uppercase pt-1 text-primary m-0">Individual rústico</h6>
-                      <p class="m-0 p-0"><small>Trenzado en algodón. Lavable. Medidas: 30 cm x 45 cm.</small></p>
-                      <a href=""><small>Eliminar</small></a>
-                      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                        <div id="liveToastSix" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                          <div class="d-flex">
-                            <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                            <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="d-flex p-2 justify-content-center position-relative bg-white border-top">
-                    <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/favoritos.html">ver todos los favoritos</a>
+                </ul>
+                <ul id="favouritesMenuUl" class="list-group p-0 m-0">
+                  <!-- MAGIC HAPPENS HERE -->
+                </ul>
+                <!-- GOTO CART LINK -->
+                <ul class="list-group p-0 m-0 ecd-border-bt">
+                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
+                    <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
                   </li>
                 </ul>
               </div>
             </div>
-
+            <template>
+              <li class="list-group-item border-top bg-white d-flex flex-row p-2 align-items-start position-relative">
+                <div class="position-absolute top-0 end-0 pt-2 pe-2">
+                  <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnFour" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Comprar" title="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
+                </div>
+                <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-co-tradicional-liviana-01-100x100.jpg" width="100" height="100" alt="Cortina rústica liviana. Material lino clásico belga" /></figure>
+                <div class="container d-flex flex-column align-items-start ps-2">
+                  <h6 class="text-uppercase pt-1 text-primary m-0">cortina rústica liviana</h6>
+                  <p class="m-0 p-0"><small>Lino clásico belga</small></p>
+                  <a href=""><small>Eliminar</small></a>
+                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
+                    <div id="liveToastFour" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
+                      <div class="d-flex">
+                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
+                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <ul>
+                <li class="d-flex p-2 justify-content-center position-relative bg-white border-top">
+                  <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/favoritos.html">ver todos los favoritos</a>
+                </li>
+              </ul>
+            </template>
             <!-- MENU CART -->
             <div class="dropdown">
               <button type="button" id="cartMenuDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
                 <i class="fa-solid fa-bag-shopping fa-1x"></i>
-                <span id="cartItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary">+6 <span class="visually-hidden">Carrito de compras</span></span>
+                <span id="cartItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary"> <span class="visually-hidden">Carrito de compras</span></span>
               </button>
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px" aria-labelledby="cartMenuDropdown">
-                <ul class="list-group list-group-flush p-0 m-0">
+                <ul class="list-group p-0 m-0">
                   <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
                   </li>
                 </ul>
-                <ul id="navbarCartDropdown" class="list-group list-group-flush p-0 m-0">
+                <ul id="navbarCartUl" class="list-group list-group-flush p-0 m-0">
                   <!-- MAGIC HAPPENS HERE -->
                 </ul>
-                <ul class="list-group list-group-flush p-0 m-0">
-                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative border-top">
-                    <a class="text-uppercase align-content-center small text-primary" href="../pages/carrito.html"><strong>ir al carrito</strong></a>
+                <!-- GOTO CART LINK -->
+                <ul class="list-group p-0 m-0 ecd-border-bt">
+                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0">
+                    <a class="btn ecd-btn-outlined w-100 shadow-none m-0 p-0" href="../pages/carrito.html"><strong>mi carrito</strong></a>
                   </li>
                 </ul>
               </div>
@@ -639,24 +555,36 @@
 
       <!-- HERO GALLERY -->
       <section class="container-ecd px-5">
-        <div id="product-list" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5 px-xl-5">
+        <div id="productList" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5 px-xl-5">
           <!-- MAGIC HAPPENS HERE -->
         </div>
       </section>
 
       <div class="container my-5 py-5"></div>
 
-      <template id="product-template">
+      <div id="ecdToast" class="toast-container position-fixed bottom-0 end-0 p-3 bg-danger shadow-lg m-5 p-0">
+        <button type="button" class="btn-close shadow-lg m-0 p-0 me-3 shadow-none h4 float-end" aria-label="Close"></button>
+        <div>
+          <div class="p-4">
+            <div class="me-4">
+              <i class="btn-favourite-msj fa-solid fa-heart fa-beat mx-3 my-0" style="--fa-beat-scale: 2; --fa-animation-iteration-count: 5"> </i>
+              <a id="ecdToastLink" class="fw-bold" href="../pages/carrito.html"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <template id="productTemplate">
         <div class="col">
           <div class="card border-0">
             <figure class="position-relative m-0">
               <img src="" class="card-img-top productoImg" alt="" />
               <button type="button" class="btnFavourite bg-transparent border-0 position-absolute top-0 end-0 p-1 shadow-none fa-solid fa-heart btn-favourite" id="liveToastBtnSeven">
-                <span class=""></span>
+                <span></span>
               </button>
               <a class="btnComprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase"></a>
             </figure>
-            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
               <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                   <div class="toast-body">
@@ -681,6 +609,19 @@
               <p class="m-0 productoMaterial"></p>
               <p class="productoMedidas m-0"></p>
               <!-- <p class="productoAncho m-0"></p> -->
+            </div>
+          </div>
+        </div>
+      </template>
+      <template id="toast">
+        <div id="ecdToast" class="toast-container position-fixed bottom-0 end-0 p-3 bg-danger shadow-lg m-5 p-0">
+          <button type="button" class="btn-close shadow-lg m-0 p-0 me-3 shadow-none h4 float-end" aria-label="Close"></button>
+          <div>
+            <div class="p-4">
+              <div class="me-4">
+                <i class="btn-favourite-msj fa-solid fa-heart fa-beat mx-3 my-0" style="--fa-beat-scale: 2; --fa-animation-iteration-count: 5"> </i>
+                <a id="ecdToastLink" class="fw-bold" href="../pages/carrito.html"></a>
+              </div>
             </div>
           </div>
         </div>
