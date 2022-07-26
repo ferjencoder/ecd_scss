@@ -49,13 +49,16 @@ const fectchDataJSON = async () => {
     if (document.URL.includes('producto.html')) {
       console.log("YOU'RE IN PRODUCTO.HTML GALLERY");
       renderProductGallery(dataJSON, productoSelected);
-      // renderNavbars();
       callSwiper();
     }
     if (document.URL.includes('carrito.html')) {
       console.log("YOU'RE IN CARRITO.HTML");
       renderCart(cart);
       renderCartSummary(cart);
+    }
+    if (document.URL.includes('favoritos.html')) {
+      console.log("YOU'RE IN FAVORITOS.HTML");
+      renderFavourites(favourites);
     }
 
     return dataJSON;
@@ -614,15 +617,15 @@ function plusQty(cartItem) {
 }
 
 // SPECIFIC TO FAVOURITES.HTML
-const renderFavourites = (dataJSON) => {
-  if (document.URL.includes('productos.html')) {
+const renderFavourites = (favourites) => {
+  if (document.URL.includes('favoritos.html')) {
     console.log("YOU'RE IN PRODUCTOS.HTML");
 
     // VARIABLES FROM PRODUCTOS.HTML
-    const productList = document.getElementById('productList');
-    productList.innerHTML = '';
+    const favouritesList = document.getElementById('favouritesList');
+    favouritesList.innerHTML = '';
 
-    for (const producto of dataJSON) {
+    for (const producto of favourites) {
       const precio = precioArs(producto);
 
       const divHTML = `
@@ -666,9 +669,9 @@ const renderFavourites = (dataJSON) => {
         </div>
         `;
 
-      productList.innerHTML += divHTML;
+      favouritesList.innerHTML += divHTML;
     }
-    dataJSON.forEach((producto) => {
+    favourites.forEach((producto) => {
       document.getElementById(`toast${producto.id}`).onclick = function () {
         addToFavourites(producto);
       };
@@ -679,7 +682,7 @@ const renderFavourites = (dataJSON) => {
   }
 };
 
-//todo 1. REMEMBER TO ADD SWIPER IN PRODUCTO.HTML
+// 1. REMEMBER TO ADD SWIPER IN PRODUCTO.HTML
 //todo 2. CREATE OWN SWEET ALERT
 //todo 3. THINK OF AN ARRAY TO CAPTURE 4 LAST SEEN ITEMS
 //todo 4. ADD PILL WITH ITEMS IN FAVOURITES AND CART IN OFFCANVAS NAVBAR

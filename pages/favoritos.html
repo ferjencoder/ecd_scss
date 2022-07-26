@@ -7,9 +7,9 @@
     <meta name="language" content="Spanish" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="ferJen" />
-    <meta name="description" content="Tus Favoritos de Entre Cortinas. Inspirate y compartí tus favoritos. Chequea nuestros diseños exclusivos en almohadones, mantas, cortinas y mucho más." />
+    <meta name="description" content="Somos Entre Cortinas, una empresa argentina con gran trayectoria en el diseño, fabricación e instalación de sistemas de cortinas. Disponemos de modelos exclusivos en cortinas roller, horizontales, bandas verticales, rollers dual, panel oriental, tradicionales, romanas y mucho más." />
     <meta name="keywords" content="COMPRAR CORTINAS, CORTINAS, BLACKOUT, ROLLER, ROLLER DUAL, BANDAS VERTICALES, ALMOHADONES, MANTELERÍA, TOLDOS" />
-    <link rel="canonical" href="https://entrecortinas.netlify.app/favoritos.html" />
+    <link rel="canonical" href="https://entrecortinas.netlify.app/carrito.html" />
 
     <!-- FAV+ICONS -->
     <link rel="icon" href="../assets/img/ico/favicon-32x32.png" />
@@ -31,15 +31,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
     <!-- BOOTSTRAP -->
     <script src="../assets/js/bootstrap.bundle.min.js" defer></script>
 
+    <!-- NETLIFY -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+
     <!-- SWEET ALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
+    <!-- SWIPER -->
+    <script src="../assets/js/swiper-bundle.js" defer></script>
+
     <!-- SCRIPTS -->
+    <!-- <script src="../assets/js/toasts.js" defer></script> -->
     <script src="../app.js" defer></script>
 
     <title>Tus Favoritos || Entre Cortinas</title>
@@ -350,12 +358,12 @@
       </nav>
     </header>
 
-    <!-- HERO TEXT -->
-    <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-9">
+    <!-- HERO BANNER TEXT -->
+    <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-10">
       <div class="row justify-content-center">
         <article class="col-lg-4 d-none d-lg-flex">
           <div class="d-block text-center px-3">
-            <h6 class="text-serif-nav fw-bold text-uppercase">imagina</h6>
+            <h6 class="text-serif-nav fw-bold">IMAGINA</h6>
             <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
           </div>
           <div class="vr"></div>
@@ -377,9 +385,7 @@
               <li>
                 <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
               </li>
-              <li>
-                <p class="mb-0 text-uppercase text-sub-hero"></p>
-              </li>
+              <li><p class="mb-0 text-uppercase text-sub-hero"></p></li>
             </ul>
           </div>
         </article>
@@ -395,67 +401,28 @@
       </article>
     </section>
 
-    <!-- MAIN CONTENT - FAVORITOS -->
-    <main class="mx-5">
-      <!-- HERO SECTION CARDS ONE -->
-      <section class="my-5 text-center">
-        <div class="container-fluid mt-5">
-          <div class="row g-3">
-            <!-- SECTION THREE - CARD SEVEN -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card shadow-sm">
-                <img src="../assets/img/ecd-al-rustico-lino-01-558x501.jpg" width="558" height="501" class="card-img-top" alt="Almohadón tusor cuadrado. Tres guardas en el frente. Funda lavable. Medida: 50 x 50 cm." />
-                <!-- SECTION THREE - CARD SEVEN CONTENT -->
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif fw-bold mb-0">ALMOHADÓN TUSOR CUADRADO</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="list-group-horizontal d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Blue Chambrayjpg.jpg" class="cardSwatch" width="32" alt="Muestra Blue Chambray" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Flagstone.jpg" class="cardSwatch" width="32" alt="Muestra Flagstone" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Chambray Gray.jpg" class="cardSwatch" width="32" alt="Muestra Chambray Gray" /></li>
-                  </ul>
-                  <div class="cad-text">
-                    <p class="card-text h5">$4.200</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD EIGHT  -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-tejido-01-558x501.jpg" width="558" height="501" alt="Almohadón tejido ochos. Material lana natural." class="card-img-top" />
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif text-uppercase fw-bold mb-0">Almohadón tejido ochos</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Belgian Flax Linen Sheer, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, White.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino translúcido blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Broadway, Gray.jpg" class="cardSwatch" width="32" alt="Muestra material Broadway translúcido gris" /></li>
-                  </ul>
-                  <p class="card-text h5">$4.500</p>
-                </div>
-              </div>
-            </div>
-            <!-- SECTION THREE - CARD NINE  -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img src="../assets/img/ecd-al-rustico-lino-03-558x501.jpg" width="558" height="501" alt="Almohadón lino texturado" class="card-img-top" />
-                <div class="card-body text-center">
-                  <h5 class="card-title text-serif fw-bold text-uppercase mb-0">Almohadón lino texturado</h5>
-                  <p class="card-text">Funda lavable. Medidas: 50 x 50 cm.</p>
-                  <ul class="d-flex p-0 py-1 justify-content-center">
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, Classic Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material Classic Ivory" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Classic Belgian Flax Linen, White.jpg" class="cardSwatch" width="32" alt="Muestra material lino blanco" /></li>
-                    <li class="px-1"><img src="../assets/img/swatches/Velvet Twill, Ivory.jpg" class="cardSwatch" width="32" alt="Muestra material lino marfil" /></li>
-                  </ul>
-                  <p class="card-text h5">$3.800</p>
-                </div>
-              </div>
+    <!-- MAIN CONTENT -->
+    <main class="container-ecd m-0 p-0">
+      <!-- HERO GALLERY -->
+      <section class="container-ecd px-5">
+        <div id="favouritesList" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-1 mx-xl-5 px-xl-5">
+          <!-- MAGIC HAPPENS HERE -->
+        </div>
+      </section>
+
+      <div class="container my-5 py-5"></div>
+
+      <div id="ecdToast" class="toast-container position-fixed bottom-0 end-0 p-3 bg-danger shadow-lg m-5 p-0">
+        <button type="button" class="btn-close shadow-lg m-0 p-0 me-3 shadow-none h4 float-end" aria-label="Close"></button>
+        <div>
+          <div class="p-4">
+            <div class="me-4">
+              <i class="btn-favourite-msj fa-solid fa-heart fa-beat mx-3 my-0" style="--fa-beat-scale: 2; --fa-animation-iteration-count: 5"> </i>
+              <a id="ecdToastLink" class="fw-bold" href="../pages/carrito.html"></a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -539,9 +506,5 @@
         </p>
       </div>
     </footer>
-
-    <!-- SCRIPTS -->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../app.js"></script>
   </body>
 </html>
