@@ -619,8 +619,6 @@ function plusQty(cartItem) {
 // SPECIFIC TO FAVOURITES.HTML
 const renderFavourites = (favourites) => {
   if (document.URL.includes('favoritos.html')) {
-    console.log("YOU'RE IN PRODUCTOS.HTML");
-
     // VARIABLES FROM PRODUCTOS.HTML
     const favouritesList = document.getElementById('favouritesList');
     favouritesList.innerHTML = '';
@@ -632,9 +630,10 @@ const renderFavourites = (favourites) => {
         <div class="col">
           <div class="card border-0">
             <figure class="position-relative m-0">
+            <button id="delFav${producto.id}" class="ecd-btn-outlined-muted position-absolute top-0 end-0 text-uppercase" aria-label="Close" type="button">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+            </button>
               <img src="${producto.img500[0]}" class="card-img-top productoImg" alt="${producto.descripcion}" />
-              <button type="button" class="btnFavourite bg-transparent border-0 position-absolute top-0 end-0 p-1 shadow-none fa-solid fa-heart btn-favourite" id="toast${producto.id}">
-              </button>
               <a id="btn${producto.id}" class="btnComprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase" href="../pages/producto.html">VER MÁS</a>
             </figure>
             <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
@@ -649,9 +648,7 @@ const renderFavourites = (favourites) => {
               </div>
             </div>
             <div class="card-body p-0">
-              <h6 class="card-title fw-bold text-uppercase mb-0 mt-2">
-              ${producto.nombre}
-              </h6>
+              <h6 class="card-title fw-bold text-uppercase mb-0 mt-2">${producto.nombre}</h6>
               <div class="clearfix">
                 <ul id="swatch-list" class="d-flex p-0 pt-1 m-0 float-start">
                   <li class="cardSwatch p-1 ps-0"><img id="productoSwatch0" src="${producto.img40[0]}" width="28" alt="Muestra material Classic Ivory" /></li>
@@ -659,11 +656,11 @@ const renderFavourites = (favourites) => {
                   <li class="cardSwatch p-1"><img id="productoSwatch2" src="${producto.img40[2]}" width="28" alt="Muestra material lino marfil" /></li>
                   <li class="cardSwatch p-1"><img id="productoSwatch3" src="${producto.img40[3]}" width="28" alt="Muestra material lino marfil" /></li>
                 </ul>
-                <span class="productoStock badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1"></span>
+                <span class="productoStock badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1">${producto.stock}</span>
               </div>
               <p class="m-0 productoMaterial">Material: ${producto.material}</p>
               <p class="productoMedidas m-0">Medidas: ${producto.medidas}</p>
-              <p class="productoAncho m-0">${precio}</p>
+              <p class="productoAncho m-0 fw-bold">${precio}</p>
             </div>
           </div>
         </div>
@@ -672,15 +669,23 @@ const renderFavourites = (favourites) => {
       favouritesList.innerHTML += divHTML;
     }
     favourites.forEach((producto) => {
-      document.getElementById(`toast${producto.id}`).onclick = function () {
-        addToFavourites(producto);
-      };
       document.getElementById(`btn${producto.id}`).onclick = function () {
         selectProduct(producto);
+      };
+      document.getElementById(`delFav${producto.id}`).onclick = function () {
+        deleteFromFavourites(producto);
       };
     });
   }
 };
+
+function deleteFromFavourites(cartItem) {
+  let itemSelected = favourites.findIndex((prod) => prod.id == cartItem.id);
+  favourites.splice(itemSelected, 1);
+
+  localStorage.setItem('favourites', JSON.stringify(favourites));
+  fectchDataJSON();
+}
 
 // 1. REMEMBER TO ADD SWIPER IN PRODUCTO.HTML
 //todo 2. CREATE OWN SWEET ALERT
@@ -688,8 +693,8 @@ const renderFavourites = (favourites) => {
 //todo 4. ADD PILL WITH ITEMS IN FAVOURITES AND CART IN OFFCANVAS NAVBAR
 //todo 5. FIX BTN IN FAVOURITES AND CAR OFFCANVAS AND NAVBAR (ADD LAST SEEN ITEMS TO FAVOURITES) (REF 4.)
 
-//info REAL TO FIX
-//info 1. agregar link / btn eliminar a favoritos
-//info 2. arreglar lista de cart en dropdown falta algo
+//info TO FIX
+// 1. agregar link / btn eliminar a favoritos
+// 2. arreglar lista de cart en dropdown falta algo
 
 //! FIX NAVBARS IN OTHER LOCATIONS =S
