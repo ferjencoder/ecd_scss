@@ -11537,6 +11537,25 @@ textarea.form-control-lg {
   background-color: #fff;
 }
 
+.ecd-btn-not-outlined {
+  background-color: rgb(72, 50, 65);
+  font-size: 0.875em;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  border: 1.5px solid rgb(72, 50, 65);
+  cursor: pointer;
+  font-weight: 400;
+}
+.ecd-btn-not-outlined:hover {
+  transition: all 0.3s ease;
+  color: rgb(121, 85, 105);
+  background-color: #fff;
+}
+
 .ecd-btn-outlined-muted {
   background-color: rgb(230, 227, 222);
   font-size: 0.875em;

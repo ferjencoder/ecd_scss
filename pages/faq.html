@@ -26,20 +26,22 @@
     <meta property="og:url" content="https://entrecortinas.netlify.app/" />
     <meta property="og:image" content="../assets/img/ecd-website-snap.jpg" />
 
-<!-- FONTS -->
+    <!-- FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/kal6lby.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
     <!-- BOOTSTRAP -->
     <script src="../assets/js/bootstrap.bundle.min.js" defer></script>
 
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
     <!-- SCRIPTS -->
-    <!-- <script src="../assets/js/toasts.js" defer></script> -->
     <script src="../app.js" defer></script>
+    
     <title>Preguntas Frecuentes || Entre Cortinas</title>
   </head>
   <body>
@@ -63,14 +65,13 @@
       <!-- START ECD NAVBAR -->
       <nav class="row">
         <div class="navbar navbar-expand-lg container-fluid navbar-light bg-white border-bottom border-primary-border p-0 ecd-navbar">
-          <!-- LOGO -->
+          <!-- OFFCANVAS -->
           <div class="col-12 col-lg-3 d-flex justify-content-between justify-content-lg-center px-4">
+            <!-- LOGO -->
             <a class="nav-link active" aria-current="page" href="../index.html"><img width="200" src="../assets/img/ico/ecd_logo.svg" alt="Logo Entre Cortinas y link a la página de inicio" height="40" /></a>
             <button class="navbar-toggler d-lg-none shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Botón para activar menu lateral" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- OFFCANVAS -->
-
             <!-- OFFCANVAS HOME MENU -->
             <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header bg-primary">
@@ -183,10 +184,10 @@
                     <ul id="offcanvasFavouritesUl" class="list-group list-group-flush p-0 m-0">
                       <!-- MAGIC HAPPENS HERE -->
                     </ul>
-                    <!-- GOTO CART LINK -->
-                    <ul class="list-group p-0 m-0 ecd-border-bt">
-                      <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
-                        <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
+                    <!-- GOTO SHOPPING LINK -->
+                    <ul class="list-group p-0 m-0">
+                      <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
+                        <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
                       </li>
                     </ul>
                   </div>
@@ -200,10 +201,12 @@
                     <ul id="offcanvasCartUl" class="list-group p-0 m-0 ecd-border-bt">
                       <!-- MAGIC HAPPENS HERE -->
                     </ul>
-                    <!-- GOTO CART LINK -->
-                    <ul class="list-group p-0 m-0 ecd-border-bt">
-                      <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
-                        <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/carrito.html"><strong>mi carrito</strong></a>
+                    <!-- OFFCANVAS SUBTOTAL -->
+                    <ul id="offcanvasCartUlST" class="list-group p-0 m-0"></ul>
+                    <!-- OFFCANVAS GOTO CART LINK -->
+                    <ul class="list-group p-0 m-0">
+                      <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
+                        <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/carrito.html"><strong>mi carrito</strong></a>
                       </li>
                     </ul>
                   </div>
@@ -289,8 +292,8 @@
               </button>
 
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-top-1 border-ecd" style="width: 450px">
-                <ul class="list-group p-0 m-0">
-                  <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary">
+                <ul class="list-group p-0 m-0 ecd-border-bt">
+                  <li class="dropdown-header text-uppercase text-center py-1 my-2 align-items-center text-primary">
                     <h6 class="m-0 p-0 fw-bold">mis favoritos</h6>
                   </li>
                 </ul>
@@ -298,39 +301,13 @@
                   <!-- MAGIC HAPPENS HERE -->
                 </ul>
                 <!-- GOTO CART LINK -->
-                <ul class="list-group p-0 m-0 ecd-border-bt">
-                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative">
-                    <a class="btn ecd-btn-outlined w-100 shadow-none mb-2 p-0" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
+                <ul class="list-group p-0 m-0">
+                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
+                    <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <template>
-              <li class="list-group-item border-top bg-white d-flex flex-row p-2 align-items-start position-relative">
-                <div class="position-absolute top-0 end-0 pt-2 pe-2">
-                  <button type="button" class="btn bg-transparent shadow-none" id="liveToastBtnFour" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Comprar" title="Comprar"><i class="fa-solid fa-bag-shopping ecd-navbar"></i></button>
-                </div>
-                <figure class="p-0 m-0 align-self-center"><img class="ps-1" src="../assets/img/ecd-co-tradicional-liviana-01-100x100.jpg" width="100" height="100" alt="Cortina rústica liviana. Material lino clásico belga" /></figure>
-                <div class="container d-flex flex-column align-items-start ps-2">
-                  <h6 class="text-uppercase pt-1 text-primary m-0">cortina rústica liviana</h6>
-                  <p class="m-0 p-0"><small>Lino clásico belga</small></p>
-                  <a href=""><small>Eliminar</small></a>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 100">
-                    <div id="liveToastFour" class="toast" role="alert" data-bs-autohide="true" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body">Agregaste un producto a <a href="../pages/carrito.html">tu carrito</a></div>
-                        <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <ul>
-                <li class="d-flex p-2 justify-content-center position-relative bg-white border-top">
-                  <a class="text-uppercase align-content-center small text-primary fw-bold" href="../pages/favoritos.html">ver todos los favoritos</a>
-                </li>
-              </ul>
-            </template>
             <!-- MENU CART -->
             <div class="dropdown">
               <button type="button" id="cartMenuDropdown" class="btn dropdown-toggle shadow-none" data-bs-toggle="dropdown" aria-label="Carrito de compras" aria-expanded="false">
@@ -338,8 +315,8 @@
                 <span id="cartItemsPill" class="position-absolute bottom-100 start-100 translate-middle badge rounded-pill text-primary"> <span class="visually-hidden">Carrito de compras</span></span>
               </button>
               <div class="dropdown-menu dropdown-menu-end mt-2 mb-0 p-0 border-ecd" style="width: 450px" aria-labelledby="cartMenuDropdown">
-                <ul class="list-group p-0 m-0">
-                  <li class="dropdown-header text-uppercase text-center py-1 my-1 align-items-center text-primary border-bottom">
+                <ul class="list-group p-0 m-0 ecd-border-bt">
+                  <li class="dropdown-header text-uppercase text-center py-1 my-2 align-items-center text-primary">
                     <h6 class="m-0 p-0 fw-bold">mi carrito</h6>
                   </li>
                 </ul>
@@ -347,9 +324,9 @@
                   <!-- MAGIC HAPPENS HERE -->
                 </ul>
                 <!-- GOTO CART LINK -->
-                <ul class="list-group p-0 m-0 ecd-border-bt">
-                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0">
-                    <a class="btn ecd-btn-outlined w-100 shadow-none m-0 p-0" href="../pages/carrito.html"><strong>mi carrito</strong></a>
+                <ul class="list-group p-0 m-0">
+                  <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
+                    <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/carrito.html"><strong>mi carrito</strong></a>
                   </li>
                 </ul>
               </div>

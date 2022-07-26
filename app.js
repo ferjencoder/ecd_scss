@@ -9,11 +9,13 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [],
 
 // GLOBAL SCOPE VARRIABLES
 const alertToastDiv = document.getElementById('ecdToast');
+let subtotalCheckOutNum = 0;
 
 // CART VARIABLES
 const cartItemsPill = document.getElementById('cartItemsPill'),
   offcanvasCartUl = document.getElementById('offcanvasCartUl'), // MAGIC HAPPENS HERE
   navbarCartUl = document.getElementById('navbarCartUl'), // MAGIC HAPPENS HERE
+  offcanvasCartUlST = document.getElementById('offcanvasCartUlST'), // MAGIC HAPPENS HERE
   cartMenuDropdown = document.getElementById('cartMenuDropdown'); // TOGGLE
 
 // FAVOURITES NAVBAR DROPDOWN
@@ -22,10 +24,17 @@ const btnFavourite = document.querySelector('.btnFavourite'),
   offcanvasFavouritesUl = document.getElementById('offcanvasFavouritesUl'),
   favouritesMenuUl = document.getElementById('favouritesMenuUl');
 
+// CARRITO.HTML VARIABLES
+let minusQ, numQ, plusQ, subtotalCartItem;
+const subtotalCheckOut = document.querySelector('#subtotalCheckOut'),
+  cuponCheckOut = document.querySelector('#cuponCheckOut'),
+  envioCheckOut = document.querySelector('#envioCheckOut'),
+  totalCheckOut = document.querySelector('#totalCheckOut');
+
 // AFTER DOM IS LOADED FETCH DATA FROM JSON
 document.addEventListener('DOMContentLoaded', () => {
   fectchDataJSON();
-  //renderNavbars(cart);
+  renderNavbars();
 });
 
 // FETCH DATA FROM API/json
@@ -33,31 +42,23 @@ const fectchDataJSON = async () => {
   try {
     const res = await fetch('../assets/js/api.json');
     const dataJSON = await res.json();
-    //console.log('FETCH: ', { dataJSON });
-    if (document.URL.includes('productos.html')) {
-      renderProducts(dataJSON);
-      renderNavbars(cart);
-    }
+
+    renderProducts(dataJSON);
+    renderNavbars();
+
     if (document.URL.includes('producto.html')) {
       console.log("YOU'RE IN PRODUCTO.HTML GALLERY");
-      console.log(productoSelected);
-      // renderNavbars();
       renderProductGallery(dataJSON, productoSelected);
+      // renderNavbars();
       callSwiper();
     }
     if (document.URL.includes('carrito.html')) {
       console.log("YOU'RE IN CARRITO.HTML");
-      renderNavbars(cart);
       renderCart(cart);
       renderCartSummary(cart);
     }
-    if (document.URL.includes('contacto.html')) {
-      renderNavbars(cart);
-    }
-    if (document.URL.includes('index.html' || 'contacto.html')) {
-      renderNavbars(cart);
-    }
-    //return createProductsArray(dataJSON);
+
+    return dataJSON;
   } catch (error) {
     console.error(`Disculpas! algo salió mal. Por favor, intente de nuevo o contacte al admin.`);
     console.error(error);
@@ -66,16 +67,27 @@ const fectchDataJSON = async () => {
 
 // FORMAT PRECIO
 const precioArs = function (producto) {
+  // ONLY PASS PRODUCT NOT PRODUCT.PRICE
   let precioToFormat = producto.precio;
-  console.log('PRECIOFORMAR', precioToFormat);
   const options = {
     style: 'currency',
     currency: 'ARS',
     maximumSignificantDigits: 3,
   };
   const precioARS = new Intl.NumberFormat('es-AR', options).format(precioToFormat);
-  //console.log(precioARS);
   return precioARS;
+};
+
+const anyPrecioARS = function (precio) {
+  // PASS ANY NUMBER
+  let precioToFormat = precio;
+  const options = {
+    style: 'currency',
+    currency: 'ARS',
+    maximumSignificantDigits: 3,
+  };
+  const anyPrecioARS = new Intl.NumberFormat('es-AR', options).format(precioToFormat);
+  return anyPrecioARS;
 };
 
 // SPRECIFIC TO PRODUCTOS.HTML
@@ -92,7 +104,7 @@ const renderProducts = (dataJSON) => {
 
     for (const producto of dataJSON) {
       const precio = precioArs(producto);
-
+      console.log(precio);
       const divHTML = `
         <div class="col">
           <div class="card border-0">
@@ -128,7 +140,7 @@ const renderProducts = (dataJSON) => {
               </div>
               <p class="m-0 productoMaterial">Material: ${producto.material}</p>
               <p class="productoMedidas m-0">Medidas: ${producto.medidas}</p>
-              <p class="productoAncho m-0">${precio}</p>
+              <p class="productoAncho m-0 fw-bold">${precio}</p>
             </div>
           </div>
         </div>
@@ -196,11 +208,7 @@ function selectProduct(producto) {
   }
 }
 
-function renderNavbars(producto) {
-  // console.log('--------------------------');
-  // console.log('RENDERED FAVOURITES MENU: ', favourites);
-  // console.log('RENDERED CART MENU: ', cart);
-
+function renderNavbars() {
   // FAVOURITES
   let favouritePill = favourites.length;
   favouriteItemsPill.innerHTML = '';
@@ -237,6 +245,7 @@ function renderNavbars(producto) {
   navbarCartUl.innerHTML = '';
 
   cart.forEach((producto) => {
+    subtotalCheckOutNum += producto.precio;
     const precio = precioArs(producto);
     let divHTML = `
       <li class="list-group-item d-flex justify-content-between align-items-center position-relative">
@@ -252,15 +261,22 @@ function renderNavbars(producto) {
         <span class="badge bg-success rounded-pill text-dark position-absolute top-0 end-0 m-2">${producto.stock[0]}</span>
       </li>
     `;
+
     offcanvasCartUl.innerHTML += divHTML;
     navbarCartUl.innerHTML += divHTML;
   });
+  const subtotalARS = anyPrecioARS(subtotalCheckOutNum);
 
+  let subTotalDivHTML = `
+    <ul class="list-group p-0 m-0">
+      <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
+        <p class="mt-3">SUBTOTAL: ${subtotalARS}</p>
+      </li>
+    </ul>
+  `;
+  offcanvasCartUlST.innerHTML = subTotalDivHTML;
   cartItemsPill.innerHTML = cartItemPill;
-  // console.log('RENDERED FAVOURITES END');
-  // console.log('--------------------------');
 }
-
 // SPRECIFIC TO PRODUCTO.HTML GALLERY
 const callSwiper = () => {
   // console.log('SWIPER CALL');
@@ -304,13 +320,18 @@ const callSwiper = () => {
 
 const renderProductGallery = (dataJSON, productoSelected) => {
   const almohadonesDiv = document.getElementById('productList'),
-    almohadonesTable = document.getElementById('productTable');
+    almohadonesTable = document.getElementById('productTable'),
+    productTableUl1 = document.getElementById('productTableUl1'),
+    productTableUl2 = document.getElementById('productTableUl2'),
+    productTableUl3 = document.getElementById('productTableUl3');
 
   // console.log(productoSelected);
   almohadonesDiv.innerHTML = '';
-  almohadonesTable.innerHTML = '';
+  //almohadonesTable.innerHTML = '';
 
   dataJSON.forEach((producto) => {
+    const precioNum = precioArs(producto);
+
     if (producto.id == productoSelected) {
       //RENDER PRODUCT GALLERY - SWIPER
       almohadonesDiv.innerHTML += `
@@ -350,57 +371,57 @@ const renderProductGallery = (dataJSON, productoSelected) => {
       </div>
       `;
 
-      // RENDER PRODUCT DETAILS TABLE
-      almohadonesTable.innerHTML += `
-        <aside class="py-5 p-sm-5 pt-xl-5 px-xl-0 bg-white ecd-border-light">
-          <div class="container-sm px-5 px-xl-4">
-            <div class="col-12 m-0 px-4 mt-4">
-              <ul class="small-photos p-0 list-group-flush">
-                <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">${producto.nombre}</h2></li>
-                <li class="ecd-border-bt mb-3"><p>${producto.descripcion}</p></li>
-                <li class="mt-4 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
-                <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
-                <li class="mb-3 p-0"><p class="m-0 p-0">PRECIO: ${producto.precio}</p></li>
-                <li class="mb-2">
-                  <h6 class="text-uppercase text-primary">
-                    <strong>Selecciona el color: <span></span></strong>
-                  </h6>
-                </li>
-                <li>
-                  <div class="list-group list-group-flush list-group-horizontal overflow-hidden m-0 p-0 border-0 d-inline-flex" id="list-tab" role="tablist">
-                    <div class="list-group-item btn-swatch sw1 m-0 p-1 text-center list-group-item-action border-0" id="slide-0" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-one">
-                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[0]}" width="35" height="30" alt="${producto.colors[0]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[0]}" data-bs-custom-class="ecd-tooltip" />
-                    </div>
-                    <div class="list-group-item btn-swatch sw2 m-0 p-1 border-0 text-center list-group-item-action" id="slide-1" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-five">
-                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[1]}" width="35" height="30" alt="${producto.colors[1]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[1]}" data-bs-custom-class="ecd-tooltip" />
-                    </div>
-                    <div class="list-group-item btn-swatch sw3 m-0 p-1 border-0 text-center list-group-item-action" id="slide-2" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-nine">
-                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[2]}" width="35" height="30" alt="${producto.colors[2]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[2]}" data-bs-custom-class="ecd-tooltip" />
-                    </div>
-                    <div class="list-group-item btn-swatch sw4 m-0 p-1 border-0 text-center list-group-item-action" id="slide-3" data-bs-toggle="list" href="#list-thirteen" role="tab" aria-controls="list-thirteen">
-                      <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[3]}" width="35" height="30" alt="${producto.colors[3]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[3]}" data-bs-custom-class="ecd-tooltip" />
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item text-center border-0 mt-5 pb-0">
-                  <button id="" class="agregarAlCarrito btn ecd-btn-outlined w-100 shadow-none" type="button">AGREGAR AL CARRITO</button>
-                </li>
-                <li class="list-group-item text-center ecd-border-bt pb-3">
-                  <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/carrito.html">VER CARRITO</a>
-                </li>
-                <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
-                <li class="list-group-item text-center border-0 mt-2">
-                  <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/productos.html">CONTINUAR COMPRANDO</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </aside>
+      let swatchDiv = '';
+      //console.log(producto.colors.length);
+      for (let i = 0; i < producto.colors.length; i++) {
+        swatchDiv += `
+            <li class="list-group-item list-group-item-action m-0 p-0 border-0" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+              <div class="overflow-hidden" id="list-tab" role="tablist">
+                <div class="btn btn-swatch sw1 m-0 p-1 text-center border-0" id="slide-${i}" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-one">
+                  <img class="img-thumbnail ecd-shadow m-0 p-0" src="${producto.img40[i]}" width="35" height="30" alt="${producto.colors[i]}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="${producto.colors[i]}" />
+                </div>
+              </div>
+            </li>
+        `;
+      }
+
+      // // RENDER PRODUCT DETAILS TABLE
+      let productDiv = `            
+          <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">${producto.nombre}</h2></li>
+          <li class="ecd-border-bt mb-3"><p>${producto.descripcion}</p></li>
+          <li class="mt-4 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
+          <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
+          <li class="mb-3 p-0"><p class="m-0 p-0">PRECIO: ${precioNum}</p></li>
+          <li class="mb-2">
+            <h6 class="text-uppercase text-primary">
+              <strong>Selecciona el color: <span></span></strong>
+            </h6>
+          </li>
       `;
 
-      document.querySelector('.agregarAlCarrito').onclick = function () {
-        addToCart(producto);
-      };
+      let btnsDiv = `
+          <li class="list-group-item text-center border-0 mt-5 pb-0">
+            <button id="" class="agregarAlCarrito btn ecd-btn-outlined w-100 shadow-none" type="button">AGREGAR AL CARRITO</button>
+          </li>
+          <li class="list-group-item text-center ecd-border-bt pb-3">
+            <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/carrito.html">VER CARRITO</a>
+          </li>
+          <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
+          <li class="list-group-item text-center border-0 mt-2">
+            <a class="btn ecd-btn-outlined-muted w-100 shadow-none" href="../pages/productos.html">CONTINUAR COMPRANDO</a>
+          </li>
+      `;
+
+      // RENDER PRODUCT DETAILS TABLE
+      //almohadonesTable.innerHTML += productDiv + swatchDiv + btnsDiv;
+
+      productTableUl1.innerHTML = productDiv;
+      productTableUl2.innerHTML = swatchDiv;
+      productTableUl3.innerHTML = btnsDiv;
+
+      // document.querySelector('.agregarAlCarrito').onclick = function () {
+      //   addToCart(producto);
+      // };
     }
   });
 };
@@ -409,6 +430,7 @@ const addToCart = (producto) => {
   // CHECK IF productoSelected EXISTS IN CART
   // console.log(producto);
   if (cart.find((producto) => producto.id == productoSelected)) {
+    console.log('PRODUCT IN CART');
   } else {
     cart.push(producto);
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -447,15 +469,20 @@ const alertToast = function (producto) {
 };
 
 // SPRECIFIC TO CARRITO.HTML GALLERY
-
 function renderCart(cart) {
   const cartTable = document.querySelector('#cartTable');
-  const cartSummary = document.querySelector('#cartSummary');
-
+  let subtotal = 0;
+  let subtotal1 = 0;
   cartTable.innerHTML = '';
 
   for (const cartItem of cart) {
-    const precio = precioArs(cartItem);
+    subtotal = 0;
+    subtotal1 = 0;
+    let precio = 0;
+    precio = precioArs(cartItem);
+
+    subtotal1 += Number(cartItem.precio) * cartItem.cantidad;
+    subtotal = anyPrecioARS(subtotal1);
 
     let divHTML = `
       <tr>
@@ -464,7 +491,7 @@ function renderCart(cart) {
         </th>
         <td class="text-start detalles">
           <strong class="product-item-name">
-            <a href="#" class="text-decoration-none text-start">${cartItem.nombre}</a>
+            <a href="#" class="text-decoration-none text-uppercase text-start">${cartItem.nombre}</a>
           </strong>
           <dl class="item-options d-flex flex-column m-0">
             <dd class="text-muted text-start my-1">COLOR: ${cartItem.colors[0]}</dd>
@@ -476,12 +503,12 @@ function renderCart(cart) {
           <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group" role="group" aria-label="First group">
               <button id="minusQ${cartItem.id}" class="btn ecd-btn-counter-hover minusQ" type="button">-</button>
-              <button id="numQ${cartItem.id}" class="d-block btn num ecd-btn-counter numQ">${cartItem.cantidad}</button>
+              <p id="numQ${cartItem.id}" class="d-block btn num ecd-btn-counter numQ m-0 p-0">${cartItem.cantidad}</p>
               <button id="plusQ${cartItem.id}" class="btn ecd-btn-counter-hover plusQ" type="button">+</button>
             </div>
           </div>
         </td>
-        <td class="text-center numeroFormat" id="subtotal">${precio}</td>
+        <td class="text-center numeroFormat" id="subtotal${cartItem.id}">${subtotal}</td>
         <td>
           <button id="del${cartItem.id}" class="btn shadow-none" aria-label="Close" type="button">
           <i class="fa-solid fa-xmark"></i>
@@ -499,51 +526,35 @@ function renderCart(cart) {
     document.getElementById(`minusQ${cartItem.id}`).onclick = function () {
       minusQty(cartItem);
     };
-    document.getElementById(`numQ${cartItem.id}`).onclick = function () {
-      numQty(cartItem);
-    };
     document.getElementById(`plusQ${cartItem.id}`).onclick = function () {
       plusQty(cartItem);
     };
-    document.getElementById(`minusQ${cartItem.id}`).onclick = function () {
-      plusQ(cartItem);
-    };
+    // document.getElementById(`numQ${cartItem.id}`).onclick = function () {
+    //   numQty(cartItem);
+    // };
+    // document.getElementById(`minusQ${cartItem.id}`).onclick = function () {
+    //   plusQ(cartItem);
+    // };
   }
+  renderCartSummary(cart);
 }
 
-const renderCartSummary = (cart) => {
-  let subtotal1 = 0;
-  console.log(cart);
-  cart.forEach((cartItem) => {
-    console.log(cartItem.precio);
-    subtotal1 += Number(cartItem.precio);
-    console.log('SUBTOTAL 1', subtotal1);
+const renderCartSummary = () => {
+  // const cartSummary = document.querySelector('#cartSummary'),
+  const subtotalCheckOut = document.querySelector('#subtotalCheckOut'),
+    totalCheckOut = document.querySelector('#totalCheckOut'),
+    cuponCheckOut = document.querySelector('#cuponCheckOut'),
+    envioCheckOut = document.querySelector('#envioCheckOut');
 
-    const subtotal = precioArs(subtotal1);
+  subtotalCheckOut.innerHTML = '';
+  totalCheckOut.innerHTML = '';
+  cuponCheckOut.innerHTML = '';
+  envioCheckOut.innerHTML = '';
 
-    console.log(subtotal);
-  });
-
-  cartSummary.innerHTML = '';
-
-  cartSummary.innerHTML = `
-  <tr>
-    <td>SUBTOTAL</td>
-    <td class="text-end subtotalCheckOut numeroFormat">${subtotal}</td>
-  </tr>
-  <tr>
-    <td>CUPON</td>
-    <td class="text-end cuponCheckOut numeroFormat">0</td>
-  </tr>
-  <tr>
-    <td>COSTO DE ENVÍO</td>
-    <td class="text-end envioCheckOut numeroFormat">0</td>
-  </tr>
-  <tr>
-    <td class="fw-bold">TOTAL</td>
-    <td class="text-end fw-bold totalCheckOut numeroFormat">${subtotal}</td>
-  </tr>
-  `;
+  subtotalCheckOut.innerHTML = summarySubtotalFn();
+  totalCheckOut.innerHTML = summarySubtotalFn();
+  cuponCheckOut.innerHTML = 0;
+  envioCheckOut.innerHTML = 0;
 };
 
 function deleteFromCart(cartItem) {
@@ -553,6 +564,120 @@ function deleteFromCart(cartItem) {
   localStorage.setItem('cart', JSON.stringify(cart));
   fectchDataJSON();
 }
+
+function summarySubtotalFn() {
+  let summarySubtotalNum = 0,
+    summaryCuponNum = 0,
+    summaryCostoEnvioNum = 0,
+    summaryTotalNum = 0;
+
+  for (const cartItem of cart) {
+    summarySubtotalNum += cartItem.precio * cartItem.cantidad;
+    summaryCuponNum += 0;
+    summaryCostoEnvioNum += 0;
+  }
+  summaryTotalNum = summarySubtotalNum + summaryCuponNum + summaryCostoEnvioNum;
+  const summarySubtotal = anyPrecioARS(summaryTotalNum);
+  const summaryTotal = anyPrecioARS(summaryTotalNum);
+  subtotalCheckOut.innerHTML = summarySubtotal;
+  totalCheckOut.innerHTML = summaryTotal;
+  return summarySubtotal, summaryTotal;
+}
+
+function minusQty(cartItem) {
+  numQ = document.querySelector(`#numQ${cartItem.id}`);
+  subtotalCartItem = document.querySelector(`#subtotal${cartItem.id}`);
+
+  // MINUS BTN
+  cartItem.cantidad > 1 ? (cartItem.cantidad -= 1) : cartItem.cantidad;
+  numQ.innerHTML = cartItem.cantidad;
+  subtotal1 = cartItem.cantidad * cartItem.precio;
+  subtotal = anyPrecioARS(subtotal1);
+  subtotalCartItem.innerHTML = subtotal;
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  summarySubtotalFn();
+}
+
+function plusQty(cartItem) {
+  subtotalCartItem = document.querySelector(`#subtotal${cartItem.id}`);
+  numQ = document.querySelector(`#numQ${cartItem.id}`);
+
+  cartItem.cantidad += 1;
+  numQ.innerHTML = cartItem.cantidad;
+  subtotal1 = cartItem.cantidad * cartItem.precio;
+  subtotal = anyPrecioARS(subtotal1);
+  subtotalCartItem.innerHTML = subtotal;
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  summarySubtotalFn();
+}
+
+// SPECIFIC TO FAVOURITES.HTML
+const renderFavourites = (dataJSON) => {
+  if (document.URL.includes('productos.html')) {
+    console.log("YOU'RE IN PRODUCTOS.HTML");
+
+    // VARIABLES FROM PRODUCTOS.HTML
+    const productList = document.getElementById('productList');
+    productList.innerHTML = '';
+
+    for (const producto of dataJSON) {
+      const precio = precioArs(producto);
+
+      const divHTML = `
+        <div class="col">
+          <div class="card border-0">
+            <figure class="position-relative m-0">
+              <img src="${producto.img500[0]}" class="card-img-top productoImg" alt="${producto.descripcion}" />
+              <button type="button" class="btnFavourite bg-transparent border-0 position-absolute top-0 end-0 p-1 shadow-none fa-solid fa-heart btn-favourite" id="toast${producto.id}">
+              </button>
+              <a id="btn${producto.id}" class="btnComprar btn ecd-btn-card position-absolute bottom-0 end-0 text-uppercase" href="../pages/producto.html">VER MÁS</a>
+            </figure>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div id="liveToastSeven" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    <p class=${producto.nombre}></p>
+                    <a href="../pages/favoritos.html">tus favoritos</a>
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <h6 class="card-title fw-bold text-uppercase mb-0 mt-2">
+              ${producto.nombre}
+              </h6>
+              <div class="clearfix">
+                <ul id="swatch-list" class="d-flex p-0 pt-1 m-0 float-start">
+                  <li class="cardSwatch p-1 ps-0"><img id="productoSwatch0" src="${producto.img40[0]}" width="28" alt="Muestra material Classic Ivory" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch1" src="${producto.img40[1]}" width="28" alt="Muestra material lino blanco" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch2" src="${producto.img40[2]}" width="28" alt="Muestra material lino marfil" /></li>
+                  <li class="cardSwatch p-1"><img id="productoSwatch3" src="${producto.img40[3]}" width="28" alt="Muestra material lino marfil" /></li>
+                </ul>
+                <span class="productoStock badge p-1 m-1 bg-success rounded-pill text-dark float-end mt-1 me-1"></span>
+              </div>
+              <p class="m-0 productoMaterial">Material: ${producto.material}</p>
+              <p class="productoMedidas m-0">Medidas: ${producto.medidas}</p>
+              <p class="productoAncho m-0">${precio}</p>
+            </div>
+          </div>
+        </div>
+        `;
+
+      productList.innerHTML += divHTML;
+    }
+    dataJSON.forEach((producto) => {
+      document.getElementById(`toast${producto.id}`).onclick = function () {
+        addToFavourites(producto);
+      };
+      document.getElementById(`btn${producto.id}`).onclick = function () {
+        selectProduct(producto);
+      };
+    });
+  }
+};
 
 //todo 1. REMEMBER TO ADD SWIPER IN PRODUCTO.HTML
 //todo 2. CREATE OWN SWEET ALERT
