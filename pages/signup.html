@@ -394,36 +394,40 @@
           <div class="row ecd-border-full flex-row-reverse flex-xl-row">
             <div class="col-12 col-xl-6 d-none d-xl-flex p-0">
               <div class="img-fluid">
-                <img src="../assets/img/ecd-manta-tejida-01.jpg" width="720" height="800" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
+                <img src="../assets/img/deco/ecd-manta-fur-01.jpg" width="700px" height="600px" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
               </div>
             </div>
             <div class="col-12 col-xl-6 p-3 d-flex flex-column">
               <div class="form d-flex flex-column">
-                <h2 class="my-2 mt-4 text-serif h1 text-center">DEJANOS TU MENSAJE</h2>
-                <hr class="bg-black align-self-center" style="width: 250px; height: 1px" />
-                <div class="m-0 text-center">
-                  <p class="m-0">Contactanos a través de este formulario o a nuestro correo:</p>
-                  <a href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20" class="my-2 link-primary">contacto@entrecortinas.com.ar</a>
-                </div>
+                <h2 class="my-2 mt-4 text-serif h1 text-center">REGISTRATE</h2>
+                <hr class="bg-black align-self-center mb-5" style="width: 250px; height: 1px" />
               </div>
               <div class="input-group d-flex justify-content-center">
-                <form name="contact" action="/rta-contacto" method="POST" class="mt-4 d-flex flex-column" style="width: 400px">
-                  <label for="name" class="visually-hidden-focusable">Nombre: </label>
-                  <input type="text" name="name" id="name" placeholder="Nombre y Apellido" class="mb-3 form-control ecd-border-full shadow-none" />
-
-                  <label for="telefono" class="visually-hidden-focusable">Telefono: </label>
-                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono ej. 299 555 1111" class="mb-3 form-control ecd-border-full shadow-none" />
-
-                  <label for="email" class="visually-hidden-focusable">Email: </label>
-                  <input type="email" name="email" id="email" placeholder="email" class="mb-3 form-control ecd-border-full shadow-none" />
-
-                  <label for="message" class="visually-hidden-focusable">Mensaje: </label>
-                  <textarea name="message" id="message" class="mb-3 form-control ecd-border-full shadow-none" placeholder="Mensaje"></textarea>
-
-                  <button type="submit" value="Send Message" class="m-0 shadow-none bg-transparent border-0 text-center">
-                    <p class="btn mb-3 shadow-none ecd-btn-outlined-p text-end">Enviar</p>
+                <div class="col-10">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ecd-form-lable-span" id="basic-addon1 ">Nombre</span>
+                    <input type="text" class="form-control shadow-none ecd-border-light" id="nombreRG" placeholder="Nombre" aria-label="nombre" aria-describedby="basic-addon1" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ecd-form-lable-span" id="basic-addon2 ">Apellidos:</span>
+                    <input type="text" class="form-control shadow-none ecd-border-light" id="apellidoRG" placeholder="Apellidos" aria-label="appellido" aria-describedby="basic-addon2" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ecd-form-lable-span" id="basic-addon3 ">Correo electrónico:</span>
+                    <input type="email" class="form-control shadow-none ecd-border-light" id="emailRG" placeholder="email" aria-label="email" aria-describedby="basic-addon3" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ecd-form-lable-span" id="basic-addon4 ">Contraseña:</span>
+                    <input type="password" class="form-control shadow-none ecd-border-light" id="passwordRG" placeholder="contraseña" aria-label="password" aria-describedby="basic-addon3" />
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ecd-form-lable-span" id="basic-addon4 ">Confirma contraseña:</span>
+                    <input type="password" class="form-control shadow-none ecd-border-light" id="confirmaPasswordRG" placeholder="confirma contraseña" aria-label="confirmaPassword" aria-describedby="basic-addon3" />
+                  </div>
+                  <button type="submit" value="Send Message" class="m-0 shadow-none bg-transparent border-0 text-center float-end">
+                    <p class="btn mb-3 shadow-none ecd-btn-outlined-p">Enviar</p>
                   </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -448,11 +452,79 @@
             <p class="m-0 p-0">Efectivo - Transferencia - Cheque - Tarjetas de débito/crédito - Mercado Pago</p>
           </div>
           <figure class="col-12 col-xl-6 d-flex p-0 m-0 justify-content-end">
-            <img src="../assets/img/ecd-manta-simil-piel-01.jpg" width="500" height="450" alt="Dos mantas simil piel una gris y otra marrón." class="mt-0 img-fluid" />
+            <img src="../assets/img/deco/ecd-manta-tejida-01.jpg" width="550px" height="450px" alt="Dos mantas simil piel una gris y otra marrón." class="mt-0 img-fluid" />
           </figure>
         </div>
       </section>
     </main>
+
+    <template>
+      <section class="container-ecd d-flex mt-5 justify-content-center">
+        <div class="mb-5">
+          <div class="row ecd-border-full flex-row-reverse flex-xl-row">
+            <div class="col-12 col-xl-6 d-none d-xl-flex p-0">
+              <div class="img-fluid">
+                <img src="../assets/img/deco/ecd-manta-tejida-01.jpg" width="720" height="800" alt="Sillon de cuero marron con manta beige con líneas negras y almohadon en lino crudo. Sobre el sillon una taza de cafe." width="max-width: 820" class="mt-0 img-fluid" />
+              </div>
+            </div>
+            <div class="col-12 col-xl-6 p-3 d-flex flex-column">
+              <div class="form d-flex flex-column">
+                <h2 class="my-2 mt-4 text-serif h1 text-center">DEJANOS TU MENSAJE</h2>
+                <hr class="bg-black align-self-center" style="width: 250px; height: 1px" />
+                <div class="m-0 text-center">
+                  <p class="m-0">Contactanos a través de este formulario o a nuestro correo:</p>
+                  <a href="mailto: contacto@entrecortinas.com.ar?subject=Consulta%20" class="my-2 link-primary">contacto@entrecortinas.com.ar</a>
+                </div>
+              </div>
+              <div class="input-group d-flex justify-content-center">
+                <form name="contact" action="/rta-contacto" method="POST" class="mt-4 d-flex flex-column" style="width: 400px">
+                  <label for="name" class="visually-hidden-focusable">Nombre: </label>
+                  <input type="text" name="name" id="name" placeholder="Nombre y Apellido" class="mb-3 form-control ecd-border-full shadow-none" />
+
+                  <label for="telefono" class="visually-hidden-focusable">Telefono: </label>
+                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono ej. 299 555 1111" class="mb-3 form-control ecd-border-full shadow-none" />
+
+                  <label for="email" class="visually-hidden-focusable">Email: </label>
+                  <input type="email" name="email" id="email" placeholder="email" class="mb-3 form-control ecd-border-full shadow-none" />
+
+                  <label for="message" class="visually-hidden-focusable">Mensaje: </label>
+                  <textarea name="message" id="message" class="mb-3 form-control ecd-border-full shadow-none" placeholder="Mensaje" rows="10"></textarea>
+
+                  <button type="submit" value="Send Message" class="m-0 shadow-none bg-transparent border-0 text-center">
+                    <p class="btn mb-3 shadow-none ecd-btn-outlined-p text-end">Enviar</p>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    <template>
+      <section>
+        <div class="col-6">
+          <label for="id" class="form-label text-uppercase">Creador de productos</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text ecd-btn-outlined-muted border-secondary fw" id="basic-addon1 ">Nombre</span>
+            <input type="text" class="form-control ecd-border-light" id="nombre" placeholder="Nombre" aria-label="nombre" aria-describedby="basic-addon1" />
+            <span class="input-group-text ecd-btn-outlined-muted border-secondary fw" id="basic-addon2 ">Apellidos:</span>
+            <input type="text" class="form-control ecd-border-light" id="apellido" placeholder="Apellidos" aria-label="appellido" aria-describedby="basic-addon2" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text ecd-btn-outlined-muted border-secondary fw" id="basic-addon3 ">Correo electrónico:</span>
+            <input type="email" class="form-control ecd-border-light" id="email" placeholder="email" aria-label="email" aria-describedby="basic-addon3" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text ecd-btn-outlined-muted border-secondary fw" id="basic-addon3 ">Contraseña:</span>
+            <input type="password" class="form-control ecd-border-light" id="password" placeholder="contraseña" aria-label="password" aria-describedby="basic-addon3" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text ecd-btn-outlined-muted border-secondary fw" id="basic-addon3 ">Confirma contraseña:</span>
+            <input type="password" class="form-control ecd-border-light" id="confirmaPassword" placeholder="confirma contraseña" aria-label="confirmaPassword" aria-describedby="basic-addon3" />
+          </div>
+        </div>
+      </section>
+    </template>
 
     <!-- FOOTER -->
     <footer class="container-fluid p-0 m-0 ecd-footer">

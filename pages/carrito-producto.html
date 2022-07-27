@@ -47,9 +47,10 @@
     <script src="../assets/js/swiper-bundle.js" defer></script>
 
     <!-- SCRIPTS -->
+    <script src="../assets/js/toasts.js" defer></script>
     <script src="../app.js" defer></script>
 
-    <title>Winter Collection || Entre Cortinas</title>
+    <title>Productos || Entre Cortinas</title>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -357,113 +358,347 @@
       </nav>
     </header>
 
-    <main class="bg-gray bg-light pb-5">
-      <!-- HERO BANNER TEXT -->
-      <section class="container-fluid d-flex mb-5 py-2 justify-content-center bg-ecd-clr-9">
-        <div class="row justify-content-center">
-          <article class="col-lg-4 d-none d-lg-flex">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold">IMAGINA</h6>
-              <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
-            </div>
-            <div class="vr"></div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4 d-flex">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
-              <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
-            </div>
-            <div class="vr d-none d-md-flex"></div>
-          </article>
-          <article class="d-none d-md-flex col-md-6 col-lg-4">
-            <div class="d-block text-center px-3">
-              <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
-              <ul class="p-0 m-0">
-                <li>
-                  <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
-                </li>
-                <li>
-                  <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
-                </li>
-                <li><p class="mb-0 text-uppercase text-sub-hero"></p></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
+    <!-- HERO BANNER TEXT -->
+    <section class="container-fluid d-flex mb-3 py-2 justify-content-center bg-ecd-clr-10">
+      <div class="row justify-content-center">
+        <article class="col-lg-4 d-none d-lg-flex">
+          <div class="d-block text-center px-3">
+            <h6 class="text-serif-nav fw-bold">IMAGINA</h6>
+            <p class="text-sub-hero">roller sunscreen, roller blackout, roller vertical, tradicionales</p>
+          </div>
+          <div class="vr"></div>
+        </article>
+        <article class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="d-block text-center px-3">
+            <h6 class="text-serif-nav fw-bold">INSPIRATE</h6>
+            <p class="text-sub-hero">la diversidad de telas y metodos de confeccion hacen a las cortinas tradicionales atemporales</p>
+          </div>
+          <div class="vr d-none d-md-flex"></div>
+        </article>
+        <article class="d-none d-md-flex col-md-6 col-lg-4">
+          <div class="d-block text-center px-3">
+            <h6 class="text-serif-nav fw-bold">CORTINAS TRADICIONALES</h6>
+            <ul class="p-0 m-0">
+              <li>
+                <p class="mb-0 text-uppercase text-sub-hero"><strong>livianas:</strong> Gasa de Algodon, Voile de Lino</p>
+              </li>
+              <li>
+                <p class="mb-0 text-uppercase text-sub-hero"><strong>pesadas:</strong> Blackout Gamuzado <strong> crudas:</strong> Lino Blackout</p>
+              </li>
+              <li><p class="mb-0 text-uppercase text-sub-hero"></p></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <!-- MAIN CONTENT -->
-      <section class="">
-        <div class="container-sm m-0 p-0">
-          <div class="row mx-2 mx-md-5 mx-xl-2 mx-xxl-5 g-0 g-xl-4">
-            <div id="productList" class="table-responsive-md col-12 d-flex col-xl-7 bg-white p-5 ecd-border-light my-5">
-              <!-- MAGIC HAPPENS HERE -->
-            </div>
-            <div class="col-12 d-block col-xl-5 my-5">
-              <aside class="py-5 p-sm-5 pt-xl-5 px-xl-0 bg-white ecd-border-light">
-                <div class="container-sm px-5 px-xl-4">
-                  <div id="productTable" class="col-12 m-0 px-4 mt-4">
-                    <!-- MAGIC HAPPENS HERE -->
-                    <ul id="productTableUl1" class="small-photos p-0 list-group-flush">
-                      <!-- MAGIC HAPPENS HERE -->
-                    </ul>
-                    <ul id="productTableUl2" class="small-photos p-0 list-group list-group-flush list-group-horizontal d-inline-flex">
-                      <!-- MAGIC HAPPENS HERE -->
-                    </ul>
-                    <ul id="productTableUl3" class="small-photos p-0 list-group-flush">
-                      <!-- MAGIC HAPPENS HERE -->
-                    </ul>
-                  </div>
-                </div>
-              </aside>
-            </div>
+    <!-- MAGIC MAIN CONTENT -->
+    <main class="container-fluid m-0 p-0">
+      <div class="container my-5 py-2"></div>
+      <section class="overflow-hidden mx-5">
+        <div id="productList1" class="container-ecd">
+          <!-- MAGIC HAPPENS HERE -->
+          <div class="list-group" id="myList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel">Home</div>
+            <div class="tab-pane" id="profile" role="tabpanel">Profile</div>
+            <div class="tab-pane" id="messages" role="tabpanel">Messages</div>
+            <div class="tab-pane" id="settings" role="tabpanel">Settings</div>
           </div>
         </div>
       </section>
+
+      <!-- FUTURE=> HERO SECTION -->
+      <div class="container my-5 py-5"></div>
     </main>
 
+    <!-- DELETE TEMPLATES -->
     <template>
-      <ul class="list-group p-0 m-0 ecd-border-bt">
-        <li class="dropdown-header text-uppercase text-center py-1 my-2 align-items-center text-primary">
-          <h6 class="m-0 p-0 fw-bold">mis favoritos</h6>
-        </li>
-      </ul>
-      <ul id="favouritesMenuUl" class="list-group p-0 m-0">
-        <!-- MAGIC HAPPENS HERE -->
-      </ul>
-      <!-- GOTO SHOPPING LINK -->
-      <ul class="list-group p-0 m-0">
-        <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
-          <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/favoritos.html"><strong>mis favoritos</strong></a>
-        </li>
-      </ul>
-      <!-- GOTO CART LINK -->
-      <ul class="list-group p-0 m-0">
-        <li class="list-group-item d-flex justify-content-center align-items-center position-relative m-0 p-0 border-0">
-          <a class="ecd-btn-not-outlined w-100 shadow-none text-center" href="../pages/carrito.html"><strong>mi carrito</strong></a>
-        </li>
-      </ul>
-    </template>
-    <template>
-      <div class="row">
-        <div class="col-4">
-          <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-            <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+      <div class="col">
+        <div class="row g-4">
+          <div class="col-1 swiper swiper-container swiper-initialized swiper-vertical d-flex">
+            <div class="swiper-wrapper list-group list-group-flush m-0 p-0 d-flex border-0" id="list-tab" data-bs-spy="scroll" data-bs-smooth-scroll="true" role="tablist" width="110" height="501">
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent active" id="list-list" data-bs-toggle="list" href="#list" role="tab" aria-controls="list-home">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-lino-v.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-one-list" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-profile">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-arcilla-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-two-list" data-bs-toggle="list" href="#list-two" role="tab" aria-controls="list-profile">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-arcilla-p.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-three-list" data-bs-toggle="list" href="#list-three" role="tab" aria-controls="list-messages">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-cambray-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-four-list" data-bs-toggle="list" href="#list-four" role="tab" aria-controls="list-settings">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-cambray-p.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-five-list" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-settings">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-eucaliptus-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-six-list" data-bs-toggle="list" href="#list-six" role="tab" aria-controls="list-settings">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-eucaliptus-p.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent active" id="list-seven-list" data-bs-toggle="list" href="#list-seven" role="tab" aria-controls="list-home">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-main.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-eight-list" data-bs-toggle="list" href="#list-eight" role="tab" aria-controls="list-profile">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-arcilla-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-nine-list" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-profile">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-arcilla-p.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-ten-list" data-bs-toggle="list" href="#list-ten" role="tab" aria-controls="list-messages">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-cambray-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-eleven-list" data-bs-toggle="list" href="#list-eleven" role="tab" aria-controls="list-settings">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-cambray-p.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="list-group-item m-0 p-1 list-group-item-action border-0 bg-transparent" id="list-twelve-list" data-bs-toggle="list" href="#list-twelve" role="tab" aria-controls="list-settings">
+                  <img class="img-fluid" src="../assets/img/productos/al/1654981998441/1654981998441-111x100-eucaliptus-c.jpg" width="89" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="swiper-button-prev pt-3 shadow-none">
+                <i class="fa-solid fa-angles-up fa-xl ecd-btn-prev"></i>
+              </div>
+              <div class="swiper-button-next ecd-btn-next pb-3 shadow-none">
+                <i class="fa-solid fa-angles-down fa-xl ecd-btn-prev"></i>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-8">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
-            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+          <div class="col-6">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane text-start fade show active" id="list" role="tabpanel" aria-labelledby="list-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al/1654981998441/1654981998441-710x639-main.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-one" role="tabpanel" aria-labelledby="list-one-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-arcilla-c.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-two" role="tabpanel" aria-labelledby="list-two-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-arcilla-p.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-three" role="tabpanel" aria-labelledby="list-three-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-cambray-c.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-four" role="tabpanel" aria-labelledby="list-four-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-cambray-p.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-five" role="tabpanel" aria-labelledby="list-five-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-eucaliptus-c.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-six" role="tabpanel" aria-labelledby="list-six-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-eucaliptus-p.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-seven" role="tabpanel" aria-labelledby="list-seven-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-lino-c.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-eight" role="tabpanel" aria-labelledby="list-eight-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-lino-p.jpg" width="630" height="auto" alt="" />
+              </div>
+              <div class="tab-pane text-start fade" id="list-nine" role="tabpanel" aria-labelledby="list-nine-list">
+                <img class="img-fluid ecd-shadow" src="../assets/img/productos/al//1654981998441/1654981998441-710x639-main.jpg" width="630" height="auto" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <ul class="small-photos p-0 list-group-flush">
+              <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">Almohadón Tusor Cuadrado</h2></li>
+              <li class="ecd-border-bt mb-3"><p>Comfy Pillow. Funda lavable.</p></li>
+              <li class="m-0 p-0"><p class="m-0 p-0">MATERIAL: Lana de lino.</p></li>
+              <li class="m-0 p-0"><p class="m-0 p-0">MEDIDAS: 50cm x 50cm, con relleno.</p></li>
+              <li class="mb-3 p-0"><p class="m-0 p-0">STOCK: 10</p></li>
+              <li class="mb-2">
+                <h6 class="text-uppercase text-primary">
+                  <strong>Color seleccionado: <span>1</span></strong>
+                </h6>
+              </li>
+              <li>
+                <div class="list-group list-group-flush list-group-horizontal overflow-hidden m-0 p-0 border-0 d-inline-flex" id="list-tab" role="tablist">
+                  <div class="list-group-item m-0 p-1 text-center list-group-item-action border-0" id="list-one-list" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-profile">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998441/1654981998441_arcilla_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color arcilla" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ARCILLA" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item m-0 p-1 border-0 text-center list-group-item-action" id="list-five-list" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-messages">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998441/1654981998441_cambray_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color cambray" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CAMBRAY" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item m-0 p-1 border-0 text-center list-group-item-action" id="list-nine-list" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-settings">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998441/1654981998441_eucaliptus_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color eucaliptus" data-bs-toggle="tooltip" data-bs-placement="bottom" title="EUCALIPTUS" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item m-0 p-1 border-0 text-center list-group-item-action" id="list-thirteen-list" data-bs-toggle="list" href="#list-thirteen" role="tab" aria-controls="list-settings">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998441/1654981998441_lino_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color lino" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LINO" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-center ecd-border-bt mt-5 pb-3">
+                <button class="btn ecd-btn-outlined w-100 shadow-none" type="submit" id="finalizarCompra" aria-label="Finalizar la compra">AGREGAR AL CARRITO</button>
+              </li>
+              <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
+              <li class="list-group-item text-center border-0 mt-2">
+                <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">CONTINUAR COMPRANDO</button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </template>
+
+    <template>
+      <div class="col mx-5">
+        <div class="row g-1 mx-5">
+          <div class="col-1 m-0 p-0">
+            <div class="swiper gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_arcilla_p_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_arcilla_t_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_arcilla_v_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_ceniza_p_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_ceniza_t_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_chocolate_p_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_chocolate_t_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_chocolate_v_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_marfil_e_100x90.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(../assets/img/productos/al/1654981998448/1654981998448_marfil_t_100x90.jpg)"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 m-0 p-0">
+            <div class="swiper gallery-top m-0 p-0">
+              <div class="swiper-wrapper container-zoom">
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_arcilla_p_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_arcilla_t_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_arcilla_v_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_ceniza_p_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_ceniza_t_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_chocolate_p_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_chocolate_t_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_chocolate_v_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_marfil_e_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" data-swiper-zoom="5">
+                    <img src="../assets/img/productos/al/1654981998448/1654981998448_marfil_t_1000x900.jpg" alt="" />
+                  </div>
+                </div>
+                <!-- <div class="container-zoom"></div> -->
+                <!-- <div class="lens-zoom"></div>
+                  <div class="result-zoom"></div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5 m-0 p-0 mt-4">
+            <ul class="small-photos p-0 list-group-flush">
+              <li class="ecd-border-bt mb-3"><h2 class="text-uppercase text-serif h4">Almohadón Tusor Cuadrado</h2></li>
+              <li class="ecd-border-bt mb-3"><p>Comfy Pillow. Funda lavable.</p></li>
+              <li class="m-0 p-0"><p class="m-0 p-0">MATERIAL: ${producto.material}.</p></li>
+              <li class="m-0 p-0 mb-3"><p class="m-0 p-0">MEDIDAS: ${producto.alto}cm x ${producto.ancho}cm, con relleno.</p></li>
+              <!-- <li class="mb-3 p-0"><p class="m-0 p-0">${producto.stock[0]}</p></li> -->
+              <li class="mb-2">
+                <h6 class="text-uppercase text-primary">
+                  <strong>Selecciona el color: <span>1</span></strong>
+                </h6>
+              </li>
+              <li>
+                <div class="list-group list-group-flush list-group-horizontal overflow-hidden m-0 p-0 border-0 d-inline-flex" id="list-tab" role="tablist">
+                  <div class="list-group-item btn-swatch sw1 m-0 p-1 text-center list-group-item-action border-0" id="list-one-list" data-bs-toggle="list" href="#list-one" role="tab" aria-controls="list-one">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998448/1654981998448_arcilla_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color arcilla" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ARCILLA" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item btn-swatch sw2 m-0 p-1 border-0 text-center list-group-item-action" id="list-five-list" data-bs-toggle="list" href="#list-five" role="tab" aria-controls="list-five">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998448/1654981998448_ceniza_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color cambray" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CAMBRAY" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item btn-swatch sw3 m-0 p-1 border-0 text-center list-group-item-action" id="list-nine-list" data-bs-toggle="list" href="#list-nine" role="tab" aria-controls="list-nine">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998448/1654981998448_chocolate_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color eucaliptus" data-bs-toggle="tooltip" data-bs-placement="bottom" title="EUCALIPTUS" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                  <div class="list-group-item btn-swatch sw4 m-0 p-1 border-0 text-center list-group-item-action" id="list-thirteen-list" data-bs-toggle="list" href="#list-thirteen" role="tab" aria-controls="list-thirteen">
+                    <img class="img-thumbnail ecd-shadow m-0 p-0" src="../assets/img/productos/al/1654981998448/1654981998448_marfil_s_40x36.jpg" width="35" height="30" alt="Almohadón tusor cuadrado color lino" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LINO" data-bs-custom-class="ecd-tooltip" />
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-center ecd-border-bt mt-5 pb-3">
+                <button class="btn ecd-btn-outlined w-100 shadow-none" type="submit" id="agragarAlCarrito" aria-label="Agregar al carrito">AGREGAR AL CARRITO</button>
+              </li>
+              <li class="list-group-item text-center ecd-border-bt">CONOCÉ LAS CUOTAS CON TU TARJETA</li>
+              <li class="list-group-item text-center border-0 mt-2">
+                <button class="btn ecd-btn-outlined-muted w-100 shadow-none" type="submit" aria-label="Continuar comprando">CONTINUAR COMPRANDO</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const firstTabEl = document.querySelector('#myTab a:last-child');
+      const firstTab = new bootstrap.Tab(firstTabEl);
+
+      firstTab.show();
+    </script>
     <!-- FOOTER -->
     <footer class="container-fluid p-0 m-0 ecd-footer">
       <div class="container-fluid">

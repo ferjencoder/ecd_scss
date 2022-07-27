@@ -88,16 +88,8 @@
   box-shadow: none;
 }
 
-#ecdToast {
-  display: none;
-}
-
 .hiddenToast {
-  display: none;
-}
-
-.showToast {
-  display: contents;
+  opacity: 0;
 }
 
 :root {
@@ -11818,6 +11810,23 @@ textarea.form-control-lg {
   border: 1px solid rgba(121, 85, 105, 0.5);
 }
 
+.ecd-form-lable-span {
+  background-color: rgb(230, 227, 222);
+  font-size: 0.875em;
+  color: rgb(72, 50, 65);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.2em 1em;
+  border: 1px solid rgba(121, 85, 105, 0.5);
+  font-weight: 400;
+}
+.ecd-form-lable-span:active {
+  border: 1px solid rgba(121, 85, 105, 0.5);
+}
+.ecd-form-lable-span:focus {
+  border: 1px solid rgba(121, 85, 105, 0.5);
+}
+
 .btnLike {
   border: 0;
   font-size: 1.5rem;
@@ -11970,7 +11979,6 @@ figcaption {
 }
 
 .popImg {
-  color: rgb(32, 255, 136);
   object-fit: cover;
 }
 

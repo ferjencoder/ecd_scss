@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "nombre": "Lorena",
+    "apellido": "Gonzalez",
+    "usuario": "Bret",
+    "email": "Sincere@april.biz",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "1-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "582",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "usuario": "juanperez1234",
+    "email": "juan_perez1234@ejemplo.com",
+    "telefono": "0299-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "2-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "879",
+        "ciudad": "Neuquen",
+        "codigoPostal": "8400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Julieta",
+    "apellido": "Lopez",
+    "usuario": "Samantha",
+    "email": "julylope@ejemplo.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "3-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "1847",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Patricia",
+    "apellido": "Domingues",
+    "usuario": "patoDomin",
+    "email": "patricia.dominguez@ejemplo.org",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "4-Dir-1",
+        "calle": "Roca",
+        "calleNro": "692",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Martin",
+    "apellido": "Fernández",
+    "usuario": "tincho1234",
+    "email": "martin_fernandez@ejemplo.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "5-Dir-1",
+        "calle": "Guemes",
+        "calleNro": "351",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Julio",
+    "apellido": "Martinez",
+    "usuario": "julito1234",
+    "email": "julio_martinez@email.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "6-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "Apt. 950",
+        "ciudad": "Mendoza Christy",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Norma",
+    "apellido": "Paez",
+    "usuario": "normi1234",
+    "email": "norma.paez1234@email.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "7-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "280",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Nicolas",
+    "apellido": "Gutierrez",
+    "usuario": "carlitoz",
+    "email": "nico_gutierrez@ejemplo.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "8-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "729",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Maurico",
+    "apellido": "Navarro",
+    "usuario": "navarro1234",
+    "email": "navarro.mauricio@emailcom",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "9-Dir-1",
+        "calle": "Estrada",
+        "calleNro": "449",
+        "ciudad": "Neuquen",
+        "codigoPostal": "8400",
+        "pais": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "nombre",
+    "apellido": "apellido",
+    "usuario": "usuario",
+    "email": "email@email.com",
+    "telefono": "0261-15-555-5555",
+    "password": "1234",
+    "fechaNacimiento": "11/05/1983",
+    "direcciones": [
+      {
+        "idDir": "10-Dir-1",
+        "calle": "San Martin",
+        "calleNro": "198",
+        "ciudad": "Mendoza",
+        "codigoPostal": "5400",
+        "pais": "Argentina"
+      }
+    ]
+  }
+]
